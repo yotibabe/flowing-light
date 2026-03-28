@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>在不确定性中锚定坐标 | 中大读书会 Light</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* Custom styling for drop-cap and editorial feel */
+    .drop-cap::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-size: 4.5rem;
+        float: left;
+        line-height: 1;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        color: var(--tw-colors-primary);
+        font-weight: 900;
+        font-style: italic;
+    }
+    .writing-vertical {
+        writing-mode: vertical-lr;
+    }
+    
+    /* Highlight styling for important text within paragraphs */
+    .highlight-text {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        color: var(--tw-colors-on-surface);
+    }
+    .highlight-text::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: var(--tw-colors-primary-container);
+        opacity: 0.3;
+        z-index: -1;
+    }
+</style>
+</head>
+<body class="font-body selection:bg-primary-fixed bg-surface text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-display font-bold text-orange-900">
+            中大读书会 Light
+        </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="index.html">首页<span class="block text-[9px] font-label uppercase tracking-widest text-stone-400 -mt-1">Home</span></a>
+<a class="text-orange-700 border-b-2 border-orange-700/30 pb-1 font-headline italic text-lg tracking-tight" href="archive.html">往期回顾<span class="block text-[9px] font-label uppercase tracking-widest text-orange-700/50 -mt-1">Archive</span></a>
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="about.html">关于我们<span class="block text-[9px] font-label uppercase tracking-widest text-stone-400 -mt-1">About</span></a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-orange-900">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-medium text-sm hover:opacity-90 transition-opacity">
+                成为嘉宾
+            </button>
+</div>
+</div>
+</nav>
+
+<main>
+<!-- Hero Section: Cinematic Entry -->
+<section class="relative w-full h-[85vh] min-h-[600px] flex items-end overflow-hidden ethereal-gradient-bg">
+<div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
+<!-- Image from the article -->
+<img alt="Vol 2 Event" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-1000 ease-in-out mix-blend-multiply" src="https://mmbiz.qpic.cn/mmbiz_jpg/zYJd2QiaQ1Z6mD4sJmE3a44rI6w5V572N8AibG0zJbZ47Wl6v1Aicibw7e2ibwHia4E7V2L81HicmO3Qo1iaEic0QibC4Xw/640?wx_fmt=jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-8 md:px-24 pb-24 md:pb-32">
+<div class="max-w-4xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-12 h-px bg-primary"></span>
+<span class="font-label text-xs uppercase tracking-[0.4em] text-primary font-bold">Vol. 02 | 创业实录</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-black text-on-surface leading-[1.15] tracking-tight mb-8">
+                    在不确定性中：<br/><span class="font-display italic font-normal text-primary">锚定坐标</span>
+</h1>
+<p class="font-headline text-2xl md:text-3xl font-light text-on-surface-variant max-w-2xl leading-relaxed">
+                    没有标准答案，也没有固定航线。
+</p>
+</div>
+</div>
+
+<!-- Decorative vertical text -->
+<div class="absolute top-1/2 right-12 hidden lg:flex flex-col items-center">
+<div class="h-32 w-px bg-primary/30"></div>
+<span class="writing-vertical py-8 font-label text-[10px] uppercase tracking-[0.5em] text-outline opacity-40 rotate-180">The Digital Curator</span>
+<div class="h-16 w-px bg-primary/30"></div>
+</div>
+</section>
+
+<!-- Narrative Content: Editorial Layout -->
+<section class="max-w-7xl mx-auto px-8 md:px-24 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-start bg-surface">
+    
+<!-- Sidebar Info (Sticky Metadata) -->
+<aside class="lg:col-span-3 sticky top-40 flex flex-col gap-12 hidden md:flex">
+<div>
+<h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4">本期叙事者</h4>
+<ul class="space-y-3 font-body text-sm">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>王李冬子 <span class="text-outline text-xs ml-2">阜时科技 CTO</span></li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>许拥盛 <span class="text-outline text-xs ml-2">达实旗云 联合创始人</span></li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>汤林保 <span class="text-outline text-xs ml-2">九有数据库 联合创始人</span></li>
+</ul>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<p class="font-headline italic text-sm text-on-surface-variant leading-relaxed">
+                    “回望来时路，那些踩过的坑、沉淀的经验、鲜活的故事，都是他们人生路上闪闪发光的勋章。”
+                </p>
+</div>
+</aside>
+
+<!-- Main Text Column -->
+<article class="lg:col-span-9 space-y-16">
+    
+<!-- Prologue -->
+<div class="space-y-8 max-w-3xl">
+<p class="font-body text-xl leading-loose text-on-surface drop-cap">
+                    “不确定性”，似乎已经成为这个时代最常被提及的词汇。当旧有的轨道逐渐模糊，当未来的方向不再清晰，我们该如何自处？
+                </p>
+
+<p class="font-body text-xl leading-loose text-on-surface-variant font-light">
+                    那个炎炎午后，在前海青年梦工场座无虚席的现场，我们试图去寻找答案。本期 light 聚焦于三位在风浪中前行的创业者。
+                </p>
+<p class="font-body text-xl leading-loose text-on-surface-variant font-light">
+                    创业，既是跌宕起伏的英雄叙事，也是用踩过的坑换来的苦尽甘来。让我们翻开这本实录，去听听那些沉淀在时间里的鲜活故事，看看他们是如何在不确定性中，锚定属于自己的坐标。
+                </p>
+</div>
+
+<!-- Section 1: 王李冬子 -->
+<div class="space-y-8 max-w-3xl pt-12 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Founder 01</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-headline text-sm font-bold">王李冬子</span>
+</div>
+<h2 class="font-headline text-3xl md:text-4xl leading-tight font-bold">初创公司从0到1的信任密码</h2>
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    冬总，一个“站在科技链尖端的男人”，带着ASML核心研发团队的硬核背景，却在众人仰望的巅峰转身跃入创业洪流，成为阜时科技的CTO。他在分享开场晒出了00级中大校庆的老照片，这个细节或许早已暗示了他的创业哲学——<span class="font-medium text-on-surface">再尖端的技术，最终也要落地到人的链接里。</span>
+                </p>
+                
+<!-- Image Block Layout -->
+<figure class="my-16">
+<div class="w-full bg-surface-container-low rounded-lg overflow-hidden shadow-sm aspect-video">
+<img src="assets/vol2/王立东子.jpg" alt="Wang Li Dongzi presenting" class="w-full h-full object-cover transition-duration-1000">
+</div>
+</figure>
+
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    “从0到1，最难的不是技术，而是让客户相信你能交付。”他用三个关键词拆解了初创公司拿下第一单的本质：免责、信任、利益，但顺序绝不能颠倒。
+                </p>
+                
+<!-- Pull Quote within flow -->
+<blockquote class="pl-6 border-l-4 border-primary/50 my-10 py-2">
+<p class="font-headline italic text-2xl text-on-surface leading-relaxed">
+                        “千万不要一上来就谈钱，先让对方相信你不会给他挖坑。”
+                    </p>
+</blockquote>
+                
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    当谈到如何打动大客户时，他的“卧底理论”令人印象深刻：“找一个能帮你摸清对方决策链条的人，比盲目拜访重要100倍。” 从光刻机到激光雷达芯片，他用10年创业经历证明：<span class="highlight-text">所谓商业逻辑的验证，本质是让信任穿过层层组织，最终落在某个人的笃定里。</span>
+                </p>
+</div>
+
+<!-- Section 2: 许拥盛 -->
+<div class="space-y-8 max-w-3xl pt-12 mt-12 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Founder 02</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-headline text-sm font-bold">许拥盛</span>
+</div>
+<h2 class="font-headline text-3xl md:text-4xl leading-tight font-bold">被投资人打断的三分钟，与反转的8000万</h2>
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    “如果用动物比喻投资人，你觉得会是什么？”许总的开场充满生趣，仿佛一下子把我们带入了动物世界。这位曾任职蒙牛、青岛啤酒的高管，现在是达实旗云的联合创始人，将创业四年期间见过的几百位投资人概括成<span class="font-medium text-on-surface">“工蚁、斑马、鹰隼”</span>三种意象，为我们揭秘资本世界的真相。
+                </p>
+                
+<!-- Image Block Layout -->
+<figure class="my-16">
+<div class="w-full bg-surface-container-low rounded-lg overflow-hidden shadow-sm aspect-video">
+<img src="assets/vol2/许总.jpg" alt="Xu Yongsheng sharing" class="w-full h-full object-cover transition-duration-1000">
+</div>
+</figure>
+
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    遇到斑马型投资人时，他经历了创业以来最戏剧性的反转：开场三分钟被打断“你们是不是没准备好”，却在远程调出医疗数据系统演示后，获得8000万投资。“这种极致直接的批评，其实是免费的战略咨询。”
+                </p>
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+<span class="highlight-text">面对看穿逻辑漏洞的猎手，许总说“坦诚是唯一的铠甲。”坦诚你的漏洞，比包装完美更有说服力。</span>理解资本逻辑，本质是理解不同诉求下的人性。
+                </p>
+</div>
+
+<!-- Story 3: 汤林保 -->
+<div class="space-y-8 max-w-3xl pt-12 mt-12 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Founder 03</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-headline text-sm font-bold">汤林保</span>
+</div>
+<h2 class="font-headline text-3xl md:text-4xl leading-tight font-bold">999个小目标里的修行</h2>
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    当我们把目光转向汤总，这位手握清华硕士、社科院博士头衔的创业者，不惜放弃银行高管职位，成为九有数据库的联合创始人。他用他的经验告诉我们，创业不是宏大叙事，而是必须拆解成一个个可执行、可量化、可落地的小目标。
+                </p>
+                
+<!-- Image Block Layout -->
+<figure class="my-16">
+<div class="w-full bg-surface-container-low rounded-lg overflow-hidden shadow-sm aspect-video">
+<img src="assets/vol2/汤总.jpg" alt="Tang Linbao sharing" class="w-full h-full object-cover transition-duration-1000">
+</div>
+</figure>
+
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    除了小目标的拆解，汤总的创业之路更是一场“心学修行”。他熟读阳明心学，<span class="highlight-text">将“致良知”与“知行合一”融入到创业的每一个决策中。</span>在不确定性中锚定内心的良知坐标，是支撑他走过无数个艰难时刻的定海神针。
+                </p>
+</div>
+
+<div class="space-y-8 max-w-3xl pt-12 mt-12 border-t border-outline-variant/30">
+<p class="font-body text-lg leading-loose text-on-surface-variant font-light">
+                    也许创业的道路充满泥泞，但只要我们还能在分享中看见彼此眼里的光，这趟旅程就不会孤单。<span class="highlight-text">那些在不确定性中锚定坐标的努力，本身就是最动人的风景。</span>
+                </p>
+</div>
+
+<!-- Special Guest / Networking Moment -->
+<figure class="my-16 max-w-4xl mx-auto border-t border-outline-variant/20 pt-12">
+<div class="w-full bg-surface-container-low rounded-lg overflow-hidden shadow-sm aspect-video">
+<img src="assets/vol2/港科大深圳校友会秘书长.jpg" alt="Networking Moment" class="w-full h-full object-cover transition-duration-1000">
+</div>
+<figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mt-4 text-center">跨界交流：港科大深圳校友会秘书长现场互动</figcaption>
+</figure>
+
+<!-- Major Pull Quote (Full Width Distraction) -->
+<div class="py-20 md:py-32 my-12 relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-surface-container-low/50 border-y border-outline-variant/20 flex justify-center">
+<div class="max-w-4xl px-8 text-center relative">
+<span class="material-symbols-outlined text-primary/10 absolute -top-12 left-1/2 -translate-x-1/2 text-[8rem] md:text-[12rem] -z-10">format_quote</span>
+<blockquote class="font-display text-3xl md:text-5xl italic text-primary leading-snug tracking-tight">
+                    “建立信任始于规避风险，成于专业可靠，最终才导向价值交换。”
+                </blockquote>
+</div>
+</div>
+
+<!-- Group Photo Placed Here for Emotional Resonance -->
+<figure class="my-16 max-w-4xl mx-auto">
+<div class="w-full bg-surface-container-low rounded-lg overflow-hidden shadow-md aspect-[16/9]">
+<img src="assets/vol2/第二期大合照.jpg" alt="Light Event Group Photo" class="w-full h-full object-cover transition-duration-1000">
+</div>
+<figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mt-4 text-center">第二期 Light 表达计划 · 现场留影</figcaption>
+</figure>
+
+<!-- Option C: Read Full Transcript Button -->
+<div class="flex flex-col items-center gap-6 pb-12 mt-20">
+    <a href="https://mp.weixin.qq.com/s/4_NnYqmV0Ir43xcNGb-cCg" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-8 py-4 bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 text-on-surface hover:text-primary transition-all duration-300 rounded-full overflow-hidden">
+        <div class="absolute inset-0 bg-primary/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+        <span class="relative flex items-center gap-3 font-medium tracking-wide">
+            阅读本期活动完整实录
+            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </span>
+    </a>
+    <span class="font-label text-[10px] text-outline uppercase tracking-widest">Read Full Transcript on WeChat</span>
+</div>
+
+</article>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200/50 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-[1440px] mx-auto">
+<div class="text-xl font-display text-orange-950">
+            中大读书会 Light
+        </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
+</div>
+<div class="font-label text-xs uppercase tracking-widest text-stone-500 text-center md:text-right">
+            © 2025 中山大学深圳校友会读书会. All Rights Reserved.
+        </div>
+</div>
+</footer>
+</body></html>

@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html lang="zh-CN"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chronicles - Flowing Light Archive</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<title>往期实录 The Archive | 中大读书会 Light</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="js/tailwind-config.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-body antialiased text-on-surface min-h-screen selection:bg-primary-fixed">
-<!-- Top Navigation (Matched with Home v5) -->
-<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl border-b border-outline-variant/10">
+<body class="font-body selection:bg-primary-fixed bg-surface text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20">
 <div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
 <div class="text-2xl font-display font-bold text-orange-900">
             中大读书会 Light
@@ -32,162 +29,167 @@
 </div>
 </div>
 </nav>
-<div class="fluid-focus-gradient-archive min-h-screen pt-32 pb-24">
-<!-- Main Layout -->
-<div class="flex max-w-[1600px] mx-auto w-full relative px-4 md:px-12">
-<!-- Sidebar Navigation -->
-<aside class="hidden lg:block w-[280px] shrink-0 pr-12">
-<div class="sticky top-32 flex flex-col justify-between">
-<div>
-<!-- Section Title -->
-<div class="mb-16">
-<h1 class="font-display text-4xl font-bold text-primary tracking-tight mb-2">Chronicles</h1>
-<p class="font-label text-[10px] uppercase tracking-[0.4em] text-on-surface-variant/60 font-bold">SYSU READING CLUB</p>
+
+<main class="pt-32 pb-32 px-8 md:px-12 max-w-[1440px] mx-auto">
+    
+<!-- Two-column layout matching reference image -->
+<div class="flex flex-col md:flex-row gap-12 lg:gap-24 items-start relative">
+    
+    <!-- Left Sidebar (Sticky) -->
+    <aside class="w-full md:w-64 shrink-0 md:sticky md:top-40 flex flex-col gap-16">
+        <!-- Section Title -->
+        <div>
+            <h1 class="font-display text-4xl lg:text-5xl font-bold text-orange-900 tracking-tight mb-2">Chronicles</h1>
+            <span class="font-label text-[10px] uppercase tracking-[0.4em] text-stone-500">SYSU READING CLUB</span>
+        </div>
+        
+        <!-- Year Navigation -->
+        <nav class="flex flex-row md:flex-col gap-6 md:gap-8 font-display text-3xl lg:text-4xl italic text-stone-400">
+            <!-- Active Year -->
+            <div class="relative text-stone-800">
+                <span class="absolute -left-6 top-1/2 -translate-y-1/2 w-1 h-8 bg-orange-600 hidden md:block"></span>
+                <a href="#y2026" class="hover:text-stone-800 transition-colors">2026</a>
+            </div>
+            <!-- Inactive Year -->
+            <div class="relative">
+                <a href="#y2025" class="hover:text-stone-600 transition-colors">2025</a>
+            </div>
+        </nav>
+        
+        <!-- Utility Link -->
+        <a href="#" class="inline-flex items-center gap-2 font-label text-[10px] uppercase tracking-widest text-stone-500 hover:text-stone-800 transition-colors group">
+            按期数分类浏览 <span class="material-symbols-outlined text-[12px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+        </a>
+        
+        <!-- Footer Tagline -->
+        <div class="mt-auto pt-16 md:pt-32 flex flex-col gap-1 font-label text-[9px] uppercase tracking-[0.3em] text-stone-400">
+            <span>DOCUMENTING</span>
+            <span>LIGHT & TRUTH</span>
+            <span>SINCE 2025</span>
+        </div>
+    </aside>
+
+    <!-- Right Content Area (Masonry-style Grid) -->
+    <div class="w-full flex-1">
+        
+        <!-- 2026 Section -->
+        <div id="y2026" class="mb-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Vol 01 (2026) Card -->
+                <article class="group relative w-full aspect-[2/3] md:aspect-[3/5] bg-stone-100 overflow-hidden flex flex-col justify-end opacity-70">
+                    <!-- Image Area (Placeholder) -->
+                    <div class="absolute inset-0 bg-stone-200 flex items-center justify-center">
+                         <span class="material-symbols-outlined text-6xl text-stone-300">auto_awesome</span>
+                    </div>
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent h-1/2 mt-auto"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative z-10 p-8 pb-10 text-center">
+                        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-700/60 mb-4 block">VOL. 01 · APR 2026</span>
+                        <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-800">【敬请期待】<br>2026首期筹备中</h3>
+                        <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2">
+                            新的生命叙事正在打磨。敬请期待4月的微光相聚。
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- 2025 Section -->
+<div id="y2025">
+    <!-- Grid changed to 2 columns (2x2 layout) as requested -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+        
+        <!-- Vol 04 Card -->
+        <a href="detail-vol4.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+            <!-- Image Area -->
+            <div class="absolute inset-0">
+                 <img src="assets/vol4/大合照.jpg" alt="Vol 4" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+            </div>
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 04 · OCT 2025</span>
+                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">穿越周期的力量：<br>从认知觉醒到体系自洽</h3>
+                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                    投资不是关于财富的简单博弈，而是对客观规律的尊重。
+                </p>
+            </div>
+        </a>
+
+        <!-- Vol 03 Card (Slightly pushed down for masonry effect in 2-col) -->
+        <a href="detail-vol3.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end md:mt-16 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+            <!-- Image Area -->
+            <div class="absolute inset-0">
+                 <img src="assets/vol3/第三期大合照.jpg" alt="Vol 3" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+            </div>
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 03 · SEP 2025</span>
+                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【生命探索】<br>好的人生，不止一种脚本</h3>
+                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                    何为好的人生？真正的成功，是勇敢地书写属于自己的版本。
+                </p>
+            </div>
+        </a>
+
+        <!-- Vol 02 Card -->
+        <a href="detail-vol2.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+            <!-- Image Area -->
+            <div class="absolute inset-0">
+                 <img src="assets/vol2/第二期大合照.jpg" alt="Vol 2" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+            </div>
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 02 · AUG 2025</span>
+                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【创业实录】<br>在不确定性中锚定坐标</h3>
+                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                    没有标准答案，也没有固定航线，却总有勇敢者在试错中刻下属于自己的坐标。
+                </p>
+            </div>
+        </a>
+
+        <!-- Vol 01 Card (Slightly pushed down for masonry effect in 2-col) -->
+<a href="detail-vol1.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end md:mt-16 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+    <!-- Image Area -->
+    <div class="absolute inset-0">
+         <img src="assets/vol1/大合照.jpg" alt="Vol 1" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+    </div>
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 01 · JUL 2025</span>
+                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【主理人手记】<br>你的故事，是你最好的简历</h3>
+                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                    关于普通人如何创造非凡变量的三个回答。别等了，就现在，来讲吧！
+                </p>
+            </div>
+        </a>
+
+    </div>
 </div>
-<!-- Year Navigation -->
-<nav class="space-y-6">
-<div class="space-y-1">
-<a class="group flex items-center gap-4 py-2 relative" href="#">
-<div class="absolute left-0 w-1 h-full bg-primary-container rounded-full"></div>
-<span class="font-headline italic text-3xl text-on-surface pl-6 transition-colors">2026</span>
-</a>
-<a class="group flex items-center gap-4 py-2 relative" href="#">
-<div class="absolute left-0 w-1 h-0 bg-primary-container/30 rounded-full group-hover:h-full transition-all duration-300"></div>
-<span class="font-headline italic text-3xl text-on-surface-variant/40 group-hover:text-on-surface pl-6 transition-colors">2025</span>
-</a>
-</div>
-<div class="pt-8 border-t border-outline-variant/30">
-<a class="font-label text-[11px] tracking-[0.2em] uppercase text-on-surface-variant/60 hover:text-primary transition-colors flex items-center gap-2 font-bold" href="#">
-<span>按行业分类浏览</span>
-<span class="material-symbols-outlined text-xs">north_east</span>
-</a>
-</div>
-</nav>
-</div>
-<!-- Sidebar Footer -->
-<div class="pt-12 mt-12 border-t border-outline-variant/20">
-<p class="font-label text-[10px] text-on-surface-variant/40 uppercase tracking-[0.3em] leading-relaxed font-medium">
-                        Documenting<br/>Light &amp; Truth<br/>Since 2025
-                    </p>
-</div>
-</div>
-</aside>
-<!-- Content Grid -->
-<main class="flex-1 w-full">
-<!-- Mobile Header -->
-<div class="lg:hidden mb-12">
-<h1 class="font-display text-5xl font-bold text-primary tracking-tight mb-8">Chronicles</h1>
-<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
-<button class="px-6 py-2 rounded-md bg-primary text-on-primary font-label text-xs font-semibold tracking-wider uppercase">2026</button>
-<button class="px-6 py-2 rounded-md border border-outline-variant text-on-surface-variant font-label text-xs font-medium tracking-wider uppercase">2025</button>
-</div>
-</div>
-<!-- Asymmetric Archive Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-16">
-<!-- Card 1 -->
-<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative" href="detail.html">
-<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
-<img alt="Abstract light hitting an open book pages" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6XVJOT9WIRlerfr7brzTTZERZLGhKA6Qq3eVGATM2somFkBdLtnnHNxAEwm19WXmJNCpuGRWxNBQNNVpjJRuHWkHUv7o-FwthZSyYcG9NQ10KmR9yrXPdgElK4e5ULlT13gGnfSbbcnKUmrbBfyUfgL3NGgkCneX3b1OHHdVRopnc9wlC0omW6gCjOBWDTU6LfXRVn-uYHBB73bjDAftVC-Sm1G4uelr31CkxMQ9qIRhTccdd-CllNLhoiTcv9iHxSwQAZWi56RU"/>
-</div>
-<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
-<div class="mb-6">
-<div class="flex items-center gap-2 mb-4">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary-container font-bold">Vol. 05 • 即将开启</span>
-</div>
-<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">【教育科技】打破重塑的勇气</h2>
-<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">探讨教育科技领域的底层逻辑，以及一位连续创业者如何在行业低谷期找寻向上的微光。</p>
-</div>
-<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
-<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">阅读实录</span>
-<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
-</div>
-</div>
-</a>
-<!-- Card 2 -->
-<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative md:mt-24" href="detail.html">
-<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
-<img alt="Dust motes in sunlight over a wooden table" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPp6mjzmuc4-XxUHYt7rR6Js2Y3XilwSBZK7e1_i4Rsn2lrLtP_3mqfzu6KZ-Q2v-HIRWCixteIwvXpWy-pei81-TalKp6d3WMG4pIZiiJHN4N1eJsLB7IVlsTvGwIfOzTnQSPinG2wAcR_CIOTLre6RMqj6nDvp2h6nXV4_cCp5N_k8Y3aVGSh20ei4P2vfRvhhu4uJfT7WxJtvbuOZgL25uIdV8VOe1fwdxnE1EZV72ViRviT5_nRxWs73L9dHs13ptQaNEr5qU"/>
-</div>
-<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
-<div class="mb-6">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Vol. 04 • Dec 2025</span>
-<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">【文化出海】越过山丘的视野</h2>
-<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">把中国故事讲给世界听，不仅需要技巧，更需要卸下包袱的真诚与轻盈。</p>
-</div>
-<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
-<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">阅读实录</span>
-<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
-</div>
-</div>
-</a>
-<!-- Card 3 -->
-<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative" href="detail.html">
-<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
-<img alt="Starry night sky over dark silhouettes of mountains" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMHw1dQkf_zhWyBlE8kpWqWVc5U83f2lZSkOKhGc_2JTGJ4oxRMZjbTkFyDGyHtUcovtNGNW8sRjY_oSc264pKVJlfLlFqZlAqtSg3BOvizHH8m1uXQlcHJM_OGMOnxp6_A-wO_uqHoYABlGaDkZS_7Lekm_KsK6yLqnO3FqqU4TgdHNIwm_zj8dT6MHZO_CTstQirCbnyBeZl_jc_JPSpzFoUmidFEWYm1NZ7yIpu043bKhwsjxC20OvCzyUCCUYjs0a8uR2kPo"/>
-</div>
-<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
-<div class="mb-6">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Vol. 03 • Oct 2025</span>
-<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">【人工智能】算法之外的人性</h2>
-<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">当 AI 可以生成一切，我们依然需要真实的体温和不完美的叙事。</p>
-</div>
-<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
-<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">阅读实录</span>
-<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
-</div>
-</div>
-</a>
-<!-- Card 4 -->
-<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative md:-mt-24" href="detail.html">
-<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
-<img alt="Dark moody library interior with dim warm light" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD72tPbJZXn47wIBV8v63PkDZZkOludzwpH5MRVPpu9fBKOqBQgxbYYC4IS5TEQLptp3cXlTRWFXql1m4IYm8dDo3I9AmX1CgY7I_CIUuFFySK5s6nonW-482DVOUZr1yZfdCGpolNdEOFkoohiRoQ-zlGywgDXgCda7nLAYYoyDtvk2vctjRktkii05ltwyYjFt-JG7dGKXzmYB7YbFkZUkuRZ0QEVOOj2chOKRBGVt2KF18Ftip4mKmSI8TYuU30D4vYOufCkRH0" style="object-position: 50% 20%;"/>
-</div>
-<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
-<div class="mb-6">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Vol. 02 • Aug 2025</span>
-<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">【医疗科技】在不确定性中寻找支点</h2>
-<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">深知最震撼人心的力量永远藏在水面之下。一位医疗科技领域校友的沉淀与突围。</p>
-</div>
-<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
-<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">阅读实录</span>
-<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
-</div>
-</div>
-</a>
-<!-- Card 5 -->
-<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative" href="detail.html">
-<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
-<img alt="Close up of a person reading a book in shadow" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtiiM6IR-glBedMrtcsU3-tAAz_RwzeYuioLfTFI0PRKd3_1HMHVpJKHHCnRxVorbT4tkiWPR8KVezArHmb07jilKxik5jOkA1JGnN0MBYGvYtLJKeVaaD2ZZOsHOJ4fo2oJ9e8oxWrGoGSwkhEKLpwIMAffyGiEfQz_JPtzR_OA5Zj8vr82gFhkAjsjEVmpNPea3guEIe0O3WILaRVbtv7evNuJBaTsvG8o-SgFyjuo_oH2rQDII6ggyHK1ebY0S062WJlGl171g"/>
-</div>
-<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
-<div class="mb-6">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Vol. 01 • July 2025</span>
-<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">【互联网】跨界者的抉择</h2>
-<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">那些改变了自己轨迹的决定，往往发生在无声的瞬间。离开大厂后的 500 天真实剖析。</p>
-</div>
-<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
-<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">阅读实录</span>
-<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
-</div>
-</div>
-</a>
-<!-- Empty Slot / Coming Soon -->
-<div class="archive-card rounded-lg border-dashed border-outline-variant/50 flex flex-col justify-center items-center p-12 text-center group md:mt-24">
-<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center mb-8 transition-transform duration-700 group-hover:scale-110">
-<span class="material-symbols-outlined text-primary-container text-3xl">auto_awesome</span>
-</div>
-<h3 class="font-headline font-bold text-2xl text-on-surface mb-3">更多故事，敬请期待</h3>
-<p class="font-body text-on-surface-variant/60 text-sm tracking-wide leading-relaxed max-w-[200px] mx-auto">挖掘正在进行中。我们期待下一个被照见的你。</p>
-</div>
+        
+    </div>
 </div>
 </main>
-</div>
-</div>
-<!-- Footer (Matched with Home v5) -->
+
+<!-- Footer -->
 <footer class="w-full border-t border-stone-200/50 bg-surface">
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-[1440px] mx-auto">
-<div class="text-xl font-display font-bold text-orange-950">
+<div class="text-xl font-display text-orange-950">
             中大读书会 Light
         </div>
 <div class="flex flex-wrap justify-center gap-8">

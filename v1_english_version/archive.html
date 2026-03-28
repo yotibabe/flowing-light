@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicles - Flowing Light Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body antialiased text-on-surface min-h-screen selection:bg-primary-fixed">
+<!-- Top Navigation (Matched with Home v5) -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl border-b border-outline-variant/10">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-display font-bold text-orange-900">
+            中大读书会 Light
+        </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="index.html">Home</a>
+<a class="text-orange-700 border-b-2 border-orange-700/30 pb-1 font-headline italic text-lg tracking-tight" href="archive.html">Archive</a>
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-orange-900">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-medium text-sm hover:opacity-90 transition-opacity">
+                Join Now
+            </button>
+</div>
+</div>
+</nav>
+<div class="fluid-focus-gradient-archive min-h-screen pt-32 pb-24">
+<!-- Main Layout -->
+<div class="flex max-w-[1600px] mx-auto w-full relative px-4 md:px-12">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:block w-[280px] shrink-0 pr-12">
+<div class="sticky top-32 flex flex-col justify-between">
+<div>
+<!-- Section Title -->
+<div class="mb-16">
+<h1 class="font-display text-4xl font-bold text-primary tracking-tight mb-2">Chronicles</h1>
+<p class="font-label text-[10px] uppercase tracking-[0.4em] text-on-surface-variant/60 font-bold">SYSU READING CLUB</p>
+</div>
+<!-- Year Navigation -->
+<nav class="space-y-6">
+<div class="space-y-1">
+<a class="group flex items-center gap-4 py-2 relative" href="#">
+<div class="absolute left-0 w-1 h-full bg-primary-container rounded-full"></div>
+<span class="font-headline italic text-3xl text-on-surface pl-6 transition-colors">2024</span>
+</a>
+<a class="group flex items-center gap-4 py-2 relative" href="#">
+<div class="absolute left-0 w-1 h-0 bg-primary-container/30 rounded-full group-hover:h-full transition-all duration-300"></div>
+<span class="font-headline italic text-3xl text-on-surface-variant/40 group-hover:text-on-surface pl-6 transition-colors">2023</span>
+</a>
+<a class="group flex items-center gap-4 py-2 relative" href="#">
+<div class="absolute left-0 w-1 h-0 bg-primary-container/30 rounded-full group-hover:h-full transition-all duration-300"></div>
+<span class="font-headline italic text-3xl text-on-surface-variant/40 group-hover:text-on-surface pl-6 transition-colors">2022</span>
+</a>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<a class="font-label text-[11px] tracking-[0.2em] uppercase text-on-surface-variant/60 hover:text-primary transition-colors flex items-center gap-2 font-bold" href="#">
+<span>Browse All Archives</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</nav>
+</div>
+<!-- Sidebar Footer -->
+<div class="pt-12 mt-12 border-t border-outline-variant/20">
+<p class="font-label text-[10px] text-on-surface-variant/40 uppercase tracking-[0.3em] leading-relaxed font-medium">
+                        Documenting<br/>Light &amp; Truth<br/>Since 2022
+                    </p>
+</div>
+</div>
+</aside>
+<!-- Content Grid -->
+<main class="flex-1 w-full">
+<!-- Mobile Header -->
+<div class="lg:hidden mb-12">
+<h1 class="font-display text-5xl font-bold text-primary tracking-tight mb-8">Chronicles</h1>
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<button class="px-6 py-2 rounded-md bg-primary text-on-primary font-label text-xs font-semibold tracking-wider uppercase">2024</button>
+<button class="px-6 py-2 rounded-md border border-outline-variant text-on-surface-variant font-label text-xs font-medium tracking-wider uppercase">2023</button>
+<button class="px-6 py-2 rounded-md border border-outline-variant text-on-surface-variant font-label text-xs font-medium tracking-wider uppercase">2022</button>
+</div>
+</div>
+<!-- Asymmetric Archive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-16">
+<!-- Card 1 -->
+<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative" href="detail.html">
+<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
+<img alt="Abstract light hitting an open book pages" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6XVJOT9WIRlerfr7brzTTZERZLGhKA6Qq3eVGATM2somFkBdLtnnHNxAEwm19WXmJNCpuGRWxNBQNNVpjJRuHWkHUv7o-FwthZSyYcG9NQ10KmR9yrXPdgElK4e5ULlT13gGnfSbbcnKUmrbBfyUfgL3NGgkCneX3b1OHHdVRopnc9wlC0omW6gCjOBWDTU6LfXRVn-uYHBB73bjDAftVC-Sm1G4uelr31CkxMQ9qIRhTccdd-CllNLhoiTcv9iHxSwQAZWi56RU"/>
+</div>
+<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary-container font-bold">Upcoming • Mar 15</span>
+</div>
+<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">The Architecture of Silence</h2>
+<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">Exploring the unsaid and the quiet spaces in modern architectural writing and philosophy.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">Read Insight</span>
+<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative md:mt-24" href="detail.html">
+<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
+<img alt="Dust motes in sunlight over a wooden table" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPp6mjzmuc4-XxUHYt7rR6Js2Y3XilwSBZK7e1_i4Rsn2lrLtP_3mqfzu6KZ-Q2v-HIRWCixteIwvXpWy-pei81-TalKp6d3WMG4pIZiiJHN4N1eJsLB7IVlsTvGwIfOzTnQSPinG2wAcR_CIOTLre6RMqj6nDvp2h6nXV4_cCp5N_k8Y3aVGSh20ei4P2vfRvhhu4uJfT7WxJtvbuOZgL25uIdV8VOe1fwdxnE1EZV72ViRviT5_nRxWs73L9dHs13ptQaNEr5qU"/>
+</div>
+<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Feb 02, 2024</span>
+<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Weightless Words</h2>
+<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">How poetry captures the ephemeral nature of human connection in the digital age.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">Read Insight</span>
+<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative" href="detail.html">
+<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
+<img alt="Starry night sky over dark silhouettes of mountains" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMHw1dQkf_zhWyBlE8kpWqWVc5U83f2lZSkOKhGc_2JTGJ4oxRMZjbTkFyDGyHtUcovtNGNW8sRjY_oSc264pKVJlfLlFqZlAqtSg3BOvizHH8m1uXQlcHJM_OGMOnxp6_A-wO_uqHoYABlGaDkZS_7Lekm_KsK6yLqnO3FqqU4TgdHNIwm_zj8dT6MHZO_CTstQirCbnyBeZl_jc_JPSpzFoUmidFEWYm1NZ7yIpu043bKhwsjxC20OvCzyUCCUYjs0a8uR2kPo"/>
+</div>
+<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Jan 10, 2024</span>
+<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">The Echoes of Light</h2>
+<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">Exploring the dual meaning of light and lightness in contemporary literature.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">Read Insight</span>
+<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 4 -->
+<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative md:-mt-24" href="detail.html">
+<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
+<img alt="Dark moody library interior with dim warm light" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD72tPbJZXn47wIBV8v63PkDZZkOludzwpH5MRVPpu9fBKOqBQgxbYYC4IS5TEQLptp3cXlTRWFXql1m4IYm8dDo3I9AmX1CgY7I_CIUuFFySK5s6nonW-482DVOUZr1yZfdCGpolNdEOFkoohiRoQ-zlGywgDXgCda7nLAYYoyDtvk2vctjRktkii05ltwyYjFt-JG7dGKXzmYB7YbFkZUkuRZ0QEVOOj2chOKRBGVt2KF18Ftip4mKmSI8TYuU30D4vYOufCkRH0" style="object-position: 50% 20%;"/>
+</div>
+<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Dec 15, 2023</span>
+<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Shadows of the City</h2>
+<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">Urban narratives and the search for meaning amidst the concrete of Shenzhen.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">Read Insight</span>
+<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 5 -->
+<a class="archive-card rounded-lg overflow-hidden flex flex-col group relative" href="detail.html">
+<div class="card-image-wrapper aspect-[4/5] w-full shrink-0">
+<img alt="Close up of a person reading a book in shadow" class="card-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtiiM6IR-glBedMrtcsU3-tAAz_RwzeYuioLfTFI0PRKd3_1HMHVpJKHHCnRxVorbT4tkiWPR8KVezArHmb07jilKxik5jOkA1JGnN0MBYGvYtLJKeVaaD2ZZOsHOJ4fo2oJ9e8oxWrGoGSwkhEKLpwIMAffyGiEfQz_JPtzR_OA5Zj8vr82gFhkAjsjEVmpNPea3guEIe0O3WILaRVbtv7evNuJBaTsvG8o-SgFyjuo_oH2rQDII6ggyHK1ebY0S062WJlGl171g"/>
+</div>
+<div class="px-8 pb-10 -mt-24 relative z-20 flex-1 flex flex-col">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold block mb-4">Nov 05, 2023</span>
+<h2 class="font-headline font-bold text-3xl text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Whispers of the Past</h2>
+<p class="font-body text-on-surface-variant text-base leading-relaxed line-clamp-3">A deep dive into historical non-fiction and authentic storytelling techniques.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/40 font-bold">Read Insight</span>
+<span class="material-symbols-outlined text-lg text-primary-container transform transition-all group-hover:translate-x-1">north_east</span>
+</div>
+</div>
+</a>
+<!-- Empty Slot / Coming Soon -->
+<div class="archive-card rounded-lg border-dashed border-outline-variant/50 flex flex-col justify-center items-center p-12 text-center group md:mt-24">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center mb-8 transition-transform duration-700 group-hover:scale-110">
+<span class="material-symbols-outlined text-primary-container text-3xl">auto_awesome</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-3">Illuminating More</h3>
+<p class="font-body text-on-surface-variant/60 text-sm tracking-wide leading-relaxed max-w-[200px] mx-auto">The archival process continues. More dispatches are being curated.</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- Footer (Matched with Home v5) -->
+<footer class="w-full border-t border-stone-200/50 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-[1440px] mx-auto">
+<div class="text-xl font-display font-bold text-orange-950">
+            中大读书会 Light
+        </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Terms of Service</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Newsletter</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Contact</a>
+</div>
+<div class="font-label text-xs uppercase tracking-widest text-stone-500 text-center md:text-right">
+            © 2024 The Digital Curator Reading Club. All Rights Reserved.
+        </div>
+</div>
+</footer>
+</body></html>

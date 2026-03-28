@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body selection:bg-primary-fixed">
+<!-- TopNavBar (Preserved from Source) -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-display font-bold text-orange-900">
+                中大读书会 Light
+            </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-orange-700 border-b-2 border-orange-700/30 pb-1 font-headline italic text-lg tracking-tight" href="index.html">首页<span class="block text-[9px] font-label uppercase tracking-widest text-orange-700/50 -mt-1">Home</span></a>
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="archive.html">往期回顾<span class="block text-[9px] font-label uppercase tracking-widest text-stone-400 -mt-1">Archive</span></a>
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="about.html">关于我们<span class="block text-[9px] font-label uppercase tracking-widest text-stone-400 -mt-1">About</span></a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-orange-900">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-medium text-sm hover:opacity-90 transition-opacity">
+                    成为嘉宾
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section: Exactly preserved from SCREEN_53 -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 ethereal-gradient-bg">
+<div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
+<div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40"></div>
+<div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20"></div>
+<div class="relative z-10 w-[92%] max-w-[1100px] bg-white/40 backdrop-blur-[60px] p-12 md:p-24 shadow-2xl shadow-on-surface/5 border border-white/40 flex flex-col md:flex-row items-center gap-16 md:gap-24">
+<div class="flex-1 space-y-8">
+<div class="space-y-4">
+<span class="font-label text-xs uppercase tracking-[0.4em] text-primary font-bold">Est. 2023 • SYSU Reading Club</span>
+<h1 class="font-display text-7xl md:text-[8rem] font-black text-on-surface leading-[0.85] tracking-tighter">
+                            Flowing <br/>
+<span class="italic font-normal text-primary">Light</span>
+</h1>
+</div>
+<div class="max-w-lg">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface leading-snug">
+                            中大读书会 Light
+                        </h2>
+<p class="font-headline text-2xl md:text-3xl mt-4 text-on-surface-variant leading-relaxed">
+                            点亮每一个平凡而独特的 <span class="text-primary-container font-black">生命故事</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-12 gap-y-6 pt-8">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary/60">LIGHTNESS</span>
+<span class="font-headline font-bold text-xl text-on-surface-variant tracking-wider mt-1">轻度分享</span>
+</div>
+<div class="hidden sm:block w-px h-10 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary/60">CONNECTION</span>
+<span class="font-headline font-bold text-xl text-on-surface-variant tracking-wider mt-1">深度链接</span>
+</div>
+<div class="hidden md:block w-px h-10 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary/60">AUTHENTICITY</span>
+<span class="font-headline font-bold text-xl text-on-surface-variant tracking-wider mt-1">真实叙述</span>
+</div>
+<div class="hidden sm:block w-px h-10 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary/60">COMMUNITY</span>
+<span class="font-headline font-bold text-xl text-on-surface-variant tracking-wider mt-1">湾区精英</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:flex flex-col items-center justify-center">
+<div class="h-64 w-px bg-primary/30"></div>
+<span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+<div class="h-16 w-px bg-primary/30"></div>
+</div>
+</div>
+</section>
+
+<!-- REDESIGNED Philosophy Section: Asymmetric Grid with Grayscale Image -->
+<section class="py-32 md:py-48 px-8 md:px-20 bg-surface relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
+<div class="w-full md:w-1/2 relative z-10">
+<div class="inline-block px-4 py-1 bg-primary-container/10 rounded-full text-primary font-label text-xs tracking-widest mb-8">
+                    THE PHILOSOPHY
+                </div>
+<h2 class="font-headline text-4xl md:text-5xl leading-tight mb-12">
+                    什么是 Light？是轻盈的相聚，是不设防的敞开，是<span class="text-primary-container italic">微光照亮微光</span>。
+                </h2>
+<div class="space-y-8">
+<p class="text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                        2025年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的深度分享栏目，我们聚焦于
+                        <span class="font-medium text-on-surface">真实的个体生命</span>，邀请各行各业的中大校友，呈现生命里极具重量的
+                        <span class="text-primary-container font-medium">转折时刻</span>。
+                    </p>
+<p class="text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                        我们是“真实故事的挖掘者”。那些重塑人生轨迹的抉择，那些历经岁月沉淀才化作坦然的过往，都在这里发声。散场之后，愿你能从别人的故事里，
+                        <span class="italic font-headline text-primary-container text-2xl block mt-6">找到自己的答案</span>
+</p>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] md:aspect-[3/4] rounded-lg overflow-hidden shadow-sm relative z-10 group">
+<!-- Reusing the elegant library image -->
+<img alt="Quiet library aisle with sunlight streaming through windows" class="w-full h-full object-cover transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDq2ZGibFQSeTfMDZ9NxDvq4Poul73USlIaIyjvUo3jqnGUGWCMFgGujeBGfTTwW3LNqgZ3H9zqeG5oBgRoe-mCHCA16fBsAhaz15xpyMtiih6DZDQxz9XJmWO-nqDFQ0NEiLAJywRbtGykYClSPnUzj5diwMhGaklND02OawTusRn_GLrUiP_OvOt2cyOkMI7rj7QnUyRQ2-dWi0oCLi9fFZvBWbkSH0Npfn0O0G15vYUfy7iAzpPWl4xXCMwMlu8vv9U-44jLR4"/>
+</div>
+<!-- Decorative background block for depth (layering principle) -->
+<div class="absolute -bottom-8 -left-8 w-32 h-48 bg-surface-container-low border border-outline-variant/30 rounded-lg -z-0 hidden md:block"></div>
+</div>
+</div>
+</section>
+
+<!-- NEW Epilogue / Call to Action Section -->
+<section class="py-32 px-8 md:px-20 bg-surface-container-low flex flex-col items-center justify-center text-center border-t border-outline-variant/10">
+<div class="max-w-3xl mx-auto flex flex-col items-center">
+<div class="w-px h-24 bg-primary/30 mb-12"></div>
+<span class="font-label text-[10px] md:text-xs uppercase tracking-[0.5em] text-secondary/60 mb-6">To Be Continued</span>
+<h2 class="font-display italic text-4xl md:text-6xl text-on-surface mb-8 tracking-tighter">
+                更多真实生命叙事<br/>
+<span class="font-headline not-italic text-3xl md:text-4xl text-primary mt-6 block">正在酝酿中</span>
+</h2>
+<p class="font-body text-on-surface-variant font-light leading-relaxed mb-12 max-w-lg text-lg">
+                我们正在寻找下一位愿意敞开生命的讲述者。<br>如果你的故事足够真实，Light 永远为你留一盏灯。
+            </p>
+<button class="bg-transparent border border-outline-variant text-on-surface px-8 py-3 rounded-md font-medium text-sm hover:border-primary hover:text-primary transition-colors duration-300">
+                成为讲述嘉宾
+            </button>
+</div>
+</section>
+
+</main>
+<!-- Footer (Preserved from Source) -->
+<footer class="w-full border-t border-stone-200/50 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-[1440px] mx-auto">
+<div class="text-xl font-display text-orange-950">
+                中大读书会 Light
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
+</div>
+<div class="font-label text-xs uppercase tracking-widest text-stone-500 text-center md:text-right">
+                © 2025 中山大学深圳校友会读书会. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>

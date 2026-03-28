@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Narrative Deep-Dive | The Digital Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body selection:bg-primary-fixed">
+<!-- TopAppBar (Consistent with SCREEN_28) -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-display font-bold text-orange-900">
+            中大读书会 Light
+        </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="index.html">Home</a>
+<a class="text-orange-700 border-b-2 border-orange-700/30 pb-1 font-headline italic text-lg tracking-tight" href="archive.html">Archive</a>
+<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-orange-900">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-medium text-sm hover:opacity-90 transition-opacity">
+                Join Now
+            </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[800px] flex items-end overflow-hidden ethereal-gradient-bg">
+<div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
+<img alt="Atmospheric misty landscape" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhysMM8cUv9bqeHigkjaTKf7kWJJ2q3JfW7PSW5QVf8cI7JraJs1KjPaL-fTMdQgkBclSAf1tjCHEkyHFkmlY4Z_apw0rXzdprS8TcWN5KOS3Gla-Y8K6TCkOeSOD_SwqUksIpsr6sfubS-xZAhVa9gwf25XJbUkFi3ka7LWiOas0FMwzerr7fJZJzBSe6pvn5MGIB9YzqhA3Fk-UkWaLibQyHJiSShOhp3TW7jYd5274tvaDJU6evMedsPMtq6e2RVBV_rIr8OvQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-12 md:px-24 pb-24">
+<div class="max-w-5xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-12 h-px bg-primary"></span>
+<span class="font-label text-xs uppercase tracking-[0.4em] text-primary font-bold">Volume IV / Issue II</span>
+</div>
+<h1 class="font-display text-6xl md:text-[7rem] font-black text-on-surface leading-[0.9] tracking-tighter mb-8">
+                    The Silent <span class="italic font-normal text-primary">Symmetry</span> <br/> of Julian Voss.
+                </h1>
+<p class="font-headline text-2xl md:text-3xl font-light text-on-surface-variant max-w-2xl leading-relaxed">
+                    A deep dive into the archival life of Berlin’s most reclusive restorer, and the artifacts that define a century of quiet observation.
+                </p>
+</div>
+</div>
+<div class="absolute top-1/2 right-12 hidden lg:flex flex-col items-center">
+<div class="h-32 w-px bg-primary/30"></div>
+<span class="writing-vertical py-8 font-label text-[10px] uppercase tracking-[0.5em] text-outline opacity-40 rotate-180">The Curator's Choice</span>
+<div class="h-16 w-px bg-primary/30"></div>
+</div>
+</section>
+<!-- Narrative Content -->
+<section class="max-w-7xl mx-auto px-12 md:px-24 py-32 grid grid-cols-1 lg:grid-cols-12 gap-24 items-start bg-surface">
+<!-- Sidebar Info -->
+<aside class="lg:col-span-3 sticky top-40 flex flex-col gap-12">
+<div>
+<h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4">Date &amp; Place</h4>
+<p class="font-body text-sm font-semibold">October 14, 2023</p>
+<p class="font-body text-sm text-on-surface-variant">Charlottenburg, Berlin</p>
+</div>
+<div>
+<h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4">Narrative Theme</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/10 rounded-full font-label text-[9px] uppercase tracking-widest text-primary font-medium">Memory</span>
+<span class="px-3 py-1 bg-primary-container/10 rounded-full font-label text-[9px] uppercase tracking-widest text-primary font-medium">Restoration</span>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<p class="font-headline italic text-sm text-on-surface-variant leading-relaxed">
+                    "Every object is a vessel for a moment that once lived. My job is not to fix it, but to ensure the moment doesn't leak out."
+                </p>
+</div>
+</aside>
+<!-- Main Text Column -->
+<article class="lg:col-span-9 space-y-16">
+<div class="space-y-8 max-w-3xl">
+<p class="font-body text-xl leading-loose text-on-surface drop-cap">
+                    The studio of Julian Voss is a place where time behaves differently. Located in the back corner of a pre-war apartment block in Berlin, it smells faintly of linseed oil and old paper. Here, the frantic pace of the digital age is softened by the heavy velvet curtains and the rhythmic ticking of a clock that hasn't been set in thirty years. 
+                </p>
+<p class="font-body text-xl leading-loose text-on-surface-variant">
+                    Voss, now eighty-two, has spent the better part of five decades restoring the fragments of lives that others might have discarded. To him, a cracked ceramic bowl from the Ming dynasty holds no more weight than a tattered postcard sent from Paris in 1912. It is the narrative thread that interests him—the tactile evidence of human presence.
+                </p>
+</div>
+<!-- Pull Quote (Updated to Match SCREEN_28 Aesthetic) -->
+<div class="py-16 px-12 border-l-4 border-primary-container relative overflow-hidden bg-white/40 backdrop-blur-xl shadow-lg shadow-on-surface/5">
+<span class="material-symbols-outlined text-primary-container/10 absolute -top-8 -right-8 text-[12rem]">format_quote</span>
+<blockquote class="font-display text-4xl md:text-5xl italic text-primary leading-tight">
+                    "The crack is where the story begins. A perfect object is a silent object. It has nothing to tell us of its survival."
+                </blockquote>
+</div>
+<div class="space-y-8 max-w-3xl">
+<p class="font-body text-xl leading-loose text-on-surface-variant font-light">
+                    As we sit in the dim light of his workbench, Voss handles a silver pocket watch with the precision of a surgeon. The watch is stalled at 4:12. He doesn't intend to wind it. "There is a beauty in the pause," he whispers. "We are so obsessed with making things work that we forget to let them rest. This watch has earned its silence."
+                </p>
+<!-- Broken Layout Images (Updated with SCREEN_28 Minimalist Styling) -->
+<div class="grid md:grid-cols-2 gap-12 py-12 relative">
+<div class="absolute -z-10 -bottom-8 -right-8 w-64 h-80 bg-surface-container-highest/30 rounded-lg"></div>
+<figure class="space-y-4">
+<div class="overflow-hidden rounded-lg shadow-sm bg-white p-2">
+<img alt="Close up of antique watch gears" class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbLkNBg2ftCXmcWfuHtYO13MUk9tgcJ0_T6s7tLSywxZLFEfwj3G3KY6TPQoAnBq4iCQRdh0ce7CaIcCCFkGtiL1EGqOjzWDi3wJnsgA7BfcWIzjEEhYGeiUSk1_97aiBw-J5pPudntnKhmrZsK7Vjc1XnbqTdIkgifmvAg4m_8P1rwwPLA1jSUdXvdk5rUUd2ykZwzJDw-Z6RJSM6tNbQw0V83F_29k2wnPmxGbhDruBF-__L5gUzCa1H4dxXwamIjroOUFo7QVQ"/>
+</div>
+<figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline">Fig. 1 — Internal Mechanism (c. 1890)</figcaption>
+</figure>
+<figure class="md:mt-24 space-y-4">
+<div class="overflow-hidden rounded-lg shadow-sm bg-white p-2">
+<img alt="Dusty library shelves" class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhsLiQnAm7ciXci_o4eOX6uAX87fGN4PbmF8zoYVeWbbPfC2F8lhgZnZSxqrwuxaiwPSENEeDxdyeE4Ag0kc4_VoYFaeVilGII_6V0gUK2_hM5Na498NOogBrF9HbiOQeLwBW1N0s4IWsx2gPUp_lUGWkuZnlJpYXFoWgts5gpV4PZYoNEuD6KrwjirY1WWOYb7DgOwAdKLWYMI4ZvdY0CpivR2MI2Wg5EZBDDjR483ktpA71w2SikgKkNxwPlPj5iDE-MSyM8utQ"/>
+</div>
+<figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline">Fig. 2 — The Archival Repository</figcaption>
+</figure>
+</div>
+<p class="font-body text-xl leading-loose text-on-surface-variant font-light">
+                    In this narrative deep-dive, we explore the philosophy of 'The Digital Curator'—how we choose what to keep in an era of infinite storage. Voss represents the antithesis of the cloud. His data is physical, his backups are locked in drawers, and his memories are etched into the patina of worn brass. To walk through his studio is to understand that the weight of our history is what keeps us anchored in an increasingly ephemeral world.
+                </p>
+<div class="pt-12">
+<a class="inline-flex items-center gap-3 text-primary font-medium hover:gap-5 transition-all text-lg group" href="archive.html">
+                        Return to Archive <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">north_east</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer (Consistent with SCREEN_28) -->
+<footer class="w-full border-t border-stone-200/50 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-[1440px] mx-auto">
+<div class="text-xl font-display text-orange-950">
+            中大读书会 Light
+        </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Terms of Service</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Newsletter</a>
+<a class="font-label text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">Contact</a>
+</div>
+<div class="font-label text-xs uppercase tracking-widest text-stone-500 text-center md:text-right">
+            © 2024 The Digital Curator Reading Club. All Rights Reserved.
+        </div>
+</div>
+</footer>
+</body></html>
