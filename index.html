@@ -15,10 +15,19 @@
 <div class="text-2xl font-display font-bold text-orange-900">
                 中大读书会 Light
             </div>
-<div class="hidden md:flex items-center gap-12">
-<a class="text-orange-700 border-b-2 border-orange-700/30 pb-1 font-headline italic text-lg tracking-tight" href="index.html">首页<span class="block text-[9px] font-label uppercase tracking-widest text-orange-700/50 -mt-1">Home</span></a>
-<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="archive.html">往期回顾<span class="block text-[9px] font-label uppercase tracking-widest text-stone-400 -mt-1">Archive</span></a>
-<a class="text-stone-600 font-medium hover:text-orange-900 font-headline italic text-lg tracking-tight transition-colors duration-300" href="about.html">关于我们<span class="block text-[9px] font-label uppercase tracking-widest text-stone-400 -mt-1">About</span></a>
+<div class="hidden md:flex gap-12 items-center">
+<a class="group flex flex-col items-center gap-1" href="index.html">
+<span class="font-label text-sm uppercase tracking-widest text-primary relative">
+            HOME
+            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-primary"></span>
+</span>
+</a>
+<a class="group flex flex-col items-center gap-1" href="archive.html">
+<span class="font-label text-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
+</a>
+<a class="group flex flex-col items-center gap-1" href="about.html">
+<span class="font-label text-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
+</a>
 </div>
 <div class="flex items-center gap-6">
 <button class="material-symbols-outlined text-orange-900">search</button>
@@ -51,6 +60,20 @@
 <p class="font-headline text-2xl md:text-3xl mt-4 text-on-surface-variant leading-relaxed">
                             点亮每一个平凡而独特的 <span class="text-primary-container font-black">生命故事</span>
 </p>
+
+<!-- Position Tags Moved Inside the Glass Panel -->
+<div class="w-full flex justify-center mt-12 border-t border-outline-variant/20 pt-8">
+    <div class="flex flex-nowrap items-center justify-center gap-x-2 md:gap-x-4 text-outline/60 font-label text-[9px] md:text-[11px] uppercase tracking-[0.1em] md:tracking-[0.2em] whitespace-nowrap opacity-80 ml-2 md:ml-4">
+        <span>LIGHTNESS <span class="font-body tracking-widest opacity-80">轻度分享</span></span>
+        <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
+        <span>CONNECTION <span class="font-body tracking-widest opacity-80">深度链接</span></span>
+        <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
+        <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80">真实叙述</span></span>
+        <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
+        <span>COMMUNITY <span class="font-body tracking-widest opacity-80">湾区精英</span></span>
+    </div>
+</div>
+
 </div>
 </div>
 <div class="hidden lg:flex flex-col items-center justify-center">
@@ -59,113 +82,50 @@
 <div class="h-16 w-px bg-primary/30"></div>
 </div>
 </div>
+</section>
+<!-- REDESIGNED Philosophy Section: Two-Column Editorial Layout -->
+<section class="py-32 md:py-48 px-8 md:px-20 bg-surface">
+    <div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        
+        <!-- Left Column: Title & Link -->
+        <div class="w-full lg:w-1/3 shrink-0 lg:sticky lg:top-40">
+            <div class="inline-block px-4 py-1 bg-primary-container/10 rounded-full text-primary font-label text-[10px] tracking-[0.3em] uppercase mb-8">
+                THE PHILOSOPHY
+            </div>
+            
+            <h2 class="font-headline text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-12 font-bold text-on-surface tracking-tight">
+                什么是 Light？
+            </h2>
+            
+            <!-- Moments of Light Link moved here -->
+            <a href="archive.html" class="inline-flex items-center gap-3 text-primary font-medium group">
+                <span class="font-display italic text-2xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Moments of Light</span> 
+                <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
 
-<!-- Re-integrated 4 positionings, absolutely positioned at the bottom of the hero section -->
-<div class="absolute bottom-8 left-0 w-full px-8 md:px-24 flex justify-center lg:justify-start z-20">
-    <div class="flex items-center gap-x-4 md:gap-x-8 text-outline/60 font-label text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] whitespace-nowrap opacity-80">
-        <div class="flex items-center gap-2 md:gap-3">
-            <span>LIGHTNESS <span class="font-body tracking-widest ml-1 opacity-80 hidden sm:inline">轻度分享</span></span>
+        <!-- Right Column: Philosophy Content -->
+        <div class="w-full lg:w-2/3 lg:pt-16">
+            <!-- Intro Highlight -->
+            <div class="font-headline text-2xl md:text-3xl leading-relaxed text-on-surface font-light mb-16 space-y-4">
+                <p>它取<span class="text-primary-container italic font-medium mx-1">"轻"</span>与<span class="text-primary-container italic font-medium mx-1">"光"</span>的双重含义。</p>
+                <p>是轻盈的相聚，是不设防的敞开；是照见彼此，<span class="font-medium text-primary-container">微光照亮微光</span>。</p>
+            </div>
+
+            <!-- Detailed Explanation -->
+            <div class="space-y-8 border-l-2 border-outline-variant/30 pl-8 md:pl-12">
+                <p class="text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                    2025年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的深度分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
+                </p>
+                <p class="text-lg md:text-xl leading-loose text-on-surface-variant font-light italic mt-8">
+                    “ 愿散场之后，你能从别人的故事里，找到自己的答案。”
+                </p>
+            </div>
         </div>
-        <span class="w-1 h-1 rounded-full bg-outline/20"></span>
-        <div class="flex items-center gap-2 md:gap-3">
-            <span>CONNECTION <span class="font-body tracking-widest ml-1 opacity-80 hidden sm:inline">深度链接</span></span>
-        </div>
-        <span class="w-1 h-1 rounded-full bg-outline/20"></span>
-        <div class="flex items-center gap-2 md:gap-3">
-            <span>AUTHENTICITY <span class="font-body tracking-widest ml-1 opacity-80 hidden sm:inline">真实叙述</span></span>
-        </div>
-        <span class="w-1 h-1 rounded-full bg-outline/20"></span>
-        <div class="flex items-center gap-2 md:gap-3">
-            <span>COMMUNITY <span class="font-body tracking-widest ml-1 opacity-80 hidden sm:inline">湾区精英</span></span>
-        </div>
+
     </div>
-</div>
-</section>
-<!-- Body Layout from SCREEN_45 (The Philosophy Section - Elegant Layout) -->
-<section class="py-40 px-8 md:px-20 bg-surface">
-<div class="max-w-4xl mx-auto text-center">
-<div class="inline-block px-4 py-1 bg-primary-container/10 rounded-full text-primary font-label text-xs tracking-widest mb-12">
-                    THE PHILOSOPHY
-                </div>
-                
-<h2 class="font-headline text-4xl md:text-6xl leading-tight mb-12 font-medium text-on-surface">
-                    什么是 Light？
-                </h2>
-                
-<div class="space-y-4 mb-24">
-    <p class="font-headline text-2xl md:text-3xl leading-relaxed text-on-surface font-light">
-        它取<span class="text-primary-container italic font-medium mx-1">"轻"</span>与<span class="text-primary-container italic font-medium mx-1">"光"</span>的双重含义。
-    </p>
-    <p class="font-headline text-2xl md:text-3xl leading-relaxed text-on-surface font-light">
-        是轻盈的相聚，是不设防的敞开；
-    </p>
-    <p class="font-headline text-2xl md:text-3xl leading-relaxed text-on-surface font-light">
-        是照见彼此，<span class="font-medium">微光照亮微光</span>。
-    </p>
-</div>
-
-<div class="max-w-3xl mx-auto space-y-8 text-left border-l-2 border-outline-variant/30 pl-8 md:pl-12">
-    <p class="text-lg md:text-xl leading-loose text-on-surface-variant font-light">
-        2025年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的深度分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
-    </p>
-    <p class="text-lg md:text-xl leading-loose text-on-surface-variant font-light italic mt-8">
-        “ 愿散场之后，你能从别人的故事里，找到自己的答案。”
-    </p>
-</div>
-
-</div>
-</section>
-<!-- Featured Collection removed per user request -->
-<!-- Editor's Picks Section Integrated into Homepage -->
-<section class="py-32 px-8 md:px-20 bg-surface border-t border-outline-variant/10">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-<div>
-<div class="inline-block px-4 py-1 bg-secondary-container/10 rounded-full text-secondary font-label text-xs tracking-widest mb-4 uppercase">
-                    MOMENTS OF LIGHT
-                </div>
-<h2 class="font-headline text-4xl md:text-5xl">精选实录</h2>
-</div>
-<div class="hidden md:block h-[1px] flex-1 mx-12 bg-outline-variant/30 mb-2"></div>
-<a href="archive.html" class="inline-flex items-center gap-2 text-primary font-medium border-b border-primary-container pb-1 hover:gap-3 transition-all">
-    浏览完整档案馆 <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-
-<!-- Grid of 2 Featured Volumes -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-
-<!-- Vol. 01 (Featured) -->
-<a href="detail-vol1.html" class="group block cursor-pointer">
-<div class="w-full aspect-[4/3] rounded-lg overflow-hidden mb-6 relative bg-surface-container-low shadow-sm">
-<img src="assets/vol1/大合照.jpg" alt="Vol 1 Cover" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
-<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-</div>
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-3 block">VOL. 01 | JULY 2025</span>
-<h3 class="font-headline text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary transition-colors leading-snug">你的故事，是你最好的简历</h3>
-<p class="text-on-surface-variant font-light line-clamp-2 leading-relaxed">
-                        听完这三个故事，你是否也看到了自己人生的某种可能？别再等待，去创造属于你自己的“作品”吧！
-                    </p>
-</a>
-
-<!-- Vol. 02 (Featured) -->
-<a href="detail-vol2.html" class="group block cursor-pointer md:mt-24">
-<div class="w-full aspect-[4/3] rounded-lg overflow-hidden mb-6 relative bg-surface-container-low shadow-sm">
-<img src="assets/vol2/第二期大合照.jpg" alt="Vol 2 Cover" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
-<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-</div>
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-3 block">VOL. 02 | AUGUST 2025</span>
-<h3 class="font-headline text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary transition-colors leading-snug">在不确定性中锚定坐标</h3>
-<p class="text-on-surface-variant font-light line-clamp-2 leading-relaxed">
-                        创业是最勇敢者的游戏：没有标准答案，也没有固定航线，却总有勇敢者在试错中刻下属于自己的坐标。
-                    </p>
-</a>
-
-</div>
-</div>
 </section>
 
-<!-- NEW Epilogue / Call to Action Section -->
 </main>
 <!-- Footer (Preserved from Source) -->
 <footer class="w-full border-t border-stone-200/50 bg-surface">
