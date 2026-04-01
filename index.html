@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 
 <html lang="zh-CN"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="js/tailwind-config.js"></script>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Injecting GSAP & Lenis for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <script>
+        // Merge extra animations into the loaded tailwind config
+        tailwind.config.theme.extend.animation = {
+            'float-slow': 'float 15s ease-in-out infinite',
+            'float-delayed': 'float 18s ease-in-out 2s infinite',
+        };
+        tailwind.config.theme.extend.keyframes = {
+            float: {
+                '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(-20px) scale(1.05)' },
+            }
+        };
+    </script>
+    <style>
+        /* Custom scrollbar and smooth behaviors */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e7e5e4; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d6d3d1; }
+        
+        .mix-blend-multiply { mix-blend-mode: multiply; }
+        ::selection { background-color: #ffdbd1; color: #a63a19; }
+    </style>
 </head>
-<body class="font-body selection:bg-primary-fixed">
+<body class="font-body selection:bg-primary-fixed overflow-x-hidden">
+    <!-- Glowing Custom Cursor - 缩小体积并降低透明度 -->
+    <div id="cursor-glow" class="fixed top-0 left-0 w-40 h-40 bg-primary-container/20 rounded-full blur-[50px] pointer-events-none z-0 mix-blend-multiply transition-opacity duration-500 hidden md:block"></div>
+
 <!-- TopNavBar (Preserved from Source) -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 md:bg-transparent backdrop-blur-xl border-b border-stone-200/50 md:border-none">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto flex-nowrap overflow-x-auto no-scrollbar">
@@ -41,32 +73,33 @@
 <!-- Hero Section: Exactly preserved from SCREEN_53 -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 ethereal-gradient-bg">
 <div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
-<div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40"></div>
-<div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20"></div>
-<div class="relative z-10 w-[92%] max-w-[1100px] bg-white/40 backdrop-blur-[60px] p-8 md:p-12 lg:p-24 shadow-2xl shadow-on-surface/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24">
+<div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40 animate-float-slow"></div>
+<div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20 animate-float-delayed"></div>
+<div class="hero-panel relative z-10 w-[92%] max-w-[1100px] bg-white/40 backdrop-blur-[60px] p-8 md:p-12 lg:p-24 shadow-2xl shadow-on-surface/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 hover:shadow-primary/10 transition-shadow duration-700">
 <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
 <div class="space-y-4">
 <!-- Empty container to replace the Trust Badge -->
-<span class="font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
-<h1 class="font-display text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-on-surface leading-[0.85] tracking-tighter">
+<span class="hero-text font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
+<h1 class="hero-text font-display text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-on-surface leading-[0.85] tracking-tighter">
                             Flowing <br/>
 <span class="italic font-normal text-primary">Light</span>
 </h1>
 </div>
 <div class="max-w-lg mx-auto md:mx-0">
-<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface leading-snug">
+<h2 class="hero-text font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface leading-snug">
                             中大读书会 Light
                         </h2>
-<p class="font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-on-surface-variant leading-relaxed">
+<p class="hero-text font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-on-surface-variant leading-relaxed">
                             点亮每一个平凡而独特的 <span class="text-primary-container font-black">生命故事</span>
 </p>
 
 <!-- Position Tags Moved Inside the Glass Panel -->
-<div class="w-full flex justify-center mt-12 border-t border-outline-variant/20 pt-8">
+<!-- 删除了"深度"四个字 -->
+<div class="hero-text w-full flex justify-center mt-12 border-t border-outline-variant/20 pt-8">
     <div class="flex flex-nowrap items-center justify-center gap-x-2 md:gap-x-4 text-outline/60 font-label text-[9px] md:text-[11px] uppercase tracking-[0.1em] md:tracking-[0.2em] whitespace-nowrap opacity-80 ml-2 md:ml-4">
-        <span>LIGHTNESS <span class="font-body tracking-widest opacity-80">轻度分享</span></span>
+        <span>LIGHTNESS</span>
         <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
-        <span>CONNECTION <span class="font-body tracking-widest opacity-80">深度链接</span></span>
+        <span>CONNECTION <span class="font-body tracking-widest opacity-80">链接</span></span>
         <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
         <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80">真实叙述</span></span>
         <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
@@ -76,7 +109,7 @@
 
 </div>
 </div>
-<div class="hidden lg:flex flex-col items-center justify-center">
+<div class="hero-text hidden lg:flex flex-col items-center justify-center">
 <div class="h-64 w-px bg-primary/30"></div>
 <span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
 <div class="h-16 w-px bg-primary/30"></div>
@@ -84,11 +117,11 @@
 </div>
 </section>
 <!-- REDESIGNED Philosophy Section: Two-Column Editorial Layout -->
-<section class="py-24 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 bg-surface">
+<section id="philosophy-section" class="py-24 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 bg-surface">
     <div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
         
         <!-- Left Column: Title & Link -->
-        <div class="w-full lg:w-1/3 shrink-0 lg:sticky lg:top-40">
+        <div class="w-full lg:w-1/3 shrink-0 lg:sticky lg:top-40 philosophy-left opacity-0 translate-y-10">
             <div class="inline-block px-4 py-1 bg-primary-container/10 rounded-full text-primary font-label text-[10px] tracking-[0.3em] uppercase mb-6 md:mb-8">
                 THE PHILOSOPHY
             </div>
@@ -107,22 +140,54 @@
         <!-- Right Column: Philosophy Content -->
         <div class="w-full lg:w-2/3 lg:pt-16">
             <!-- Intro Highlight -->
-            <div class="font-headline text-xl sm:text-2xl md:text-3xl leading-relaxed text-on-surface font-light mb-12 md:mb-16 space-y-4">
+            <div class="philosophy-right opacity-0 translate-y-10 font-headline text-xl sm:text-2xl md:text-3xl leading-relaxed text-on-surface font-light mb-12 md:mb-16 space-y-4">
                 <p>它取<span class="text-primary-container italic font-medium mx-1">"轻"</span>与<span class="text-primary-container italic font-medium mx-1">"光"</span>的双重含义。</p>
                 <p>是轻盈的相聚，是不设防的敞开；是照见彼此，<span class="font-medium text-primary-container">微光照亮微光</span>。</p>
             </div>
 
             <!-- Detailed Explanation -->
-            <div class="space-y-6 md:space-y-8 border-l-2 border-outline-variant/30 pl-6 md:pl-8 lg:pl-12">
+            <div class="philosophy-right opacity-0 translate-y-10 space-y-6 md:space-y-8 border-l-2 border-outline-variant/30 pl-6 md:pl-8 lg:pl-12">
                 <p class="text-base sm:text-lg md:text-xl leading-loose text-on-surface-variant font-light">
-                    2025年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的深度分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
-                </p>
-                <p class="text-base sm:text-lg md:text-xl leading-loose text-on-surface-variant font-light italic mt-6 md:mt-8">
-                    “ 愿散场之后，你能从别人的故事里，找到自己的答案。”
+                    <span class="text-primary font-medium text-2xl mr-1">2025</span>年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
                 </p>
             </div>
         </div>
 
+    </div>
+</section>
+
+<!-- Independent Golden Quote Section - 回归浅色粉橙氛围调 -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-background">
+    <!-- Parallax Background -->
+    <div class="absolute inset-0 z-0 h-[130%] -top-[15%] quote-parallax-bg">
+        <!-- 宁静的光影图 -->
+        <img src="https://images.unsplash.com/photo-1515549832467-8783363e19b6?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover" alt="Minimalist shadow and light">
+        <!-- 去除灰色底色，恢复通透的浅粉橙渐变蒙层，保持整体色调轻盈一致 -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#fdfbfb]/90 via-[#fdfbfb]/60 to-[#fdfbfb]/95 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 bg-primary-container/10 mix-blend-multiply"></div>
+    </div>
+    
+    <!-- Quote Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center quote-reveal flex flex-col items-center justify-center">
+        <!-- 顶部细线引导 -->
+        <div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-primary/60 mb-12"></div>
+        
+        <!-- 删除了巨大的引号 span 标签 -->
+        
+        <!-- 取消强制换行，使用自然宽度的层次排版，解决串行问题 -->
+        <div class="space-y-6 md:space-y-10">
+            <!-- 铺垫句 (使用深色字) -->
+            <p class="font-headline text-xl sm:text-2xl md:text-3xl text-on-surface-variant font-light tracking-widest">
+                愿散场之后，
+            </p>
+            <!-- Highlight 高光句 (使用主色调) -->
+            <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[1.8] md:leading-[1.8] font-light tracking-wide max-w-3xl mx-auto">
+                你能从别人的故事里，<br/>找到<span class="text-primary font-medium border-b border-primary/40 pb-1 px-1">自己的答案</span>。
+            </h2>
+        </div>
+        
+        <!-- 底部细线收尾 -->
+        <div class="mt-20 w-[1px] h-20 bg-gradient-to-t from-transparent to-primary/60"></div>
     </div>
 </section>
 
@@ -145,4 +210,111 @@
 </div>
 </footer>
 
-</body></html>
+</body>
+<!-- Interactive Animations Scripts -->
+<script>
+    // 1. Lenis Smooth Scroll Setup
+    const lenis = new Lenis({
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+        smoothTouch: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // 2. GSAP Setup
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Update ScrollTrigger on Lenis scroll
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0, 0);
+
+    // 3. Custom Glowing Cursor (Follows Mouse)
+    const cursor = document.getElementById('cursor-glow');
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+        });
+    }
+
+    // 4. Hero Entrance Animation
+    const heroTimeline = gsap.timeline();
+    heroTimeline.from(".hero-panel", {
+        y: 40,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        delay: 0.1
+    })
+    .from(".hero-text", {
+        y: 30,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.15,
+        ease: "power3.out"
+    }, "-=1.0");
+
+    // 5. Philosophy Section Sequence Animation (先出标题，再出正文)
+    const philosophyTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#philosophy-section",
+            start: "top 70%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // 先出左边标题
+    philosophyTl.to(".philosophy-left", {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out"
+    })
+    // 稍微延迟后出右边正文
+    .to(".philosophy-right", {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.3,
+        ease: "power3.out"
+    }, "-=0.6");
+
+    // 6. Golden Quote Parallax & Reveal
+    gsap.to('.quote-parallax-bg', {
+        scrollTrigger: {
+            trigger: '.quote-parallax-bg',
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+        },
+        y: "20%",
+        ease: "none"
+    });
+
+    gsap.from('.quote-reveal', {
+        scrollTrigger: {
+            trigger: '.quote-reveal',
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out"
+    });
+</script>
+</html>
