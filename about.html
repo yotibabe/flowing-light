@@ -11,25 +11,25 @@
 </head>
 <body class="antialiased selection:bg-primary-fixed">
 <!-- Header Area with Integrated Background -->
-<header class="fixed w-full top-0 z-50 transition-all duration-500 ease-in-out bg-white/80 md:bg-transparent backdrop-blur-xl border-b border-stone-200/50 md:border-outline-variant/20" id="main-header">
+<header class="fixed w-full top-0 z-50 transition-all duration-500 ease-in-out bg-white/45 md:bg-transparent backdrop-blur-[40px]  md:border-outline-variant/20" id="main-header">
 <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 h-16 md:h-24 flex items-center justify-between flex-nowrap overflow-x-auto no-scrollbar">
-<a class="text-sm sm:text-lg md:text-2xl font-display tracking-wide text-on-surface z-50 whitespace-nowrap shrink-0" href="index.html">
+<a class="text-fluid-lg font-display tracking-wide text-on-surface z-50 whitespace-nowrap shrink-0" href="index.html">
         中大读书会 <span class="italic font-normal">Light</span>
 </a>
 
 
 
-<nav class="flex gap-3 sm:gap-6 md:gap-12 items-center justify-end shrink-0 ml-4">
-<a class="group flex flex-col items-center gap-1" href="index.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
+<nav class="flex gap-4 sm:gap-8 items-center justify-end shrink-0 ml-4">
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="index.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
 </a>
-<a class="group flex flex-col items-center gap-1" href="archive.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="archive.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
 </a>
-<a class="group flex flex-col items-center gap-1" href="about.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-primary relative">
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="about.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-primary relative">
             ABOUT
-            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-primary"></span>
+            <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform origin-left"></span>
 </span>
 </a>
 </nav>
@@ -53,7 +53,7 @@
 
     <!-- Scroll Down Indicator -->
     <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface">Discover</span>
+        <span class="font-label text-fluid-sm uppercase tracking-widest text-on-surface">Discover</span>
         <span class="material-symbols-outlined text-sm text-on-surface">arrow_downward</span>
     </div>
 </section>
@@ -68,7 +68,7 @@
 <!-- The Core (Four Values) - Simplified List Style -->
 <article class="mb-32 bg-surface rounded-3xl p-12 md:p-20 shadow-[0_0_60px_-15px_rgba(0,0,0,0.05)] border border-outline-variant/10">
 <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-16 text-center">我们是谁？做什么？</h2>
-<div class="flex flex-col gap-16">
+<div class="flex flex-col gap-fluid-xl">
 <!-- Value 1 -->
 <div class="flex flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-12 md:pb-16 last:border-0 last:pb-0">
 <div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
@@ -181,7 +181,7 @@
                 
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
                     <!-- Join Community Button -->
-                    <button onclick="alert('请扫描公众号二维码加入社群')" class="speaker-trigger-btn group relative inline-flex items-center justify-center px-10 py-5 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-full overflow-hidden shadow-lg hover:shadow-xl">
+                    <button onclick="alert('请扫描公众号二维码加入社群')" class="speaker-trigger-btn group relative inline-flex items-center justify-center px-10 py-5 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-sm overflow-hidden ">
                         <span class="font-label text-xs tracking-[0.2em] uppercase z-10 flex items-center gap-3">
                             <span class="material-symbols-outlined text-lg">qr_code_scanner</span>
                             加入社群
@@ -189,7 +189,7 @@
                     </button>
                     
                     <!-- Become Speaker Button -->
-                    <a href="#" class="speaker-trigger-btn group relative inline-flex items-center justify-center px-10 py-5 bg-surface border border-outline-variant/50 hover:border-primary text-on-surface hover:text-primary transition-all duration-300 rounded-full overflow-hidden shadow-sm hover:shadow-md">
+                    <a href="#" class="speaker-trigger-btn group relative inline-flex items-center justify-center px-10 py-5 bg-surface border border-outline-variant/50 hover:border-primary text-on-surface hover:text-primary transition-all duration-300 rounded-sm overflow-hidden ">
                         <span class="font-label text-xs tracking-[0.2em] uppercase z-10 flex items-center gap-3">
                             <span class="material-symbols-outlined text-lg">mic</span>
                             成为讲者
@@ -199,18 +199,18 @@
             </article>
 
 <!-- Footer (Synchronized with Home v5) -->
-<footer class="w-full border-t border-stone-200/50 bg-surface mt-12 md:mt-20">
+<footer class="w-full  bg-surface mt-12 md:mt-20">
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-12 md:py-16 gap-8 max-w-[1440px] mx-auto">
-<div class="text-xl font-display text-orange-950 text-center md:text-left">
+<div class="text-xl font-display text-on-surface text-center md:text-left">
                 中大读书会 Light
             </div>
 <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
 </div>
-<div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-stone-500 text-center md:text-right mt-4 md:mt-0 w-full md:w-auto">
+<div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right mt-4 md:mt-0 w-full md:w-auto">
                 © 2025 中山大学深圳校友会读书会. All Rights Reserved.
             </div>
 </div>
@@ -230,14 +230,14 @@
     
     <!-- Modal Content -->
     <div class="relative z-10 bg-white rounded-2xl shadow-2xl w-[90%] max-w-sm p-8 transform scale-95 opacity-0 transition-all duration-300" id="wechat-modal-content">
-        <button id="close-modal-btn" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 transition-colors z-20">
+        <button id="close-modal-btn" class="absolute top-4 right-4 text-outline hover:text-on-surface transition-colors z-20">
             <span class="material-symbols-outlined">close</span>
         </button>
         
         <div class="text-center space-y-6">
             <div class="space-y-2">
-                <h3 class="font-display text-xl font-bold text-stone-900">期待在这里<br>听到你的声音</h3>
-                <p class="font-label text-xs uppercase tracking-widest text-stone-500">BECOME A SPEAKER</p>
+                <h3 class="font-display text-xl font-bold text-on-surface">期待在这里<br>听到你的声音</h3>
+                <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">BECOME A SPEAKER</p>
             </div>
             
             <!-- QR Code Area -->
@@ -245,7 +245,7 @@
                 <img src="assets/wechat-qr-yoti.jpg" onerror="this.onerror=null; this.src='assets/wechat-qr.jpg';" onerror="this.onerror=null; this.src='assets/wechat-qr.jpg';" alt="WeChat QR Code" class="w-full h-full object-contain">
             </div>
             
-            <p class="font-body text-sm text-stone-600">
+            <p class="font-body text-sm text-on-surface-variant">
                 扫码添加主理人微信<br>开启你的表达之旅
             </p>
         </div>

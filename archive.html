@@ -14,25 +14,22 @@
 
 <!-- TopAppBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 md:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20">
-<div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto flex-nowrap overflow-x-auto no-scrollbar">
-<div class="text-sm sm:text-lg md:text-2xl font-display font-bold whitespace-nowrap shrink-0 text-orange-900 z-50">
+<div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto">
+<a class="text-fluid-lg font-display font-bold tracking-wide text-primary z-50 shrink-0" href="index.html">
             中大读书会 Light
-        </div>
-        
-
-
-<div class="flex gap-3 sm:gap-6 md:gap-12 items-center justify-end shrink-0 ml-4">
-<a class="group flex flex-col items-center gap-1" href="index.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
 </a>
-<a class="group flex flex-col items-center gap-1" href="archive.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-primary relative">
+<div class="flex gap-4 sm:gap-8 items-center justify-end shrink-0 ml-4">
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="index.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
+</a>
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="archive.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-primary relative">
             ARCHIVE
-            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-primary"></span>
+<span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform origin-left"></span>
 </span>
 </a>
-<a class="group flex flex-col items-center gap-1" href="about.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="about.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
 </a>
 </div>
 
@@ -40,7 +37,7 @@
 
 </nav>
 
-<main class="pt-32 pb-32 px-6 md:px-12 max-w-[1440px] mx-auto">
+<main class="pt-32 pb-24 md:pb-32 px-6 md:px-12 max-w-[1440px] mx-auto">
     
 <!-- Page Header (Editorial Style) -->
 <div class="flex flex-col md:flex-row gap-12 lg:gap-24 items-start relative">
@@ -49,27 +46,27 @@
     <aside class="w-full md:w-64 shrink-0 md:sticky md:top-40 flex flex-col gap-16">
         <!-- Section Title -->
         <div>
-            <h1 class="font-display text-4xl lg:text-5xl font-bold text-orange-900 tracking-tight mb-2">Chronicles</h1>
-            <span class="font-label text-[10px] uppercase tracking-[0.4em] text-stone-500">SYSU READING CLUB</span>
+            <h1 class="font-display text-fluid-4xl lg:text-fluid-5xl font-bold text-primary tracking-tight mb-2">Chronicles</h1>
+            <span class="font-label text-[10px] uppercase tracking-[0.4em] text-on-surface-variant">SYSU READING CLUB</span>
         </div>
         
         <!-- Year Navigation -->
-        <nav class="flex flex-row md:flex-col gap-6 md:gap-8 font-display text-3xl lg:text-4xl italic text-stone-400">
+        <nav class="flex flex-row md:flex-col gap-6 md:gap-8 font-headline text-fluid-3xl italic text-outline">
             <!-- Active Year -->
-            <div class="relative text-stone-800">
+            <div class="relative text-on-surface">
                 <span class="absolute -left-6 top-1/2 -translate-y-1/2 w-1 h-8 bg-orange-600 hidden md:block"></span>
-                <a href="#y2025" class="hover:text-stone-800 transition-colors">2025</a>
+                <a href="#y2025" class="hover:text-on-surface transition-colors">2025</a>
             </div>
             <!-- Inactive Year (Future, hidden from main nav or deemphasized) -->
         </nav>
         
         <!-- Utility Link -->
-        <a href="#" class="inline-flex items-center gap-2 font-label text-[10px] uppercase tracking-widest text-stone-500 hover:text-stone-800 transition-colors group">
+        <a href="#" class="inline-flex items-center gap-2 font-label text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors group">
             按期数分类浏览 <span class="material-symbols-outlined text-[12px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
         </a>
         
         <!-- Footer Tagline -->
-        <div class="mt-auto pt-16 md:pt-32 flex flex-col gap-1 font-label text-[9px] uppercase tracking-[0.3em] text-stone-400">
+        <div class="mt-auto pt-16 md:pt-32 flex flex-col gap-1 font-label text-[9px] uppercase tracking-[0.3em] text-outline">
             <span>DOCUMENTING</span>
             <span>LIGHT & TRUTH</span>
             <span>SINCE 2025</span>
@@ -85,76 +82,76 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
         
         <!-- Vol 04 Card -->
-        <a href="episodes/vol4/index.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+        <a href="episodes/vol4/index.html" class="archive-card group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex flex-col justify-end cursor-pointer">
             <!-- Image Area -->
-            <div class="absolute inset-0">
-                 <img src="assets/vol4/大合照.jpg" alt="Vol 4" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+            <div class="card-image-wrapper absolute inset-0">
+                 <img src="assets/vol4/大合照.jpg" alt="Vol 4" class="card-image w-full h-full object-cover">
             </div>
             <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
             
             <!-- Content -->
             <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 04 · OCT 2025</span>
-                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【认知觉醒】<br>穿越周期的力量</h3>
-                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4 block">VOL. 04 · OCT 2025</span>
+                <h3 class="font-headline text-fluid-xl font-bold mb-4 text-on-surface group-hover:text-primary transition-colors leading-tight">【认知觉醒】<br>穿越周期的力量</h3>
+                <p class="font-body text-fluid-sm text-on-surface-variant leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
                     投资不是关于财富的简单博弈，而是对客观规律的尊重。
                 </p>
             </div>
         </a>
 
         <!-- Vol 03 Card (Slightly pushed down for masonry effect in 2-col) -->
-        <a href="episodes/vol3/index.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end md:mt-16 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+        <a href="episodes/vol3/index.html" class="archive-card group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex flex-col justify-end md:mt-16 cursor-pointer">
             <!-- Image Area -->
-            <div class="absolute inset-0">
-                 <img src="assets/vol3/第三期大合照.jpg" alt="Vol 3" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+            <div class="card-image-wrapper absolute inset-0">
+                 <img src="assets/vol3/第三期大合照.jpg" alt="Vol 3" class="card-image w-full h-full object-cover">
             </div>
             <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
             
             <!-- Content -->
             <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 03 · SEP 2025</span>
-                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【生命探索】<br>好的人生，不止一种脚本</h3>
-                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4 block">VOL. 03 · SEP 2025</span>
+                <h3 class="font-headline text-fluid-xl font-bold mb-4 text-on-surface group-hover:text-primary transition-colors leading-tight">【生命探索】<br>好的人生，不止一种脚本</h3>
+                <p class="font-body text-fluid-sm text-on-surface-variant leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
                     何为好的人生？真正的成功，是勇敢地书写属于自己的版本。
                 </p>
             </div>
         </a>
 
         <!-- Vol 02 Card -->
-        <a href="episodes/vol2/index.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+        <a href="episodes/vol2/index.html" class="archive-card group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex flex-col justify-end cursor-pointer">
             <!-- Image Area -->
-            <div class="absolute inset-0">
-                 <img src="assets/vol2/第二期大合照.jpg" alt="Vol 2" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+            <div class="card-image-wrapper absolute inset-0">
+                 <img src="assets/vol2/第二期大合照.jpg" alt="Vol 2" class="card-image w-full h-full object-cover">
             </div>
             <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
             
             <!-- Content -->
             <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 02 · AUG 2025</span>
-                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【创业实录】<br>在不确定性中锚定坐标</h3>
-                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4 block">VOL. 02 · AUG 2025</span>
+                <h3 class="font-headline text-fluid-xl font-bold mb-4 text-on-surface group-hover:text-primary transition-colors leading-tight">【创业实录】<br>在不确定性中锚定坐标</h3>
+                <p class="font-body text-fluid-sm text-on-surface-variant leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
                     没有标准答案，也没有固定航线，却总有勇敢者在试错中刻下属于自己的坐标。
                 </p>
             </div>
         </a>
 
         <!-- Vol 01 Card (Slightly pushed down for masonry effect in 2-col) -->
-<a href="episodes/vol1/index.html" class="group relative w-full aspect-[4/5] bg-stone-100 overflow-hidden flex flex-col justify-end md:mt-16 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+<a href="episodes/vol1/index.html" class="archive-card group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex flex-col justify-end md:mt-16 cursor-pointer">
     <!-- Image Area -->
     <div class="absolute inset-0">
-         <img src="assets/vol1/大合照.jpg" alt="Vol 1" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+         <img src="assets/vol1/大合照.jpg" alt="Vol 1" class="card-image w-full h-full object-cover">
     </div>
             <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent h-1/2 mt-auto transition-opacity duration-500"></div>
             
             <!-- Content -->
             <div class="relative z-10 p-6 lg:p-8 pb-10 text-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-orange-600 mb-4 block">VOL. 01 · JUL 2025</span>
-                <h3 class="font-headline text-2xl lg:text-3xl font-bold mb-4 text-stone-900 group-hover:text-orange-800 transition-colors leading-tight">【主理人手记】<br>你的故事，是你最好的简历</h3>
-                <p class="font-body text-sm text-stone-600 leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4 block">VOL. 01 · JUL 2025</span>
+                <h3 class="font-headline text-fluid-xl font-bold mb-4 text-on-surface group-hover:text-primary transition-colors leading-tight">【主理人手记】<br>你的故事，是你最好的简历</h3>
+                <p class="font-body text-fluid-sm text-on-surface-variant leading-relaxed font-light px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
                     关于普通人如何创造非凡变量的三个回答。别等了，就现在，来讲吧！
                 </p>
             </div>
@@ -165,7 +162,7 @@
         
         <!-- Future Expectation / Small Teaser -->
         <div class="mt-24 pt-12 border-t border-outline-variant/10 text-center">
-            <p class="font-display italic text-stone-400 text-lg md:text-xl">
+            <p class="font-headline italic text-outline text-fluid-lg">
                 2026... More moments to come.
             </p>
         </div>
@@ -175,18 +172,18 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full border-t border-stone-200/50 bg-surface">
+<footer class="w-full bg-surface-container-low">
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-12 md:py-16 gap-8 max-w-[1440px] mx-auto">
-<div class="text-xl font-display text-orange-950 text-center md:text-left">
+<div class="text-xl font-display text-on-surface text-center md:text-left">
             中大读书会 Light
         </div>
 <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
 </div>
-<div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-stone-500 text-center md:text-right mt-4 md:mt-0 w-full md:w-auto">
+<div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right mt-4 md:mt-0 w-full md:w-auto">
             © 2025 中山大学深圳校友会读书会. All Rights Reserved.
         </div>
 </div>

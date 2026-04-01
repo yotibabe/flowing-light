@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="zh-CN"><head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -43,27 +43,27 @@
     <div id="cursor-glow" class="fixed top-0 left-0 w-24 h-24 bg-primary-container/15 rounded-full blur-[30px] pointer-events-none z-0 mix-blend-multiply transition-opacity duration-500 hidden md:block"></div>
 
 <!-- TopNavBar (Preserved from Source) -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 md:bg-transparent backdrop-blur-xl border-b border-stone-200/50 md:border-none">
-<div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto flex-nowrap overflow-x-auto no-scrollbar">
-<div class="text-sm sm:text-lg md:text-2xl font-display font-bold whitespace-nowrap shrink-0 text-orange-900 z-50">
+<nav class="fixed top-0 w-full z-50 bg-white/45 md:bg-transparent backdrop-blur-[40px] md:border-none">
+<div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto">
+<div class="text-fluid-lg font-display font-bold tracking-wide shrink-0 text-primary z-50">
                 中大读书会 Light
             </div>
             
 
 
 <!-- Desktop Navigation -->
-<div class="flex gap-3 sm:gap-6 md:gap-12 items-center justify-end shrink-0 ml-4">
-<a class="group flex flex-col items-center gap-1" href="index.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-primary relative">
+<div class="flex gap-4 sm:gap-8 items-center justify-end shrink-0 ml-4">
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="index.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-primary relative">
             HOME
-            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-primary"></span>
+            <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform origin-left"></span>
 </span>
 </a>
-<a class="group flex flex-col items-center gap-1" href="archive.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="archive.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
 </a>
-<a class="group flex flex-col items-center gap-1" href="about.html">
-<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
+<a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="about.html">
+<span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
 </a>
 </div>
 
@@ -76,36 +76,39 @@
 <div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
 <div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40 animate-float-slow"></div>
 <div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20 animate-float-delayed"></div>
-<div class="hero-panel relative z-10 w-[92%] max-w-[1100px] bg-white/40 backdrop-blur-[60px] p-8 md:p-12 lg:p-24 shadow-2xl shadow-on-surface/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 hover:shadow-primary/10 transition-shadow duration-700">
-<div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+<div class="hero-panel relative z-10 w-full md:w-[92%] max-w-[1100px] md:bg-white/45 md:backdrop-blur-[40px] px-6 py-12 md:p-12 lg:p-24 md:shadow-2xl md:shadow-on-surface/5 md:border md:border-white/40 flex flex-col md:flex-row items-center gap-fluid-lg md:gap-16 lg:gap-24 hover:shadow-primary/10 transition-shadow duration-700">
+<div class="flex-1 space-y-fluid-md w-full text-center md:text-left">
 <div class="space-y-4">
 <!-- Empty container to replace the Trust Badge -->
-<span class="hero-text font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
-<h1 class="hero-text font-display text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-on-surface leading-[0.85] tracking-tighter">
+<span class="hero-text font-label text-fluid-sm uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
+<h1 class="hero-text font-display text-fluid-6xl font-black text-on-surface leading-[0.85] tracking-tighter">
                             Flowing <br/>
 <span class="italic font-normal text-primary">Light</span>
 </h1>
 </div>
 <div class="max-w-lg mx-auto md:mx-0">
-<h2 class="hero-text font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface leading-snug">
-                            中大读书会 Light
+<h2 class="hero-text font-headline text-fluid-3xl font-bold text-on-surface leading-snug">
+                            中大深圳校友会<br/>读书会分享栏目
                         </h2>
-<p class="hero-text font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-on-surface-variant leading-relaxed">
+<p class="hero-text font-body text-fluid-lg mt-fluid-md text-on-surface-variant leading-relaxed">
                             点亮每一个平凡而独特的 <span class="text-primary-container font-black">生命故事</span>
 </p>
 
 <!-- Position Tags Moved Inside the Glass Panel -->
 <!-- 删除了"深度"四个字 -->
-<div class="hero-text w-full flex justify-center mt-12 border-t border-outline-variant/20 pt-8">
-    <div class="flex flex-nowrap items-center justify-center gap-x-2 md:gap-x-4 text-outline/60 font-label text-[9px] md:text-[11px] uppercase tracking-[0.1em] md:tracking-[0.2em] whitespace-nowrap opacity-80 ml-2 md:ml-4">
-        <span>LIGHTNESS</span>
-        <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
-        <span>CONNECTION <span class="font-body tracking-widest opacity-80">链接</span></span>
-        <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
-        <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80">真实叙述</span></span>
-        <span class="w-1 h-1 rounded-full bg-outline/40 mx-1"></span>
-        <span>COMMUNITY <span class="font-body tracking-widest opacity-80">湾区精英</span></span>
-    </div>
+<div class="hero-text w-full flex justify-center md:justify-start mt-fluid-xl border-t border-outline-variant/20 pt-fluid-lg">
+    <a href="archive.html" class="inline-flex items-center justify-center min-h-[44px] gap-3 text-primary font-medium group">
+        <span class="font-headline italic text-fluid-xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Enter Archive</span> 
+        <span class="material-symbols-outlined text-fluid-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+    </a>
+</div>
+
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-8 text-outline/60 font-label text-[10px] md:text-[11px] uppercase tracking-[0.1em] md:tracking-[0.2em] opacity-80">
+    <span>CONNECTION <span class="font-body tracking-widest opacity-80">链接</span></span>
+    <span class="hidden sm:inline">•</span>
+    <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80">真实叙述</span></span>
+    <span class="hidden sm:inline">•</span>
+    <span>COMMUNITY <span class="font-body tracking-widest opacity-80">湾区精英</span></span>
 </div>
 
 </div>
@@ -116,40 +119,46 @@
 <div class="h-16 w-px bg-primary/30"></div>
 </div>
 </div>
+
+<!-- Down Arrow Indicator -->
+<div class="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Discover</span>
+<span class="material-symbols-outlined text-outline">arrow_downward</span>
+</div>
 </section>
 <!-- REDESIGNED Philosophy Section: Two-Column Editorial Layout -->
-<section id="philosophy-section" class="py-24 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#fdfbfb] via-[#fdfbfb] to-[#faf8f7]">
-    <div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+<section id="philosophy-section" class="py-fluid-2xl px-6 md:px-12 bg-surface-container-low">
+    <div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-fluid-xl items-start">
         
         <!-- Left Column: Title & Link -->
         <div class="w-full lg:w-1/3 shrink-0 lg:sticky lg:top-40 philosophy-left opacity-0 translate-y-10">
-            <div class="inline-block px-4 py-1 bg-primary-container/10 rounded-full text-primary font-label text-[10px] tracking-[0.3em] uppercase mb-6 md:mb-8">
+            <div class="inline-block px-4 py-1 bg-surface-container-high rounded-full text-on-surface-variant font-label text-[10px] tracking-[0.3em] uppercase mb-fluid-md">
                 THE PHILOSOPHY
             </div>
             
-            <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8 md:mb-12 font-bold text-on-surface tracking-tight">
+            <h2 class="font-headline text-fluid-4xl leading-[1.1] mb-fluid-lg font-bold text-on-surface tracking-tight">
                 什么是 Light？
             </h2>
             
             <!-- Moments of Light Link moved here -->
-            <a href="archive.html" class="inline-flex items-center gap-3 text-primary font-medium group mb-8 lg:mb-0">
-                <span class="font-display italic text-xl md:text-2xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Moments of Light</span> 
-                <span class="material-symbols-outlined text-base md:text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <a href="archive.html" class="inline-flex items-center min-h-[44px] gap-3 text-primary font-medium group mb-fluid-lg lg:mb-0">
+                <span class="font-headline italic text-fluid-xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Moments of Light</span> 
+                <span class="material-symbols-outlined text-fluid-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
         </div>
 
         <!-- Right Column: Philosophy Content -->
         <div class="w-full lg:w-2/3 lg:pt-16">
             <!-- Intro Highlight -->
-            <div class="philosophy-right opacity-0 translate-y-10 font-headline text-xl sm:text-2xl md:text-3xl leading-relaxed text-on-surface font-light mb-12 md:mb-16 space-y-4">
-                <p>它取 <span class="font-display italic text-3xl sm:text-4xl md:text-5xl text-primary font-normal mx-1">"轻"</span> 与 <span class="font-display italic text-3xl sm:text-4xl md:text-5xl text-primary font-normal mx-1">"光"</span> 的双重含义。</p>
+            <div class="philosophy-right opacity-0 translate-y-10 font-headline text-fluid-2xl leading-relaxed text-on-surface font-light mb-fluid-xl space-y-4">
+                <p>它取 <span class="font-headline italic text-fluid-3xl text-primary font-normal mx-1">"轻"</span> 与 <span class="font-headline italic text-fluid-3xl text-primary font-normal mx-1">"光"</span> 的双重含义。</p>
                 <p>是轻盈的相聚，是不设防的敞开；是照见彼此，<span class="font-medium text-primary-container">微光照亮微光</span>。</p>
             </div>
 
             <!-- Detailed Explanation -->
-            <div class="philosophy-right opacity-0 translate-y-10 space-y-6 md:space-y-8 border-l-2 border-outline-variant/30 pl-6 md:pl-8 lg:pl-12">
-                <p class="text-base sm:text-lg md:text-xl leading-loose text-on-surface-variant font-light">
-                    <span class="text-primary font-medium text-2xl mr-1">2025</span>年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
+            <div class="philosophy-right opacity-0 translate-y-10 space-y-fluid-md border-l-2 border-outline-variant/30 pl-fluid-md">
+                <p class="font-body text-fluid-lg leading-relaxed text-on-surface-variant font-light">
+                    <span class="text-primary font-medium text-fluid-xl mr-1">2025</span>年7月，「中大读书会 Light」正式点亮。作为中大深圳校友会读书会旗下的分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
                 </p>
             </div>
         </div>
@@ -158,23 +167,23 @@
 </section>
 
 <!-- Independent Golden Quote Section - Option 5: 柔和渐变天际 (Soft Horizon) -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#faf8f7] via-[#fdfbfb] to-[#fdfbfb]">
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-surface">
     <!-- Parallax Element (Removed Image, keeping the subtle movement container for consistency if needed) -->
     <div class="absolute inset-0 z-0 h-[130%] -top-[15%] quote-parallax-bg"></div>
     
     <!-- Quote Content -->
     <div class="relative z-10 max-w-4xl mx-auto px-6 text-center quote-reveal flex flex-col items-center justify-center">
         <!-- 顶部细线引导 -->
-        <div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-primary/40 mb-12"></div>
+        <div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-primary/40 mb-fluid-lg"></div>
         
         <!-- 取消强制换行，使用自然宽度的层次排版，解决串行问题 -->
-        <div class="space-y-6 md:space-y-10">
+        <div class="space-y-fluid-md">
             <!-- 铺垫句 -->
-            <p class="font-headline text-xl sm:text-2xl md:text-3xl text-on-surface-variant/80 font-light tracking-widest">
+            <p class="font-headline text-fluid-2xl text-on-surface-variant/80 font-light tracking-widest">
                 愿散场之后，
             </p>
             <!-- Highlight 高光句 -->
-            <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-on-surface leading-[1.8] md:leading-[1.8] font-light tracking-wide max-w-3xl mx-auto">
+            <h2 class="font-headline text-fluid-4xl text-on-surface leading-relaxed font-light tracking-wide max-w-3xl mx-auto">
                 你能从别人的故事里，<br/>找到<span class="text-primary font-medium border-b border-primary/30 pb-1 px-1">自己的答案</span>。
             </h2>
         </div>
@@ -186,18 +195,18 @@
 
 </main>
 <!-- Footer (Preserved from Source) -->
-<footer class="w-full border-t border-stone-200/50 bg-surface">
+<footer class="w-full bg-surface-container-low">
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-12 md:py-16 gap-8 max-w-[1440px] mx-auto">
-<div class="text-xl font-display text-orange-950 text-center md:text-left">
+<div class="text-xl font-display text-on-surface text-center md:text-left">
                 中大读书会 Light
             </div>
 <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
-<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-stone-500 hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
+<a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
 </div>
-<div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-stone-500 text-center md:text-right mt-4 md:mt-0 w-full md:w-auto">
+<div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right mt-4 md:mt-0 w-full md:w-auto">
                 © 2025 中山大学深圳校友会读书会. All Rights Reserved.
             </div>
 </div>

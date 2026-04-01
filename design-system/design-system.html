@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Design System v2.0 - Flowing Light</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-body text-on-surface bg-background antialiased selection:bg-primary-fixed">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 py-4 px-6 md:px-12">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between">
+            <div class="font-display text-fluid-lg font-bold text-primary">Flowing Light Design System v2.0</div>
+            <div class="font-label text-[10px] uppercase tracking-widest text-outline">Component Library Sandbox</div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-24 space-y-32">
+        
+        <!-- Section: Design Principles -->
+        <section class="bg-surface-container-low p-8 md:p-12 rounded-lg border border-outline-variant/30">
+            <h2 class="font-headline text-fluid-2xl font-bold mb-6">The "Luminescent Parchment" Concept</h2>
+            <div class="font-body text-fluid-base text-on-surface-variant space-y-4 max-w-3xl leading-relaxed">
+                <p>This design system treats the screen as a gallery space rather than a software interface. It prioritizes the "weight" of intellectual content through high-end editorial layouts.</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>No-Line Rule:</strong> Avoid 1px solid borders for structural sectioning. Use background shifts (surface to surface_container) or generous whitespace.</li>
+                    <li><strong>Ghost Border Fallback:</strong> If a separator is required, use `outline-variant` at 30% opacity.</li>
+                    <li><strong>Ambient Shadows:</strong> Hierarchy is established through Tonal Layering and diffused light (`shadow-2xl` with `on-surface/5` opacity) rather than harsh physical shadows.</li>
+                    <li><strong>Ethereal Gradients:</strong> Soft, multi-stop radial gradients to create depth in hero backgrounds.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section: Typography -->
+        <section>
+            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">1. Typography (流体排版)</h2>
+            <div class="space-y-12">
+                <div>
+                    <span class="text-xs font-label text-outline mb-2 block">Display (Playfair Display) - 英雄区大标题</span>
+                    <h1 class="font-display text-fluid-5xl font-black tracking-tighter leading-tight">Moments of <span class="italic text-primary font-normal">Light</span></h1>
+                </div>
+                <div>
+                    <span class="text-xs font-label text-outline mb-2 block">Headline (Noto Serif SC) - 章节标题 / 详情页主标题</span>
+                    <h2 class="font-headline text-fluid-3xl font-bold leading-snug">穿越周期的力量：在不确定性中锚定坐标</h2>
+                </div>
+                <div>
+                    <span class="text-xs font-label text-outline mb-2 block">Body (Work Sans) - 正文阅读</span>
+                    <p class="font-body text-fluid-lg text-on-surface-variant font-light leading-relaxed max-w-2xl">
+                        作为中大深圳校友会读书会旗下的分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
+                    </p>
+                </div>
+                <div>
+                    <span class="text-xs font-label text-outline mb-2 block">Label (Work Sans / Uppercase) - 装饰性标签 / 元数据</span>
+                    <span class="font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold">Est. 2023 • SYSU Reading Club</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Colors -->
+        <section>
+            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">2. Color Palette (色彩体系)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Primary -->
+                <div class="space-y-2">
+                    <div class="h-24 rounded-lg bg-primary flex items-end p-4 text-white font-label text-xs">bg-primary</div>
+                    <div class="h-16 rounded-lg bg-primary-container flex items-end p-4 text-on-primary-container font-label text-xs">bg-primary-container</div>
+                    <div class="h-16 rounded-lg bg-primary-fixed flex items-end p-4 text-on-primary-fixed font-label text-xs">bg-primary-fixed</div>
+                </div>
+                <!-- Surface -->
+                <div class="space-y-2">
+                    <div class="h-24 rounded-lg bg-surface border border-outline-variant/20 flex items-end p-4 text-on-surface font-label text-xs">bg-surface</div>
+                    <div class="h-16 rounded-lg bg-surface-container-low flex items-end p-4 text-on-surface-variant font-label text-xs">bg-surface-container-low</div>
+                    <div class="h-16 rounded-lg bg-surface-container-highest flex items-end p-4 text-on-surface font-label text-xs">bg-surface-container-highest</div>
+                </div>
+                <!-- Outline & Text -->
+                <div class="space-y-2">
+                    <div class="h-24 rounded-lg bg-outline flex items-end p-4 text-white font-label text-xs">bg-outline</div>
+                    <div class="h-16 rounded-lg bg-outline-variant flex items-end p-4 text-on-surface font-label text-xs">bg-outline-variant</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Components -->
+        <section>
+            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">3. UI Components (核心组件)</h2>
+            
+            <div class="space-y-16">
+                <!-- Buttons -->
+                <div>
+                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Buttons & Links</h3>
+                    <div class="flex flex-wrap gap-8 items-center">
+                        <button class="px-10 py-5 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-sm font-label text-xs tracking-widest uppercase">
+                            Primary Button
+                        </button>
+                        <a href="#" class="px-10 py-5 bg-surface border border-outline-variant/50 hover:border-primary text-on-surface hover:text-primary transition-all duration-300 rounded-sm font-label text-xs tracking-widest uppercase">
+                            Secondary Outline
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-3 text-primary font-medium group">
+                            <span class="font-headline italic text-fluid-xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Text Link With Arrow</span> 
+                            <span class="material-symbols-outlined text-fluid-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div>
+                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Editorial Cards (Archive Style)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <a href="#" class="group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex flex-col justify-end cursor-pointer shadow-lg shadow-on-surface/5">
+                            <!-- Placeholder Image -->
+                            <div class="absolute inset-0 bg-surface-container-high w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-20 p-6 md:p-8 transform group-hover:-translate-y-2 transition-transform duration-500">
+                                <span class="font-label text-[10px] text-primary-fixed uppercase tracking-widest mb-3 block">Vol 4. 2026</span>
+                                <h3 class="font-headline text-fluid-xl font-bold text-white leading-tight mb-2">穿越周期的力量</h3>
+                                <p class="font-body text-sm text-white/70 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto">
+                                    嘉宾：王建强 / 张辉权
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blockquote -->
+                <div>
+                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Editorial Blockquote</h3>
+                    <blockquote class="my-8 pl-6 md:pl-12 border-l-2 border-primary/30 relative">
+                        <span class="absolute -top-4 -left-2 text-6xl text-primary/10 font-display italic">"</span>
+                        <p class="font-headline text-fluid-lg text-primary leading-relaxed italic">
+                            不要去追寻确定性，去拥抱不确定性，在不确定性中建立自己的坐标系。
+                        </p>
+                    </blockquote>
+                </div>
+
+        <!-- Section: Complex Layout Patterns -->
+        <section>
+            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">4. Layout Patterns (布局模式)</h2>
+            
+            <div class="space-y-24">
+                
+                <!-- Pattern 1: Navigation -->
+                <div class="space-y-6">
+                    <h3 class="font-headline text-fluid-xl font-bold">1. Standard Navigation (标准导航)</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">Touch-friendly links with `min-h-[44px] min-w-[44px]`. Hover states use a 1px expanding border from the left origin. No forcing `whitespace-nowrap` on mobile.</p>
+                    <div class="bg-surface border border-outline-variant/30 rounded-lg p-8 relative overflow-hidden">
+                        <div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto bg-surface-container-low/50">
+                            <a class="text-fluid-lg font-display tracking-wide text-on-surface shrink-0" href="#">Flowing Light</a>
+                            <div class="flex gap-4 sm:gap-8 items-center justify-end shrink-0 ml-4">
+                                <a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="#">
+                                    <span class="font-label text-fluid-sm uppercase tracking-widest text-primary relative">
+                                        HOME
+                                        <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform origin-left"></span>
+                                    </span>
+                                </a>
+                                <a class="group flex flex-col items-center gap-1 p-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="#">
+                                    <span class="font-label text-fluid-sm uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pattern 2: Hero Panel -->
+                <div class="space-y-6">
+                    <h3 class="font-headline text-fluid-xl font-bold">2. Hero Glass Panel (首屏玻璃卡片)</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">On desktop: `bg-white/45` with `backdrop-blur-[40px]` and `shadow-2xl`. On mobile: these heavy effects are removed to provide breathing room. Uses fluid gap spacing.</p>
+                    <div class="relative min-h-[400px] flex items-center justify-center overflow-hidden ethereal-gradient-bg rounded-xl border border-outline-variant/20 p-4">
+                        <div class="hero-panel relative z-10 w-full md:w-[92%] max-w-[1100px] md:bg-white/45 md:backdrop-blur-[40px] px-6 py-12 md:p-12 lg:p-24 md:shadow-2xl md:shadow-on-surface/5 md:border md:border-white/40 flex flex-col md:flex-row items-center gap-fluid-lg md:gap-16 lg:gap-24">
+                            <div class="flex-1 space-y-fluid-md w-full text-center md:text-left">
+                                <span class="font-label text-fluid-sm uppercase tracking-[0.4em] text-primary font-bold block">Tagline</span>
+                                <h1 class="font-display text-fluid-5xl font-black text-on-surface leading-[0.85] tracking-tighter">
+                                    Hero<br><span class="italic font-normal text-primary">Title</span>
+                                </h1>
+                            </div>
+                            <div class="hero-image relative w-full md:w-5/12 h-[200px] md:h-[300px] rounded-2xl overflow-hidden group shadow-2xl shadow-primary/20 bg-surface-container-highest">
+                                <!-- Image Placeholder -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pattern 3: Article Content -->
+                <div class="space-y-6">
+                    <h3 class="font-headline text-fluid-xl font-bold">3. Editorial Article Flow (正文阅读流)</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">Uses `max-w-[800px] w-full` container. Sub-headings use Noto Serif. Paragraphs use Work Sans with `leading-relaxed` and `gap-fluid-md` between paragraphs.</p>
+                    <div class="bg-surface border border-outline-variant/30 rounded-lg p-8 md:p-16">
+                        <article class="max-w-[800px] w-full mx-auto space-y-fluid-md">
+                            <h2 class="font-headline text-fluid-3xl font-bold text-on-surface mb-fluid-md mt-fluid-xl">1. 内容的骨架：建立坐标系</h2>
+                            <p class="font-body text-fluid-lg leading-relaxed text-on-surface-variant font-light">在动荡的环境中，个体的叙事往往比宏大的理论更具有穿透力。我们的每一场分享，都是在试图还原那些真实的挣扎与突破。</p>
+                            <blockquote class="my-fluid-2xl pl-6 md:pl-12 border-l-2 border-primary/30 relative">
+                                <p class="font-headline text-fluid-lg text-primary leading-relaxed italic">"保持轻盈，但在核心价值上扎根极深。"</p>
+                            </blockquote>
+                            <p class="font-body text-fluid-lg leading-relaxed text-on-surface-variant font-light">这是我们在设计这个系统时，始终贯彻的原则。不追求表面的繁复，而是让光影与留白去说话。</p>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

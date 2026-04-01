@@ -57,6 +57,24 @@ tailwind.config = {
                 "body": ["Work Sans", "sans-serif"],
                 "label": ["Work Sans", "sans-serif"]
             },
+            fontSize: {
+                "fluid-sm": "clamp(0.875rem, 0.8rem + 0.38vw, 1.125rem)",
+                "fluid-base": "clamp(1rem, 0.925rem + 0.38vw, 1.25rem)",
+                "fluid-lg": "clamp(1.125rem, 1rem + 0.63vw, 1.5rem)",
+                "fluid-xl": "clamp(1.25rem, 1.05rem + 1vw, 2rem)",
+                "fluid-2xl": "clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem)",
+                "fluid-3xl": "clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem)",
+                "fluid-4xl": "clamp(2rem, 1.25rem + 3.75vw, 4.5rem)",
+                "fluid-5xl": "clamp(2.5rem, 1.5rem + 5vw, 6rem)",
+                "fluid-6xl": "clamp(3rem, 1.5rem + 7.5vw, 8rem)",
+            },
+            spacing: {
+                "fluid-sm": "clamp(0.5rem, 0.3rem + 1vw, 1rem)",
+                "fluid-md": "clamp(1rem, 0.6rem + 2vw, 2rem)",
+                "fluid-lg": "clamp(1.5rem, 0.5rem + 5vw, 4rem)",
+                "fluid-xl": "clamp(2rem, 0.5rem + 7.5vw, 6rem)",
+                "fluid-2xl": "clamp(3rem, 1rem + 10vw, 8rem)",
+            },
             borderRadius: {
                 "DEFAULT": "0.125rem",
                 "sm": "0.125rem",
