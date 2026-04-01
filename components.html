@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Light 专栏可视化组件库 (Components)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    .component-box {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+        background: #fff;
+        overflow: hidden;
+    }
+    .component-preview {
+        padding: 2rem;
+        background: #FDFDFD;
+    }
+    .component-code {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 1rem 1.5rem;
+        font-family: monospace;
+        font-size: 0.875rem;
+        overflow-x: auto;
+        white-space: pre-wrap;
+    }
+    .copy-btn {
+        background: #ff7b54;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        cursor: pointer;
+        float: right;
+        margin-top: -0.5rem;
+    }
+</style>
+</head>
+<body class="font-body bg-surface text-on-surface p-8">
+
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-2">Light 专栏可视化组件库</h1>
+    <p class="text-gray-500 mb-8">在这里预览所有文章可用的排版样式，点击“复制代码”即可直接粘贴到您的文章模板中。</p>
+
+    <!-- Component 1 -->
+    <div class="component-box">
+        <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 font-bold flex justify-between items-center">
+            <span>1. 首字下沉段落（通常用于文章开头第一段）</span>
+            <button class="copy-btn" onclick="copyCode('code1')">复制代码</button>
+        </div>
+        <div class="component-preview">
+            <p class="font-body text-lg md:text-xl leading-loose text-on-surface drop-cap">
+                距离第一期“light表达计划”落幕已有数日，但那个周六下午的暖意似乎还萦绕在心头。
+            </p>
+        </div>
+        <div class="component-code" id="code1">
+<p class="font-body text-lg md:text-xl leading-loose text-on-surface drop-cap">
+    距离第一期“light表达计划”落幕已有数日，但那个周六下午的暖意似乎还萦绕在心头。
+</p>
+        </div>
+    </div>
+
+    <!-- Component 2 -->
+    <div class="component-box">
+        <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 font-bold flex justify-between items-center">
+            <span>2. 句子高亮划线（在普通段落中突出重点）</span>
+            <button class="copy-btn" onclick="copyCode('code2')">复制代码</button>
+        </div>
+        <div class="component-preview">
+            <p class="font-body text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                在这个充满不确定性的时代，我们深信，<span class="highlight-text">最能给人力量的不是遥远的趋势，而是身边人一个个真实发生的故事。</span>
+            </p>
+        </div>
+        <div class="component-code" id="code2">
+<p class="font-body text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+    在这个充满不确定性的时代，我们深信，<span class="highlight-text">最能给人力量的不是遥远的趋势，而是身边人一个个真实发生的故事。</span>
+</p>
+        </div>
+    </div>
+
+    <!-- Component 3 -->
+    <div class="component-box">
+        <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 font-bold flex justify-between items-center">
+            <span>3. 大字报金句引用块（带左侧竖线，适合整句名言）</span>
+            <button class="copy-btn" onclick="copyCode('code3')">复制代码</button>
+        </div>
+        <div class="component-preview">
+            <blockquote class="pl-4 md:pl-6 border-l-4 border-primary/50 my-8 md:my-10 py-2">
+                <p class="font-headline italic text-xl md:text-2xl text-on-surface leading-relaxed">
+                    他不再递出那张印着“前总经理”的名片，而是直接“甩链接”，他说：“看，这就是我的想法，我的作品。”
+                </p>
+            </blockquote>
+        </div>
+        <div class="component-code" id="code3">
+<blockquote class="pl-4 md:pl-6 border-l-4 border-primary/50 my-8 md:my-10 py-2">
+    <p class="font-headline italic text-xl md:text-2xl text-on-surface leading-relaxed">
+        这里输入您想引用的金句内容。
+    </p>
+</blockquote>
+        </div>
+    </div>
+
+    <!-- Component 4 -->
+    <div class="component-box">
+        <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 font-bold flex justify-between items-center">
+            <span>4. 居中大字报（带双引号背景，适合文章结尾总结）</span>
+            <button class="copy-btn" onclick="copyCode('code4')">复制代码</button>
+        </div>
+        <div class="component-preview">
+            <div class="py-8 md:py-12 my-8 md:my-12 relative bg-surface-container-lowest/50 border-y border-outline-variant/20 flex justify-center">
+                <div class="px-6 md:px-8 text-center relative max-w-4xl mx-auto">
+                    <span class="material-symbols-outlined text-primary/10 absolute -top-8 md:-top-10 left-1/2 -translate-x-1/2 text-[4rem] md:text-[6rem] -z-10">format_quote</span>
+                    <blockquote class="font-display text-xl sm:text-2xl md:text-3xl italic text-primary leading-snug tracking-tight">
+                        别再等待，去创造属于你自己的“作品”。<br>它不需要完美的蓝图，只需要真诚的表达。
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="component-code" id="code4">
+<div class="py-8 md:py-12 my-8 md:my-12 relative bg-surface-container-lowest/50 border-y border-outline-variant/20 flex justify-center -mx-6 md:mx-0 w-[100vw] md:w-auto left-1/2 md:left-auto right-1/2 md:right-auto -ml-[50vw] md:ml-0 -mr-[50vw] md:mr-0">
+    <div class="px-6 md:px-8 text-center relative max-w-4xl mx-auto">
+        <span class="material-symbols-outlined text-primary/10 absolute -top-8 md:-top-10 left-1/2 -translate-x-1/2 text-[4rem] md:text-[6rem] -z-10">format_quote</span>
+        <blockquote class="font-display text-xl sm:text-2xl md:text-3xl italic text-primary leading-snug tracking-tight">
+            别再等待，去创造属于你自己的“作品”。<br>它不需要完美的蓝图，只需要真诚的表达。
+        </blockquote>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <!-- Component 5 -->
+    <div class="component-box">
+        <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 font-bold flex justify-between items-center">
+            <span>5. 带图卡片（适合插图和图注）</span>
+            <button class="copy-btn" onclick="copyCode('code5')">复制代码</button>
+        </div>
+        <div class="component-preview">
+            <figure class="my-8 md:my-16">
+                <div class="w-full bg-surface-container-low md:rounded-lg overflow-hidden shadow-sm aspect-video">
+                    <img src="assets/vol1/刘哲.jpg" alt="Description" class="w-full h-full object-cover transition-duration-1000">
+                </div>
+                <figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mt-4 text-center">这里写图片的描述或名字</figcaption>
+            </figure>
+        </div>
+        <div class="component-code" id="code5">
+<figure class="my-8 md:my-16 -mx-6 md:mx-0">
+    <div class="w-full bg-surface-container-low md:rounded-lg overflow-hidden shadow-sm aspect-video">
+        <img src="images/您的图片名字.jpg" alt="图片描述" class="w-full h-full object-cover transition-duration-1000">
+    </div>
+    <!-- 可选：如果您不需要图片底部的描述，可以删掉下面这行 figcaption -->
+    <figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mt-4 text-center px-6 md:px-0">这里写图片的描述或名字</figcaption>
+</figure>
+        </div>
+    </div>
+
+    <!-- Component 6 -->
+    <div class="component-box">
+        <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 font-bold flex justify-between items-center">
+            <span>6. 小节标题块（带编号和名字的标题）</span>
+            <button class="copy-btn" onclick="copyCode('code6')">复制代码</button>
+        </div>
+        <div class="component-preview">
+            <div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-2 md:mb-4">
+                <span class="font-label text-[10px] uppercase tracking-widest text-primary">Story 01</span>
+                <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+                <span class="font-headline text-sm font-bold">刘哲</span>
+            </div>
+            <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl leading-tight font-bold">你的作品，是你的第二份简历</h2>
+        </div>
+        <div class="component-code" id="code6">
+<!-- 新的小节开始时，通常会带有顶部边距和边框：pt-8 md:pt-12 mt-8 md:mt-12 border-t border-outline-variant/30 -->
+<div class="space-y-8 max-w-3xl pt-8 md:pt-12 mt-8 md:mt-12 border-t border-outline-variant/30">
+    <div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-2 md:mb-4">
+        <span class="font-label text-[10px] uppercase tracking-widest text-primary">Story 01</span>
+        <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+        <span class="font-headline text-sm font-bold">人物名字</span>
+    </div>
+    <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl leading-tight font-bold">这里是本小节的标题</h2>
+    
+    <p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+        这里是本小节的正文段落...
+    </p>
+</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyCode(id) {
+        const text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            alert('代码已复制！现在您可以去粘贴到模板里了。');
+        });
+    }
+</script>
+</body>
+</html>

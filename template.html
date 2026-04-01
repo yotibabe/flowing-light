@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>【期数标题】 | 中大读书会 Light</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- ⚠️ 注意：引入上两层目录的配置文件和样式表 -->
+<script src="../../js/tailwind-config.js"></script>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="font-body selection:bg-primary-fixed bg-surface text-on-surface">
+
+<!-- ========================================== -->
+<!-- ⚠️ 警告：请勿修改下方的导航栏代码 ⚠️ -->
+<!-- ========================================== -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 md:bg-transparent backdrop-blur-xl border-b border-stone-200/50 md:border-none">
+    <div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto flex-nowrap overflow-x-auto no-scrollbar">
+        <div class="text-sm sm:text-lg md:text-2xl font-display font-bold whitespace-nowrap shrink-0 text-orange-900 z-50">
+            中大读书会 Light
+        </div>
+        <div class="flex gap-3 sm:gap-6 md:gap-12 items-center justify-end shrink-0 ml-4">
+            <a class="group flex flex-col items-center gap-1" href="../../index.html">
+                <span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
+            </a>
+            <a class="group flex flex-col items-center gap-1" href="../../archive.html">
+                <span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-primary relative">
+                    ARCHIVE
+                    <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-primary"></span>
+                </span>
+            </a>
+            <a class="group flex flex-col items-center gap-1" href="../../about.html">
+                <span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- ========================================== -->
+<!-- 👆 导航栏代码结束 👆 -->
+<!-- ========================================== -->
+
+<main>
+
+<!-- 👇 请在这里填写本期的头图和标题信息 👇 -->
+<section class="relative w-full h-[70vh] md:h-[85vh] min-h-[500px] md:min-h-[600px] flex items-end overflow-hidden ethereal-gradient-bg">
+    <div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
+    <div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40 pointer-events-none"></div>
+    <div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-full h-48 md:h-64 bg-gradient-to-t from-surface to-transparent z-10 pointer-events-none"></div>
+    
+    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 pb-16 md:pb-24 lg:pb-32">
+        <div class="max-w-4xl">
+            <div class="flex items-center gap-4 mb-6 md:mb-8">
+                <span class="w-8 md:w-12 h-px bg-primary"></span>
+                <!-- 替换期数和主题 -->
+                <span class="font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold">Vol. XX | 这里填写主题</span>
+            </div>
+            <!-- 替换大标题，可以使用 <br/> 换行 -->
+            <h1 class="font-headline text-4xl sm:text-5xl md:text-7xl font-black text-on-surface leading-[1.15] tracking-tight mb-6 md:mb-8 text-balance break-keep">
+                这里填写主标题第一行：<br/>这里填写&nbsp;<span class="font-display italic font-normal text-primary whitespace-nowrap">高亮文字</span>
+            </h1>
+            <!-- 替换副标题 -->
+            <p class="font-headline text-xl sm:text-2xl md:text-3xl font-light text-on-surface-variant max-w-2xl leading-relaxed text-balance break-keep">
+                这里填写副标题/导语内容。
+            </p>
+        </div>
+    </div>
+    
+    <div class="absolute top-1/2 right-12 hidden lg:flex flex-col items-center">
+        <div class="h-32 w-px bg-primary/30"></div>
+        <span class="writing-vertical py-8 font-label text-[10px] uppercase tracking-[0.5em] text-outline opacity-40 rotate-180">The Digital Curator</span>
+        <div class="h-16 w-px bg-primary/30"></div>
+    </div>
+</section>
+<!-- 👆 头图区域结束 👆 -->
+
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start bg-surface relative z-20">
+    
+    <!-- 👇 请在这里填写侧边栏（分享者）信息 👇 -->
+    <aside class="lg:col-span-3 lg:sticky lg:top-40 flex flex-col gap-12 hidden md:flex order-2 lg:order-1 mt-12 lg:mt-0">
+        <div>
+            <h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4">栏目发起人</h4>
+            <p class="font-body text-base font-semibold">龚玉婷</p>
+            <p class="font-body text-sm text-on-surface-variant mt-1">Light 主理人</p>
+        </div>
+        <div>
+            <h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4">本期叙事者</h4>
+            <ul class="space-y-3 font-body text-sm">
+                <!-- 替换讲者列表 -->
+                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>讲者A <span class="text-outline text-xs ml-2">Title/标签</span></li>
+                <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>讲者B <span class="text-outline text-xs ml-2">Title/标签</span></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="md:hidden flex flex-wrap gap-8 border-b border-outline-variant/20 pb-8 mb-8 order-1">
+        <div>
+            <h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-2">THEME</h4>
+            <!-- 替换移动端显示的副标题 -->
+            <p class="font-headline text-lg text-on-surface">这里填写移动端主题</p>
+        </div>
+    </div>
+    <!-- 👆 侧边栏信息结束 👆 -->
+
+    <!-- ========================================== -->
+    <!-- 👇 请在这里填入正文文章内容 👇 -->
+    <!-- 💡 提示：需要特殊样式时，请打开 components.html 复制对应组件 -->
+    <!-- ========================================== -->
+    <article class="lg:col-span-9 space-y-12 md:space-y-16 order-1 lg:order-2">
+        
+        <div class="space-y-8 max-w-3xl">
+            <p class="font-body text-lg md:text-xl leading-loose text-on-surface drop-cap">
+                这是文章的第一段，会自动应用首字下沉效果。请在这里输入您的文字内容。
+            </p>
+            
+            <p class="font-body text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                这是普通的段落文字。如果您想要某句话高亮，可以使用 <span class="highlight-text">这样的下划线高亮效果</span>。
+            </p>
+        </div>
+        
+        <!-- 文章结束，保留底部的 CTA 按钮 -->
+        <div class="mt-16 md:mt-24 pt-12 border-t border-outline-variant/20 mb-16 flex flex-col items-center gap-8 max-w-lg mx-auto px-4 w-full">
+            <div class="w-full flex flex-col items-center gap-3">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center w-full py-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-medium text-sm md:text-base tracking-widest border border-outline-variant/30">
+                    阅读本期活动完整实录
+                    <span class="material-symbols-outlined ml-2 text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <span class="font-label text-[10px] text-outline uppercase tracking-widest">Read Full Transcript on WeChat</span>
+            </div>
+            <div class="w-full text-center pt-8 border-t border-outline-variant/10">
+                <p class="font-label text-xs uppercase tracking-[0.2em] text-secondary/60 mb-4">下一场周期，你会如何掌舵？</p>
+                <button class="speaker-trigger-btn w-full py-4 rounded-md bg-primary text-on-primary font-medium text-base tracking-widest shadow-md shadow-primary/20 hover:bg-primary/90 transition-all">
+                    就现在，来讲吧
+                </button>
+            </div>
+            <div class="w-full flex justify-center pt-8 border-t border-outline-variant/10 mt-2">
+                <a href="../../archive.html" class="inline-flex items-center gap-2 text-outline hover:text-primary transition-colors group">
+                    <span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    <span class="font-label text-xs uppercase tracking-[0.3em] font-medium">Back to Archive</span>
+                </a>
+            </div>
+        </div>
+        
+    </article>
+    <!-- ========================================== -->
+    <!-- 👆 正文文章内容结束 👆 -->
+    <!-- ========================================== -->
+
+</section>
+</main>
+
+<!-- ========================================== -->
+<!-- ⚠️ 警告：请勿修改下方的页脚和弹窗代码 ⚠️ -->
+<!-- ========================================== -->
+<div id="wechat-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+    <div id="wechat-modal-backdrop" class="absolute inset-0 bg-surface/90 backdrop-blur-md opacity-0 transition-opacity duration-300"></div>
+    <div id="wechat-modal-content" class="relative bg-surface-container-lowest p-8 md:p-12 shadow-2xl scale-95 opacity-0 transition-all duration-300 max-w-sm w-[90%] mx-auto flex flex-col items-center border border-outline-variant/20">
+        <button id="close-modal-btn" class="absolute top-4 right-4 p-2 text-outline hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-6">Let's Connect</span>
+        <h3 class="font-headline text-2xl font-bold mb-8 text-center leading-tight">
+            扫码添加主理人微信<br>开启你的表达
+        </h3>
+        <div class="w-48 h-48 bg-surface-container-low mb-8 relative p-2 border border-outline-variant/20">
+            <!-- 注意这里的图片路径也修改了 -->
+            <img src="../../assets/wechat-qr-yoti.jpg" alt="WeChat QR Code" class="w-full h-full object-cover">
+        </div>
+        <p class="font-body text-sm text-center text-outline leading-relaxed">
+            请备注“Light 表达计划”<br>期待你的故事
+        </p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('wechat-modal');
+        const backdrop = document.getElementById('wechat-modal-backdrop');
+        const content = document.getElementById('wechat-modal-content');
+        const closeBtn = document.getElementById('close-modal-btn');
+        const triggerBtns = document.querySelectorAll('.speaker-trigger-btn');
+        
+        const openModal = () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            void modal.offsetWidth;
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+            document.body.style.overflow = 'hidden';
+        };
+        
+        const closeModal = () => {
+            backdrop.classList.remove('opacity-100');
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+        
+        triggerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+        });
+        
+        if(closeBtn) closeBtn.addEventListener('click', closeModal);
+        if(backdrop) backdrop.addEventListener('click', closeModal);
+    });
+</script>
+</body>
+</html>

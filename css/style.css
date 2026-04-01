@@ -98,11 +98,32 @@ body {
 }
 
 .drop-cap::first-letter {
-    float: left;
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    line-height: 0.8;
+    font-size: 4.5rem;
+    float: left;
+    line-height: 1;
     padding-right: 0.5rem;
     padding-top: 0.5rem;
-    color: #a63a19;
+    color: #ff7b54; /* Using the primary color defined in tailwind config */
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Highlight styling for important text within paragraphs */
+.highlight-text {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    color: #1a1c1c; /* on-surface */
+}
+.highlight-text::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #ffdbd1; /* primary-container */
+    opacity: 0.3;
+    z-index: -1;
 }
