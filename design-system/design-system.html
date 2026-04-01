@@ -44,7 +44,7 @@
                     <h1 class="font-display text-fluid-5xl font-black tracking-tighter leading-tight">Moments of <span class="italic text-primary font-normal">Light</span></h1>
                 </div>
                 <div>
-                    <span class="text-xs font-label text-outline mb-2 block">Headline (Noto Serif SC) - 章节标题 / 详情页主标题</span>
+                    <span class="text-xs font-label text-outline mb-2 block">Headline (Noto Serif SC) - 展示型：章节标题 / 阅读型：文章 h1（上限 fluid-3xl）</span>
                     <h2 class="font-headline text-fluid-3xl font-bold leading-snug">穿越周期的力量：在不确定性中锚定坐标</h2>
                 </div>
                 <div>
@@ -185,16 +185,17 @@
 
                 <!-- Pattern 3: Article Content -->
                 <div class="space-y-6">
-                    <h3 class="font-headline text-fluid-xl font-bold">3. Editorial Article Flow (正文阅读流)</h3>
-                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">Uses `max-w-[800px] w-full` container. Sub-headings use Noto Serif. Paragraphs use Work Sans with `leading-relaxed` and `gap-fluid-md` between paragraphs.</p>
+                    <h3 class="font-headline text-fluid-xl font-bold">3. Editorial Article Flow (正文阅读流 — 阅读型页面标准)</h3>
+                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">阅读型页面（Episode 详情）的字体天花板低于展示型页面。<code>max-w-[800px]</code> 容器保证最优行长。<strong>h2 上限 fluid-2xl</strong>，正文默认 <strong>fluid-base + leading-relaxed</strong>，仅首段允许用 fluid-lg。衬线体在一个视口内不超过 3 个实例。</p>
                     <div class="bg-surface border border-outline-variant/30 rounded-lg p-8 md:p-16">
+                        <!-- READING CONTEXT: h2 ceiling = fluid-2xl, body default = fluid-base -->
                         <article class="max-w-[800px] w-full mx-auto space-y-fluid-md">
-                            <h2 class="font-headline text-fluid-3xl font-bold text-on-surface mb-fluid-md mt-fluid-xl">1. 内容的骨架：建立坐标系</h2>
-                            <p class="font-body text-fluid-lg leading-relaxed text-on-surface-variant font-light">在动荡的环境中，个体的叙事往往比宏大的理论更具有穿透力。我们的每一场分享，都是在试图还原那些真实的挣扎与突破。</p>
+                            <h2 class="font-headline text-fluid-2xl font-bold text-on-surface mb-fluid-md mt-fluid-xl">1. 内容的骨架：建立坐标系</h2>
+                            <p class="font-body text-fluid-base leading-relaxed text-on-surface-variant font-light">在动荡的环境中，个体的叙事往往比宏大的理论更具有穿透力。我们的每一场分享，都是在试图还原那些真实的挣扎与突破。</p>
                             <blockquote class="my-fluid-2xl pl-6 md:pl-12 border-l-2 border-primary/30 relative">
                                 <p class="font-headline text-fluid-lg text-primary leading-relaxed italic">"保持轻盈，但在核心价值上扎根极深。"</p>
                             </blockquote>
-                            <p class="font-body text-fluid-lg leading-relaxed text-on-surface-variant font-light">这是我们在设计这个系统时，始终贯彻的原则。不追求表面的繁复，而是让光影与留白去说话。</p>
+                            <p class="font-body text-fluid-base leading-relaxed text-on-surface-variant font-light">这是我们在设计这个系统时，始终贯彻的原则。不追求表面的繁复，而是让光影与留白去说话。</p>
                         </article>
                     </div>
                 </div>
