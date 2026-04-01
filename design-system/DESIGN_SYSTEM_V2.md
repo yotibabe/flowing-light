@@ -78,6 +78,7 @@ Layout problems are often the root cause of interfaces feeling "off". Space is a
 ## 5. Components & Interactions
 *   **Navigation:** Touch-friendly links with a minimum hit area of `min-h-[44px] min-w-[44px]`. Hover states use a 1px expanding border from the left origin (`scale-x-100 transition-transform origin-left`).
 *   **Buttons:** Rectangular with minimal rounding (`rounded-sm`). Primary buttons use `bg-on-surface text-surface`.
+*   **Inline Contextual Links:** When a call-to-action carries strong emotional or philosophical context, do not use an isolated button. Instead, embed it within an `<h2>` or `<h3>` as an inline link with a bottom border and hover arrow (`border-b border-primary/30 pb-1 group-hover:translate-x-1`).
 *   **Cards (The "Vibrant & Frosted" Standard):** 
     *   **Border Radius Limit:** All cards must use `rounded-2xl` or smaller (prefer `rounded-xl` or `rounded-2xl`). Do not mix extreme radii like `rounded-3xl` or `rounded-full` for content cards.
     *   **Frost Edges (Glassmorphism Only):** Glassmorphism cards (translucent panels) must have a crisp edge to define their boundary against the background. Always use `border border-white/40` (or similar low-opacity white) on glass containers.
@@ -86,8 +87,14 @@ Layout problems are often the root cause of interfaces feeling "off". Space is a
     *   **Typography:** Archive card text must follow Editorial Layout principles: left-aligned, tight vertical rhythm, no arbitrary `<br>` line breaks.
     *   **Image Loading:** Always use `loading="lazy"` on archive cards.
 *   **Blockquotes:** Marked by a subtle left border (`border-l-2 border-primary/30`) and generous `my-fluid-2xl` padding.
+*   **Editorial Endcap (Reading CTA):** At the end of a long-form reading page, DO NOT use the standard global footer. Instead, use a tight, vertically stacked CTA block consisting of: a Primary Action (solid dark button with icon, e.g., "Speak Now") followed by a Secondary Navigation (ghost button with left arrow, e.g., "Back to Archive"). Keep copy direct; remove marketing fluff.
 
-## 6. Do's and Don'ts
+## 6. Layout Philosophies
+*   **Editorial Asymmetry:** On desktop breakpoints, avoid strict center-alignment. Use wide containers (`max-w-[1100px]`) and pair left-aligned text with subtle right-aligned vertical decorations (lines or vertical typography) to create a magazine-like balance.
+*   **Zero-Distraction Reading:** Reading pages (Episode Details) must strip away all background motion. Remove floating orbs, glowing cursors, and complex entrance animations. The background should be a static `ethereal-gradient-bg` to maintain absolute focus on typography and imagery.
+*   **Vertical Elongation:** For glassmorphic concept cards (like the "Core Values" block), utilize asymmetric padding (e.g., `pt-24 pb-24` on desktop) to make the card appear elongated and elegant rather than square and boxy.
+
+## 7. Do's and Don'ts
 
 ### Hard Rules (Non-negotiable — breaking these breaks the system)
 *   **DO:** Use `text-fluid-*` and `gap-fluid-*` everywhere. Never use hardcoded size breakpoints like `text-2xl sm:text-4xl`.
@@ -104,7 +111,7 @@ Layout problems are often the root cause of interfaces feeling "off". Space is a
 
 ---
 
-## 7. Quick Reference (速查表)
+## 8. Quick Reference (速查表)
 
 When in doubt about which token to use, consult this table before reaching for a larger size.
 

@@ -70,22 +70,16 @@
 <!-- Main Layout: Full Screen Hero + Scrolling Content -->
 <!-- Giant Watermark Text (Fixed Global Background) -->
 <div class="fixed inset-0 z-[1] flex items-center justify-center pointer-events-none select-none overflow-hidden hero-watermark">
-    <!-- Using font-display text-fluid-6xl font-black to strictly conform to Design System Display Context ceiling -->
-    <h1 class="font-display text-fluid-6xl font-black leading-tight text-on-surface whitespace-nowrap tracking-tighter flex flex-col items-center">
-        <span>Seek <span class="italic font-normal">Light.</span></span>
-        <span>Stay <span class="italic font-normal">Light.</span></span>
+    <!-- Changed from font-black to font-normal italic for a lighter, more elegant parchment feel -->
+    <h1 class="font-display text-fluid-6xl font-normal italic leading-tight text-on-surface whitespace-nowrap tracking-tighter flex flex-col items-center">
+        <span>Seek <span class="italic">Light.</span></span>
+        <span>Stay <span class="italic">Light.</span></span>
     </h1>
 </div>
 
 <!-- Hero Section (Manifesto) -->
 <section class="relative w-full h-screen flex items-center justify-center pt-24 overflow-hidden z-10">
     <!-- Local Hero Background removed since we now use global ethereal background -->
-    
-    <!-- Scroll Down Indicator -->
-    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300 hero-scroll-indicator">
-        <span class="font-label text-fluid-sm uppercase tracking-widest text-on-surface">Discover</span>
-        <span class="material-symbols-outlined text-sm text-on-surface">arrow_downward</span>
-    </div>
 </section>
 
 <!-- Content Wrapper -->
@@ -96,53 +90,63 @@
 <div class="w-full max-w-5xl mx-auto pb-32">
 
 <!-- The Core (Four Values) - Simplified List Style -->
-<article class="mb-32 bg-surface/80 backdrop-blur-md rounded-2xl p-12 md:p-20 shadow-[0_0_60px_-15px_rgba(0,0,0,0.05)] border border-white/40 relative z-20">
-<h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-16 text-center">我们是谁？做什么？</h2>
-<div class="flex flex-col gap-fluid-xl" id="values-list">
+<!-- 增加了 pt-12 sm:pt-16 md:pt-24 和 pb-10 sm:pb-16 md:pb-24 专门放大上下沿的留白，使卡片更修长优雅 -->
+<article class="mb-24 md:mb-32 bg-surface/80 backdrop-blur-md rounded-2xl pt-12 px-6 pb-10 sm:pt-16 sm:px-10 sm:pb-16 md:pt-24 md:px-16 md:pb-24 shadow-[0_0_60px_-15px_rgba(0,0,0,0.05)] border border-white/40 relative z-20">
+<!-- 增大标题字号：从 text-sm 改为 text-fluid-xl 配合 font-headline，赋予该 Section 更强的层次感 -->
+<h2 class="font-headline text-fluid-xl md:text-fluid-2xl font-bold text-on-surface mb-10 md:mb-16 text-center tracking-tight">我们是谁？做什么？</h2>
+<div class="flex flex-col gap-10 md:gap-16" id="values-list">
 <!-- Value 1 -->
-<div class="value-item flex flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-12 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
-<div class="value-icon w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 transform scale-75">
-<span class="material-symbols-outlined text-3xl">air</span>
+<div class="value-item flex flex-col md:flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-10 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
+<div class="value-content flex-1 w-full">
+<div class="flex items-center gap-3 mb-2 md:mb-4">
+    <div class="value-icon w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+        <span class="material-symbols-outlined text-xl">air</span>
+    </div>
+    <h3 class="text-xl md:text-fluid-xl font-headline font-bold text-on-surface flex items-center flex-wrap gap-2">轻度分享 <span class="text-outline text-[9px] md:text-[10px] font-label font-normal tracking-widest uppercase">LIGHTNESS</span></h3>
 </div>
-<div class="value-content flex-1">
-<h3 class="text-fluid-xl font-headline font-bold text-on-surface mb-4">轻度分享 <span class="text-outline text-[10px] font-label font-normal ml-3 tracking-widest uppercase">LIGHTNESS</span></h3>
-<p class="text-on-surface-variant font-body text-lg font-light leading-relaxed max-w-2xl">
+<p class="text-on-surface-variant font-body text-base md:text-lg font-light leading-relaxed max-w-2xl md:ml-14">
                                 轻盈、开放，不设门槛。摒弃说教与宏大叙事，只做有温度和厚度的生命历程分享。
                             </p>
 </div>
 </div>
 <!-- Value 2 -->
-<div class="value-item flex flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-12 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
-<div class="value-icon w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 transform scale-75">
-<span class="material-symbols-outlined text-3xl">water_drop</span>
+<div class="value-item flex flex-col md:flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-10 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
+<div class="value-content flex-1 w-full">
+<div class="flex items-center gap-3 mb-2 md:mb-4">
+    <div class="value-icon w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+        <span class="material-symbols-outlined text-xl">water_drop</span>
+    </div>
+    <h3 class="text-xl md:text-fluid-xl font-headline font-bold text-on-surface flex items-center flex-wrap gap-2">真实叙述 <span class="text-outline text-[9px] md:text-[10px] font-label font-normal tracking-widest uppercase">AUTHENTICITY</span></h3>
 </div>
-<div class="value-content flex-1">
-<h3 class="text-fluid-xl font-headline font-bold text-on-surface mb-4">真实叙述 <span class="text-outline text-[10px] font-label font-normal ml-3 tracking-widest uppercase">AUTHENTICITY</span></h3>
-<p class="text-on-surface-variant font-body text-lg font-light leading-relaxed max-w-2xl">
+<p class="text-on-surface-variant font-body text-base md:text-lg font-light leading-relaxed max-w-2xl md:ml-14">
                                 在灯光亮起前，认真叩问“你真正想说的是什么”。我们是真实故事的挖掘者，从策划到文案全程深度介入。
                             </p>
 </div>
 </div>
 <!-- Value 3 -->
-<div class="value-item flex flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-12 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
-<div class="value-icon w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 transform scale-75">
-<span class="material-symbols-outlined text-3xl">link</span>
+<div class="value-item flex flex-col md:flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-10 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
+<div class="value-content flex-1 w-full">
+<div class="flex items-center gap-3 mb-2 md:mb-4">
+    <div class="value-icon w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+        <span class="material-symbols-outlined text-xl">link</span>
+    </div>
+    <h3 class="text-xl md:text-fluid-xl font-headline font-bold text-on-surface flex items-center flex-wrap gap-2">深度链接 <span class="text-outline text-[9px] md:text-[10px] font-label font-normal tracking-widest uppercase">CONNECTION</span></h3>
 </div>
-<div class="value-content flex-1">
-<h3 class="text-fluid-xl font-headline font-bold text-on-surface mb-4">深度链接 <span class="text-outline text-[10px] font-label font-normal ml-3 tracking-widest uppercase">CONNECTION</span></h3>
-<p class="text-on-surface-variant font-body text-lg font-light leading-relaxed max-w-2xl">
+<p class="text-on-surface-variant font-body text-base md:text-lg font-light leading-relaxed max-w-2xl md:ml-14">
                                 散场之后，才是共鸣的开始。愿每一位听众都能从别人的故事里，找到自己的答案。
                             </p>
 </div>
 </div>
 <!-- Value 4 -->
-<div class="value-item flex flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-12 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
-<div class="value-icon w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 transform scale-75">
-<span class="material-symbols-outlined text-3xl">groups</span>
+<div class="value-item flex flex-col md:flex-row items-start gap-4 md:gap-12 border-b border-outline-variant/20 pb-10 md:pb-16 last:border-0 last:pb-0 opacity-0 translate-y-10">
+<div class="value-content flex-1 w-full">
+<div class="flex items-center gap-3 mb-2 md:mb-4">
+    <div class="value-icon w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+        <span class="material-symbols-outlined text-xl">groups</span>
+    </div>
+    <h3 class="text-xl md:text-fluid-xl font-headline font-bold text-on-surface flex items-center flex-wrap gap-2">湾区精英 <span class="text-outline text-[9px] md:text-[10px] font-label font-normal tracking-widest uppercase">COMMUNITY</span></h3>
 </div>
-<div class="value-content flex-1">
-<h3 class="text-fluid-xl font-headline font-bold text-on-surface mb-4">湾区精英 <span class="text-outline text-[10px] font-label font-normal ml-3 tracking-widest uppercase">COMMUNITY</span></h3>
-<p class="text-on-surface-variant font-body text-lg font-light leading-relaxed max-w-2xl">
+<p class="text-on-surface-variant font-body text-base md:text-lg font-light leading-relaxed max-w-2xl md:ml-14">
                                 依托中山大学深圳校友会，连接粤港澳大湾区各行各业的校友，照见彼此，互相点亮。
                             </p>
 </div>
@@ -201,7 +205,7 @@
             <article class="pt-16 pb-24 text-center max-w-3xl mx-auto cta-section opacity-0 translate-y-10">
                 <div class="mb-16">
                     <span class="material-symbols-outlined text-primary/20 text-6xl mb-6">wb_twilight</span>
-                    <h2 class="font-headline text-fluid-4xl font-black text-on-surface mb-6">
+                    <h2 class="font-headline text-fluid-2xl md:text-fluid-3xl font-bold text-on-surface mb-6 tracking-tight">
                         宇宙不爆炸，读书不放假。
                     </h2>
                     <p class="font-body text-fluid-lg text-on-surface-variant font-light">

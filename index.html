@@ -61,59 +61,42 @@
     </div>
 </header>
 <main>
-<!-- Hero Section: Exactly preserved from SCREEN_53 -->
+<!-- Hero Section: Restored Editorial Layout -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 ethereal-gradient-bg">
 <div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
 <div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40 animate-float-slow"></div>
 <div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20 animate-float-delayed"></div>
-<div class="hero-panel relative z-10 w-full md:w-[92%] max-w-[1100px] md:bg-white/45 md:backdrop-blur-[40px] px-6 py-12 md:p-12 lg:p-24 md:shadow-2xl md:shadow-on-surface/5 md:border md:border-white/40 flex flex-col md:flex-row items-center gap-fluid-lg md:gap-16 lg:gap-24 hover:shadow-primary/10 transition-shadow duration-700">
-<div class="flex-1 space-y-fluid-md w-full text-center md:text-left">
-<div class="space-y-4">
-<!-- Empty container to replace the Trust Badge -->
-<span class="hero-text font-label text-fluid-sm uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
-<h1 class="hero-text font-display text-fluid-6xl font-black text-on-surface leading-[0.85] tracking-tighter">
-                            Flowing <br/>
-<span class="italic font-normal text-primary">Light</span>
-</h1>
-</div>
-<div class="max-w-lg mx-auto md:mx-0">
-<h2 class="hero-text font-headline text-fluid-3xl font-bold text-on-surface leading-snug">
-                            中大深圳校友会<br/>读书会分享栏目
-                        </h2>
-<p class="hero-text font-body text-fluid-lg mt-fluid-md text-on-surface-variant leading-relaxed">
-                            点亮每一个平凡而独特的 <span class="text-primary-container font-black">生命故事</span>
-</p>
+<!-- Restored wide max-w to 1100px, responsive flex-row for editorial layout -->
+<div class="hero-panel relative z-10 w-full md:w-[92%] max-w-[1100px] md:bg-white/45 md:backdrop-blur-[40px] px-6 py-12 md:p-16 lg:p-24 md:shadow-2xl md:shadow-on-surface/5 md:border md:border-white/40 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24 hover:shadow-primary/10 transition-shadow duration-700">
+    
+    <!-- Left Column: Main Text (Left aligned on PC, center on Mobile) -->
+    <div class="flex-1 w-full text-center md:text-left space-y-8">
+        <div class="space-y-6">
+            <span class="hero-text font-label text-fluid-sm uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
+            <h1 class="hero-text font-display text-fluid-6xl font-black text-on-surface leading-[0.85] tracking-tighter pb-4">
+                Flowing <br/>
+                <span class="italic font-normal text-primary">Light</span>
+            </h1>
+        </div>
+        <div class="max-w-lg mx-auto md:mx-0">
+            <h2 class="hero-text font-headline text-fluid-3xl font-bold text-on-surface leading-snug mt-6">
+                中大深圳校友会<br/>读书会分享栏目
+            </h2>
+            <p class="hero-text font-body text-fluid-lg mt-fluid-md text-on-surface-variant leading-relaxed">
+                点亮每一个平凡而独特的 <span class="text-primary-container font-black">生命故事</span>
+            </p>
+        </div>
+    </div>
 
-<!-- Position Tags Moved Inside the Glass Panel -->
-<!-- 删除了"深度"四个字 -->
-<div class="hero-text w-full flex justify-center md:justify-start mt-fluid-xl border-t border-outline-variant/20 pt-fluid-lg">
-    <a href="archive.html" class="inline-flex items-center justify-center min-h-[44px] gap-3 text-primary font-medium group">
-        <span class="font-headline italic text-fluid-xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Enter Archive</span> 
-        <span class="material-symbols-outlined text-fluid-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-    </a>
-</div>
+    <!-- Right Column: Vertical Decorative Element (PC Only) -->
+    <div class="hidden lg:flex flex-col items-center justify-center shrink-0 hero-text opacity-0">
+        <div class="h-32 xl:h-48 w-[1px] bg-primary/30"></div>
+        <span class="py-8 font-label text-[10px] xl:text-xs uppercase tracking-[0.5em] text-primary [writing-mode:vertical-lr] rotate-180 opacity-60">
+            Moments Of Light
+        </span>
+        <div class="h-16 xl:h-24 w-[1px] bg-primary/30"></div>
+    </div>
 
-<div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-8 text-outline/60 font-label text-[10px] md:text-[11px] uppercase tracking-[0.1em] md:tracking-[0.2em] opacity-80">
-    <span>CONNECTION <span class="font-body tracking-widest opacity-80">链接</span></span>
-    <span class="hidden sm:inline">•</span>
-    <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80">真实叙述</span></span>
-    <span class="hidden sm:inline">•</span>
-    <span>COMMUNITY <span class="font-body tracking-widest opacity-80">湾区精英</span></span>
-</div>
-
-</div>
-</div>
-<div class="hero-text hidden lg:flex flex-col items-center justify-center">
-<div class="h-64 w-px bg-primary/30"></div>
-<span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
-<div class="h-16 w-px bg-primary/30"></div>
-</div>
-</div>
-
-<!-- Down Arrow Indicator -->
-<div class="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
-<span class="font-label text-[10px] uppercase tracking-widest text-outline">Discover</span>
-<span class="material-symbols-outlined text-outline">arrow_downward</span>
 </div>
 </section>
 <!-- REDESIGNED Philosophy Section: Two-Column Editorial Layout -->
@@ -129,12 +112,6 @@
             <h2 class="font-headline text-fluid-4xl leading-[1.1] mb-fluid-lg font-bold text-on-surface tracking-tight">
                 什么是 Light？
             </h2>
-            
-            <!-- Moments of Light Link moved here -->
-            <a href="archive.html" class="inline-flex items-center min-h-[44px] gap-3 text-primary font-medium group mb-fluid-lg lg:mb-0">
-                <span class="font-headline italic text-fluid-xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Moments of Light</span> 
-                <span class="material-symbols-outlined text-fluid-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </a>
         </div>
 
         <!-- Right Column: Philosophy Content -->
@@ -161,29 +138,33 @@
     <!-- Parallax Element (Removed Image, keeping the subtle movement container for consistency if needed) -->
     <div class="absolute inset-0 z-0 h-[130%] -top-[15%] quote-parallax-bg"></div>
     
-    <!-- Quote Content -->
-    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center quote-reveal flex flex-col items-center justify-center">
-        <!-- 顶部细线引导 -->
-        <div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-primary/40 mb-fluid-lg"></div>
+    <!-- Closing Quote & Archive Link (Integrated) -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center quote-reveal flex flex-col items-center justify-center py-10 md:py-16">
+        <!-- 顶部细线引导 (高度缩短，更精致) -->
+        <div class="w-[1px] h-8 bg-gradient-to-b from-transparent to-primary/40 mb-10"></div>
         
         <!-- 取消强制换行，使用自然宽度的层次排版，解决串行问题 -->
-        <div class="space-y-fluid-md">
+        <div class="flex flex-col items-center gap-6 md:gap-10">
             <!-- 铺垫句 -->
-            <p class="font-headline text-fluid-2xl text-on-surface-variant/80 font-light tracking-widest">
+            <p class="font-headline text-fluid-xl md:text-fluid-2xl text-on-surface-variant/80 font-light tracking-widest">
                 愿散场之后，
             </p>
-            <!-- Highlight 高光句 -->
-            <h2 class="font-headline text-fluid-4xl text-on-surface leading-relaxed font-light tracking-wide max-w-3xl mx-auto">
-                你能从别人的故事里，<br/>找到<span class="text-primary font-medium border-b border-primary/30 pb-1 px-1">自己的答案</span>。
+            <!-- Highlight 高光句 (带嵌入链接，分行排列) -->
+            <h2 class="font-headline text-fluid-3xl md:text-fluid-4xl text-on-surface leading-loose font-light tracking-wide max-w-3xl mx-auto flex flex-col items-center">
+                <span>你能从别人的故事里，</span>
+                <span>找到</span>
+                <a href="archive.html" class="inline-flex items-center text-primary font-medium border-b border-primary/30 pb-1 px-1 hover:border-primary transition-colors group cursor-pointer relative overflow-hidden mt-2">
+                    自己的答案
+                    <span class="material-symbols-outlined text-[0.8em] ml-1 group-hover:translate-x-1 transition-transform">east</span>
+                </a>
             </h2>
         </div>
         
-        <!-- 底部细线收尾 -->
-        <div class="mt-20 w-[1px] h-20 bg-gradient-to-t from-transparent to-primary/40"></div>
+        <!-- 底部细线收尾 (高度缩短) -->
+        <div class="mt-12 w-[1px] h-8 bg-gradient-to-t from-transparent to-primary/40"></div>
     </div>
 </section>
 
-</main>
 <!-- Footer (Synchronized with Global Spec) -->
 <footer class="w-full bg-surface-container-low">
     <div class="flex flex-col md:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-12 py-6 md:py-8 gap-6 md:gap-8 max-w-[1440px] mx-auto">
