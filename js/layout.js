@@ -50,19 +50,19 @@
           contact: `${basePath}about.html#contact-us`
         };
 
-  const renderFooter = () => `<footer class="w-full bg-surface-container-low">
-    <div class="flex flex-col md:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-12 py-6 md:py-8 gap-6 md:gap-8 max-w-[1440px] mx-auto">
-        <div class="text-fluid-lg font-display font-bold text-on-surface text-center md:text-left shrink-0">
+  const renderFooter = () => `<footer class="w-full bg-white/30 backdrop-blur-md border-t border-outline-variant/10">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-6 md:py-8 gap-4 md:gap-8 max-w-[1440px] mx-auto">
+        <div class="text-lg font-display text-[#6D3D32] text-center md:text-left tracking-wide">
             中大读书会 Light
         </div>
-        <div class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 md:gap-8 flex-1">
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="${basePath}assets/wechat-qr.png" target="_blank" rel="noopener noreferrer">微信公众号</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="${footerLinks.join}">加入社群</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="${footerLinks.speaker}">嘉宾推荐</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="${footerLinks.contact}">联系我们</a>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+            <a class="font-label text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${basePath}assets/wechat-qr.png" target="_blank" rel="noopener noreferrer">微信公众号</a>
+            <a class="font-label text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${footerLinks.join}">加入社群</a>
+            <a class="font-label text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${footerLinks.speaker}">嘉宾推荐</a>
+            <a class="font-label text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${footerLinks.contact}">联系我们</a>
         </div>
-        <div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right w-full md:w-auto shrink-0">
-            © 2025 中山大学深圳校友会读书会. All Rights Reserved.
+        <div class="font-label text-[9px] uppercase tracking-widest text-[#555555]/60 text-center md:text-right w-full md:w-auto mt-2 md:mt-0">
+            © 2025 中山大学深圳校友会读书会
         </div>
     </div>
 </footer>`;

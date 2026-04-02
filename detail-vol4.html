@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>穿越周期的力量 | 中大读书会 Light</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* Custom styling for drop-cap and editorial feel */
+    .drop-cap::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-size: 4.5rem;
+        float: left;
+        line-height: 1;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        color: var(--tw-colors-primary);
+        font-weight: 900;
+        font-style: italic;
+    }
+    .writing-vertical {
+        writing-mode: vertical-lr;
+    }
+    
+    /* Highlight styling for important text within paragraphs */
+    .highlight-text {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        color: var(--tw-colors-on-surface);
+    }
+    .highlight-text::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: var(--tw-colors-primary-container);
+        opacity: 0.3;
+        z-index: -1;
+    }
+</style>
+</head>
+<body class="font-body selection:bg-primary-fixed bg-surface text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 md:bg-transparent backdrop-blur-xl border-b border-stone-200/50 md:border-none">
+<div class="flex justify-between items-center w-full px-4 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto flex-nowrap overflow-x-auto no-scrollbar">
+<div class="text-sm sm:text-lg md:text-2xl font-display font-bold whitespace-nowrap shrink-0 text-orange-900 z-50">
+            中大读书会 Light
+        </div>
+        
+
+
+<div class="flex gap-3 sm:gap-6 md:gap-12 items-center justify-end shrink-0 ml-4">
+<a class="group flex flex-col items-center gap-1" href="index.html">
+<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
+</a>
+<a class="group flex flex-col items-center gap-1" href="archive.html">
+<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-primary relative">
+            ARCHIVE
+            <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-primary"></span>
+</span>
+</a>
+<a class="group flex flex-col items-center gap-1" href="about.html">
+<span class="font-label text-[9px] sm:text-[10px] md:text-sm uppercase whitespace-nowrap tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
+</a>
+</div>
+
+</div>
+
+</nav>
+
+<main>
+<!-- Hero Section: Cinematic Entry -->
+<section class="relative w-full h-[70vh] md:h-[85vh] min-h-[500px] md:min-h-[600px] flex items-end overflow-hidden ethereal-gradient-bg">
+<div class="absolute inset-0 z-0 fluid-focus-gradient"></div>
+<div class="absolute w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] -top-40 -left-40 pointer-events-none"></div>
+<div class="absolute w-[500px] h-[500px] bg-secondary-container/15 rounded-full blur-[100px] bottom-20 right-20 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-full h-48 md:h-64 bg-gradient-to-t from-surface to-transparent z-10 pointer-events-none"></div>
+
+
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 pb-16 md:pb-24 lg:pb-32">
+<div class="max-w-4xl">
+<div class="flex items-center gap-4 mb-6 md:mb-8">
+<span class="w-8 md:w-12 h-px bg-primary"></span>
+<span class="font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold">Vol. 04 | 投资实录</span>
+</div>
+<h1 class="font-headline text-4xl sm:text-5xl md:text-7xl font-black text-on-surface leading-[1.15] tracking-tight mb-6 md:mb-8 text-balance break-keep">
+                    穿越周期的力量：<br/>从认知觉醒到&nbsp;<span class="font-display italic font-normal text-primary whitespace-nowrap">体系自洽</span>
+</h1>
+<p class="font-headline text-xl sm:text-2xl md:text-3xl font-light text-on-surface-variant max-w-2xl leading-relaxed text-balance break-keep">
+                    在纷繁复杂的世界中，找回思考的主动权。
+</p>
+</div>
+</div>
+
+<!-- Decorative vertical text -->
+<div class="absolute top-1/2 right-12 hidden lg:flex flex-col items-center">
+<div class="h-32 w-px bg-primary/30"></div>
+<span class="writing-vertical py-8 font-label text-[10px] uppercase tracking-[0.5em] text-outline opacity-40 rotate-180">The Digital Curator</span>
+<div class="h-16 w-px bg-primary/30"></div>
+</div>
+</section>
+
+<!-- Narrative Content: Editorial Layout -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start bg-surface relative z-20">
+    
+<!-- Sidebar Info (Sticky Metadata) -->
+<aside class="lg:col-span-3 lg:sticky lg:top-40 flex flex-col gap-12 hidden md:flex order-2 lg:order-1 mt-12 lg:mt-0">
+<div>
+<h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4">本期叙事者</h4>
+<ul class="space-y-3 font-body text-sm">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>王建强 <span class="text-outline text-xs ml-2">乾元基金投资合伙人</span></li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>张辰权 <span class="text-outline text-xs ml-2">水星资管基金经理</span></li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>赵远飞 <span class="text-outline text-xs ml-2">公募基金经理</span></li>
+</ul>
+</div>
+<div class="pt-8 border-t border-outline-variant/20">
+<p class="font-headline italic text-sm text-on-surface-variant leading-relaxed">
+                    “所谓的投资，本质上不是关于财富的简单博弈，而是对客观规律的尊重，以及对自我人性的深度洞察。”
+                </p>
+</div>
+</aside>
+
+<!-- Mobile metadata fallback (shown only on mobile before content) -->
+<div class="md:hidden flex flex-wrap gap-8 border-b border-outline-variant/20 pb-8 mb-8 order-1">
+    <div>
+        <h4 class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-2">THEME</h4>
+        <p class="font-headline text-lg text-on-surface">投资探索</p>
+    </div>
+</div>
+
+<!-- Main Text Column -->
+<article class="lg:col-span-9 space-y-12 md:space-y-16 order-1 lg:order-2">
+    
+<!-- Prologue -->
+<div class="space-y-8 max-w-3xl">
+<p class="font-body text-lg md:text-xl leading-loose text-on-surface drop-cap">
+                    在这个充满不确定性的时代，我们似乎总是在寻找“确定性”的锚点。
+                </p>
+
+<p class="font-body text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                    市场的波动、周期的轮转、信息的洪流，常让人感到身处迷雾。有人在追逐浪潮中疲惫不堪，也有人选择停下脚步，在经典与逻辑中重新校准方向。所谓的“投资”，本质上不是关于财富的简单博弈，而是对客观规律的尊重，以及对自我人性的深度洞察。
+                </p>
+<p class="font-body text-lg md:text-xl leading-loose text-on-surface-variant font-light">
+                    中山大学深圳读书会主办的 light 系列第四期活动邀请了三位身处投资一线的校友嘉宾，从认知重塑、内在修养到体系构建，复盘他们如何在变幻的周期里，建立起一套逻辑自洽的“导航系统”。
+                </p>
+</div>
+
+<!-- Story 1: 王建强 -->
+<div class="space-y-8 max-w-3xl pt-8 md:pt-12 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-2 md:mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Script 01</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-headline text-sm font-medium text-on-surface">王建强</span>
+</div>
+<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl leading-tight font-bold">逻辑是投资体系的底层操作系统</h2>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+                    计算机科班出身、拥有20余年行业经验的王总，身上有着理工男特有的严谨与清醒。在他看来，投资不是拍脑袋的艺术，而是一场关于逻辑的精密计算。
+                </p>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="font-medium text-on-surface">世界观决定收益率：</span>王总认为，投资体系的形成始于个人的世界观。是对大国崛起的乐观支撑，还是对风险溢价的悲观规避，这决定了你翻开行情软件时的第一反应。
+                </p>
+                
+<!-- Image Block Layout -->
+<figure class="my-8 md:my-16 -mx-6 md:mx-0">
+<div class="w-full bg-surface-container-low md:rounded-lg overflow-hidden shadow-sm aspect-video">
+<img src="assets/vol4/王建强.jpg" alt="Wang Jianqiang sharing" class="w-full h-full object-cover transition-duration-1000">
+</div>
+</figure>
+
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="font-medium text-on-surface">寻找“自洽”的边界：</span>很多人的痛苦源于“既要、又要、还要”。王总强调，一套成熟的体系必须有明确的边界——明确你的目标、认知范围与资源极限。当你的投资行为让你感到“游刃有余”且心理舒适时，才算达成了真正的自洽。
+                </p>
+                
+<!-- Pull Quote within flow -->
+<blockquote class="pl-4 md:pl-6 border-l-4 border-primary/50 my-8 md:my-10 py-2">
+<p class="font-headline italic text-xl md:text-2xl text-on-surface leading-relaxed">
+                        “如果投资体系存在 bug，市场迟早会让你交学费。”
+                    </p>
+</blockquote>
+                
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="highlight-text">进化是永恒的命题：</span>在量化交易与自媒体情绪齐飞的今天，传统的套路正不断被挑战。王总建议，要学会在逆向思维中寻找机会，保持怀疑，更要保持迭代的勇气。
+                </p>
+</div>
+
+<!-- Story 2: 张辰权 -->
+<div class="space-y-8 max-w-3xl pt-8 md:pt-12 mt-8 md:mt-12 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-2 md:mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Script 02</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-headline text-sm font-medium text-on-surface">张辰权</span>
+</div>
+<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl leading-tight font-bold">在经典中寻找穿越时间的“安全边际”</h2>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+                    从京东互联网产业跨界到私募证券投资基金，张总选择在价值投资的圣经——《聪明的投资者》中寻找底层答案。他用极简的逻辑，拆解了价值投资的认知真相。
+                </p>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="font-medium text-on-surface">投资与投机的分水岭：</span>投资是以深度分析为基础，确保本金安全并获得适当回报。张总犀利地指出，很多散户在牛市顶点入场却自称“投资者”，本质上是在参与一场连规则都没看清的博弈。
+                </p>
+                
+<!-- Image Block Layout -->
+<figure class="my-8 md:my-16 -mx-6 md:mx-0">
+<div class="w-full bg-surface-container-low md:rounded-lg overflow-hidden shadow-sm aspect-[4/3] md:aspect-video">
+<img src="assets/vol4/张辰权.jpg" alt="Zhang Chenquan sharing" class="w-full h-full object-cover transition-duration-1000">
+</div>
+</figure>
+
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="font-medium text-on-surface">安全边际的三个原则：</span>不爆仓、不破产、不支付过高的价格。他提醒大家，真正的安全边际来源于数据、逻辑和实际经历的相互印证。
+                </p>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="highlight-text">对抗预测的诱惑：</span>格雷厄姆的思想核心之一就是“不轻易做预测”。张总分享到，预测7-10年的增长率，哪怕1%的误差都会导致估值的巨大偏差。与其沉迷于做不准的预言家，不如做一个守株待兔的聪明人，买得足够便宜，等待价值回归。
+                </p>
+</div>
+
+<!-- Story 3: 赵远飞 -->
+<div class="space-y-8 max-w-3xl pt-8 md:pt-12 mt-8 md:mt-12 border-t border-outline-variant/30">
+<div class="inline-flex items-center gap-3 bg-surface-container-low px-4 py-1.5 rounded-full mb-2 md:mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Script 03</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-headline text-sm font-medium text-on-surface">赵远飞</span>
+</div>
+<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl leading-tight font-bold">投资是一场关于“自我修养”的长跑</h2>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+                    作为公募基金经理和财经畅销书作者，赵师兄将投资视角从技术层面拉升到了“人”的维度。他认为，想要在投资路上走得远，知识结构的广度与个人修养的深度缺一不可。
+                </p>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="font-medium text-on-surface">多重身份的融合：</span>赵师兄形容投资人是“农民、科学家与战士”的结合。要像农民一样勤恳耕耘、静待花开；像科学家一样严谨实验、构建模型；更要像战士一样在残酷的市场博弈中保持定力。
+                </p>
+                
+<!-- Image Block Layout -->
+<figure class="my-8 md:my-16 -mx-6 md:mx-0">
+<div class="w-full bg-surface-container-low md:rounded-lg overflow-hidden shadow-sm aspect-video">
+<img src="assets/vol4/赵远飞.jpg" alt="Zhao Yuanfei sharing" class="w-full h-full object-cover transition-duration-1000">
+</div>
+</figure>
+
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="font-medium text-on-surface">打破“知易行难”的魔咒：</span>每个人都知道长期主义，但没几个人能忍受3-5年的静默期。赵师兄提到，投资的价值观往往是“奢侈品”，需要时间去兑现。他建议投资者要学会区分“市场的钱”和“自己的钱”，在赚钱时保持冷静，在亏损时敢于穿越低谷。
+                </p>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+<span class="highlight-text">研究向投资的转化：</span>一篇好的研究报告是“一流的故事，二流的模型”。他鼓励大家建立一套完整的投研框架：传统行业看供给，新兴行业看需求。通过对常识的坚守，打通股票投资与基金投资的思维牢笼。
+                </p>
+
+<!-- Pull Quote within flow -->
+<blockquote class="pl-4 md:pl-6 border-l-4 border-primary/50 my-8 md:my-10 py-2">
+<p class="font-headline italic text-xl md:text-2xl text-on-surface leading-relaxed">
+                        “贝塔是时代的礼物，阿尔法是认知的复利。”
+                    </p>
+</blockquote>
+</div>
+
+<div class="space-y-8 max-w-3xl pt-8 md:pt-12 mt-8 md:mt-12 border-t border-outline-variant/30">
+<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl leading-tight font-bold">坐标之外：做自己人生的“首席执行官”</h2>
+<p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light">
+                    三位嘉宾的分享，虽然侧重点不同，但最终都指向了一个核心：在纷繁复杂的世界中，找回思考的主动权。<span class="highlight-text">穿越周期的力量，并不来自于某种百战百胜的秘籍，而来自于你在经历无数次波动后，依然能够坦然面对内心的那份“笃定”。</span>无论是在股市中博弈，还是在人生中创业，我们都是自己命运的航海家。
+                </p>
+</div>
+
+<!-- Group Photo Placed Here for Emotional Resonance -->
+<figure class="my-12 md:my-16 max-w-4xl mx-auto -mx-6 md:mx-0">
+<div class="w-full bg-surface-container-low md:rounded-lg overflow-hidden shadow-md aspect-[16/9]">
+<img src="assets/vol4/大合照.jpg" alt="Light Event Group Photo" class="w-full h-full object-cover transition-duration-1000">
+</div>
+<figcaption class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mt-4 text-center px-6 md:px-0">第四期 Light 表达计划 · 现场留影</figcaption>
+</figure>
+
+<!-- Original Three Buttons Layout (Beautified) -->
+<div class="mt-16 md:mt-24 pt-12 border-t border-outline-variant/20 mb-16 flex flex-col items-center gap-8 max-w-lg mx-auto px-4 w-full">
+    
+    <!-- 1. 阅读完整实录 (Grey) -->
+    <div class="w-full flex flex-col items-center gap-3">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center w-full py-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-medium text-sm md:text-base tracking-widest border border-outline-variant/30">
+            阅读本期活动完整实录
+            <span class="material-symbols-outlined ml-2 text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+        <span class="font-label text-[10px] text-outline uppercase tracking-widest">Read Full Transcript on WeChat</span>
+    </div>
+
+    <!-- 2. 就现在，来讲吧 (Red) -->
+    <div class="w-full text-center pt-8 border-t border-outline-variant/10">
+        <p class="font-label text-xs uppercase tracking-[0.2em] text-secondary/60 mb-4">下一场周期，你会如何掌舵？</p>
+        <button class="speaker-trigger-btn w-full py-4 rounded-md bg-primary text-on-primary font-medium text-base tracking-widest shadow-md shadow-primary/20 hover:bg-primary/90 transition-all">
+            就现在，来讲吧
+        </button>
+    </div>
+    
+    <!-- 3. Back to Archive -->
+    <div class="w-full flex justify-center pt-8 border-t border-outline-variant/10 mt-2">
+        <a href="archive.html" class="inline-flex items-center gap-2 text-outline hover:text-primary transition-colors group">
+            <span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            <span class="font-label text-xs uppercase tracking-[0.3em] font-medium">Back to Archive</span>
+        </a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+        
+        
+
+        </div>
+
+
+        
+
+<!-- WeChat QR Modal -->
+<div id="wechat-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+    <div id="wechat-modal-backdrop" class="absolute inset-0 bg-surface/90 backdrop-blur-md opacity-0 transition-opacity duration-300"></div>
+    <div id="wechat-modal-content" class="relative bg-surface-container-lowest p-8 md:p-12 shadow-2xl scale-95 opacity-0 transition-all duration-300 max-w-sm w-[90%] mx-auto flex flex-col items-center border border-outline-variant/20">
+        <button id="close-modal-btn" class="absolute top-4 right-4 p-2 text-outline hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-6">Let's Connect</span>
+        <h3 class="font-headline text-2xl font-bold mb-8 text-center leading-tight">
+            扫码添加主理人微信<br>开启你的表达
+        </h3>
+        <div class="w-48 h-48 bg-surface-container-low mb-8 relative p-2 border border-outline-variant/20">
+            <img src="assets/wechat-qr-yoti.jpg" alt="WeChat QR Code" class="w-full h-full object-cover">
+        </div>
+        <p class="font-body text-sm text-center text-outline leading-relaxed">
+            请备注“Light 表达计划”<br>期待你的故事
+        </p>
+    </div>
+</div>
+
+<script>
+    // Modal Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('wechat-modal');
+        const backdrop = document.getElementById('wechat-modal-backdrop');
+        const content = document.getElementById('wechat-modal-content');
+        const closeBtn = document.getElementById('close-modal-btn');
+        
+        const triggerBtns = document.querySelectorAll('.speaker-trigger-btn');
+        
+        const openModal = () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            void modal.offsetWidth;
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+            document.body.style.overflow = 'hidden';
+        };
+        
+        const closeModal = () => {
+            backdrop.classList.remove('opacity-100');
+            backdrop.classList.add('opacity-0');
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+        
+        triggerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+        });
+        
+        if(closeBtn) closeBtn.addEventListener('click', closeModal);
+        if(backdrop) backdrop.addEventListener('click', closeModal);
+    });
+</script>
+
+
+
+</body></html>

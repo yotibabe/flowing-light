@@ -12,10 +12,7 @@
     <meta name="twitter:title" content="Flowing Light｜中大深圳校友会读书会分享栏目"/>
     <meta name="twitter:description" content="以高质感数字排版，点亮每一个平凡而独特的生命故事。"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Google Fonts: Inter for UI, Playfair Display for accents -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="js/tailwind-config.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/layout.js" defer></script>
@@ -135,7 +132,7 @@
 </section>
 
 <!-- Independent Golden Quote Section -->
-<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-transparent">
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-transparent">
     <!-- Parallax Element (Removed Image, keeping the subtle movement container for consistency if needed) -->
     <div class="absolute inset-0 z-0 h-[130%] -top-[15%] quote-parallax-bg"></div>
     
@@ -153,7 +150,12 @@
             
             <!-- Highlight 高光句 -->
             <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#1A1A1A] leading-[2.5] md:leading-[2.5] font-light tracking-widest max-w-3xl mx-auto">
-                你能从别人的故事里，<br>找到<span class="text-[#C8523A]">自己的答案</span>。
+                你能从别人的故事里，<br>找到
+                <a href="archive.html" class="inline-flex items-center text-[#C8523A] font-medium border-b border-[#C8523A]/30 pb-1 px-1 hover:border-[#C8523A] transition-colors group cursor-pointer relative overflow-hidden mt-2 md:mt-0">
+                    自己的答案
+                    <span class="material-symbols-outlined text-[0.8em] ml-2 group-hover:translate-x-1 transition-transform">east</span>
+                </a>
+                。
             </h2>
         </div>
         
@@ -207,23 +209,23 @@
     } else {
         const heroTimeline = gsap.timeline();
         heroTimeline.from(".hero-panel", {
-            y: 20,
+            y: 40,
             opacity: 0,
-            duration: 1.0,
-            ease: "power2.out",
+            duration: 1.5,
+            ease: "power3.out",
             delay: 0.1
         }).from(".hero-text", {
-            y: 15,
+            y: 30,
             opacity: 0,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power2.out"
-        }, "-=0.6");
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        }, "-=1.0");
 
         const philosophyTl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#philosophy-section",
-                start: "top 80%",
+                start: "top 70%",
                 toggleActions: "play none none reverse"
             }
         });
@@ -231,50 +233,50 @@
         philosophyTl.to(".philosophy-left", {
             y: 0,
             opacity: 1,
-            duration: 0.8,
-            ease: "power2.out"
+            duration: 1.2,
+            ease: "power3.out"
         }).to(".philosophy-right", {
             y: 0,
             opacity: 1,
-            duration: 0.8,
-            stagger: 0.15,
-            ease: "power2.out"
-        }, "-=0.4");
+            duration: 1.2,
+            stagger: 0.3,
+            ease: "power3.out"
+        }, "-=0.6");
 
         gsap.to('.quote-parallax-bg', {
             scrollTrigger: {
                 trigger: '.quote-parallax-bg',
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 0.5,
+                scrub: true,
             },
-            y: "10%",
+            y: "20%",
             ease: "none"
         });
 
         const quoteTl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.quote-reveal',
-                start: "top 80%",
+                start: "top 75%",
                 toggleActions: "play none none reverse"
             }
         });
 
-        quoteTl.fromTo('.quote-reveal > span:first-child',
-            { opacity: 0, scale: 0.8 },
-            { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
+        quoteTl.fromTo('.quote-reveal > div:first-child',
+            { height: 0, opacity: 0 },
+            { height: "5rem", opacity: 1, duration: 1, ease: "power3.out" }
         ).fromTo('.quote-reveal p',
-            { y: 15, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-            "-=0.4"
+            { y: 20, opacity: 0, filter: "blur(5px)" },
+            { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: "power2.out" },
+            "-=0.5"
         ).fromTo('.quote-reveal h2',
-            { y: 20, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.2, ease: "power2.out" },
-            "-=0.4"
+            { y: 30, opacity: 0, filter: "blur(10px)" },
+            { y: 0, opacity: 1, filter: "blur(0px)", duration: 2.5, ease: "power2.out" },
+            "-=0.2"
         ).fromTo('.quote-reveal > div:last-child',
             { height: 0, opacity: 0 },
-            { height: "3rem", opacity: 1, duration: 0.8, ease: "power2.out" },
-            "-=0.6"
+            { height: "5rem", opacity: 1, duration: 1, ease: "power3.out" },
+            "-=1"
         );
     }
 </script>

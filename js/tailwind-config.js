@@ -54,8 +54,9 @@ tailwind.config = {
             fontFamily: {
                 "headline": ["Noto Serif SC", "serif"],
                 "display": ["Playfair Display", "serif"],
-                "body": ["Work Sans", "sans-serif"],
-                "label": ["Work Sans", "sans-serif"]
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"],
+                "sans": ["Inter", "sans-serif"]
             },
             fontSize: {
                 "fluid-sm": "clamp(0.875rem, 0.8rem + 0.38vw, 1.125rem)",

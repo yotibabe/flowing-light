@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section Font Options | Flowing Light</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入所有对比字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Option 1: Playfair Display (Current) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Option 2: Lora -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Option 3: Cinzel Decorative -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Option 4: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300&display=swap" rel="stylesheet">
+    <!-- Option 5: Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        body { background-color: #FFFCF9; color: #1A1A1A; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-lora { font-family: 'Lora', serif; }
+        .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .bg-glass { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(60px); }
+    </style>
+</head>
+<body class="antialiased min-h-screen py-12 px-4 md:px-12 bg-[#FFFCF9]">
+    
+    <div class="max-w-[1100px] mx-auto space-y-24">
+        
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Hero 区域字体预览 (5种风格)</h1>
+            <p class="text-gray-500">将不同的字体直接代入完整的 Hero Section 排版中进行对比</p>
+        </div>
+
+        <!-- ==========================================
+             Option 1: Playfair Display (Current)
+        =========================================== -->
+        <div class="relative">
+            <div class="absolute -top-4 left-4 z-20 bg-[#C8523A] text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                1. 当前使用: Playfair Display (高反差/锐利/古典)
+            </div>
+            <section class="relative w-full flex items-center justify-center pt-8 overflow-hidden z-10">
+                <div class="hero-panel relative z-10 w-full bg-glass p-8 md:p-12 lg:p-24 shadow-2xl shadow-[#1A1A1A]/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 rounded-2xl">
+                    <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+                        <div class="space-y-4">
+                            <span class="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#C8523A] font-bold block">Est. 2023 • SYSU Reading Club</span>
+                            <h1 class="font-playfair text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-[#1A1A1A] leading-[0.85] tracking-tighter">
+                                Flowing <br>
+                                <span class="italic font-normal text-[#C8523A]">Light</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-lg mx-auto md:mx-0">
+                            <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] leading-snug">
+                                中大读书会 Light
+                            </h2>
+                            <p class="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-[#555555] leading-relaxed">
+                                点亮每一个平凡而独特的 <span class="text-[#D86851] font-black">生命故事</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex flex-col items-center justify-center">
+                        <div class="h-64 w-px bg-[#C8523A]/30"></div>
+                        <span class="py-8 font-sans text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+                        <div class="h-16 w-px bg-[#C8523A]/30"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             Option 2: Lora
+        =========================================== -->
+        <div class="relative">
+            <div class="absolute -top-4 left-4 z-20 bg-[#2C2C2C] text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                2. Lora (温润/饱满/老派人文)
+            </div>
+            <section class="relative w-full flex items-center justify-center pt-8 overflow-hidden z-10">
+                <div class="hero-panel relative z-10 w-full bg-glass p-8 md:p-12 lg:p-24 shadow-2xl shadow-[#1A1A1A]/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 rounded-2xl">
+                    <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+                        <div class="space-y-4">
+                            <span class="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#C8523A] font-bold block">Est. 2023 • SYSU Reading Club</span>
+                            <h1 class="font-lora text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-bold text-[#1A1A1A] leading-[0.85] tracking-tight">
+                                Flowing <br>
+                                <span class="italic font-medium text-[#C8523A]">Light</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-lg mx-auto md:mx-0">
+                            <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] leading-snug">
+                                中大读书会 Light
+                            </h2>
+                            <p class="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-[#555555] leading-relaxed">
+                                点亮每一个平凡而独特的 <span class="text-[#D86851] font-black">生命故事</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex flex-col items-center justify-center">
+                        <div class="h-64 w-px bg-[#C8523A]/30"></div>
+                        <span class="py-8 font-sans text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+                        <div class="h-16 w-px bg-[#C8523A]/30"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             Option 3: Cinzel Decorative
+        =========================================== -->
+        <div class="relative">
+            <div class="absolute -top-4 left-4 z-20 bg-[#2C2C2C] text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                3. Cinzel Decorative (先锋/装饰感/奢侈品牌)
+            </div>
+            <section class="relative w-full flex items-center justify-center pt-8 overflow-hidden z-10">
+                <div class="hero-panel relative z-10 w-full bg-glass p-8 md:p-12 lg:p-24 shadow-2xl shadow-[#1A1A1A]/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 rounded-2xl">
+                    <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+                        <div class="space-y-4">
+                            <span class="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#C8523A] font-bold block">Est. 2023 • SYSU Reading Club</span>
+                            <h1 class="font-cinzel text-5xl sm:text-6xl md:text-[5rem] lg:text-[7rem] font-black text-[#1A1A1A] leading-[0.9] tracking-tight">
+                                FLOWING <br>
+                                <span class="font-normal text-[#C8523A]">LIGHT</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-lg mx-auto md:mx-0">
+                            <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] leading-snug">
+                                中大读书会 Light
+                            </h2>
+                            <p class="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-[#555555] leading-relaxed">
+                                点亮每一个平凡而独特的 <span class="text-[#D86851] font-black">生命故事</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex flex-col items-center justify-center">
+                        <div class="h-64 w-px bg-[#C8523A]/30"></div>
+                        <span class="py-8 font-sans text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+                        <div class="h-16 w-px bg-[#C8523A]/30"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             Option 4: Montserrat
+        =========================================== -->
+        <div class="relative">
+            <div class="absolute -top-4 left-4 z-20 bg-[#2C2C2C] text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                4. Montserrat (极简/硬朗/呼吸感无衬线)
+            </div>
+            <section class="relative w-full flex items-center justify-center pt-8 overflow-hidden z-10">
+                <div class="hero-panel relative z-10 w-full bg-glass p-8 md:p-12 lg:p-24 shadow-2xl shadow-[#1A1A1A]/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 rounded-2xl">
+                    <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+                        <div class="space-y-4">
+                            <span class="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#C8523A] font-bold block">Est. 2023 • SYSU Reading Club</span>
+                            <h1 class="font-montserrat text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-[#1A1A1A] leading-[0.9] tracking-tighter uppercase">
+                                Flowing <br>
+                                <span class="italic font-light text-[#C8523A] tracking-normal">Light</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-lg mx-auto md:mx-0">
+                            <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] leading-snug">
+                                中大读书会 Light
+                            </h2>
+                            <p class="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-[#555555] leading-relaxed">
+                                点亮每一个平凡而独特的 <span class="text-[#D86851] font-black">生命故事</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex flex-col items-center justify-center">
+                        <div class="h-64 w-px bg-[#C8523A]/30"></div>
+                        <span class="py-8 font-sans text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+                        <div class="h-16 w-px bg-[#C8523A]/30"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             Option 5: Cormorant Garamond
+        =========================================== -->
+        <div class="relative">
+            <div class="absolute -top-4 left-4 z-20 bg-[#2C2C2C] text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                5. Cormorant Garamond (极其纤细/极具诗意/优雅)
+            </div>
+            <section class="relative w-full flex items-center justify-center pt-8 overflow-hidden z-10">
+                <div class="hero-panel relative z-10 w-full bg-glass p-8 md:p-12 lg:p-24 shadow-2xl shadow-[#1A1A1A]/5 border border-white/40 flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-24 rounded-2xl">
+                    <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
+                        <div class="space-y-4">
+                            <span class="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#C8523A] font-bold block">Est. 2023 • SYSU Reading Club</span>
+                            <h1 class="font-cormorant text-6xl sm:text-7xl md:text-[7rem] lg:text-[9rem] font-bold text-[#1A1A1A] leading-[0.8] tracking-tight">
+                                Flowing <br>
+                                <span class="italic font-medium text-[#C8523A]">Light</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-lg mx-auto md:mx-0">
+                            <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] leading-snug">
+                                中大读书会 Light
+                            </h2>
+                            <p class="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-[#555555] leading-relaxed">
+                                点亮每一个平凡而独特的 <span class="text-[#D86851] font-black">生命故事</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex flex-col items-center justify-center">
+                        <div class="h-64 w-px bg-[#C8523A]/30"></div>
+                        <span class="py-8 font-sans text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+                        <div class="h-16 w-px bg-[#C8523A]/30"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+</html>
