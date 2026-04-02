@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="js/tailwind-config.js"></script>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/layout.js" defer></script>
 
 <!-- Injecting GSAP & Lenis for animations -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -38,7 +39,7 @@
     .mix-blend-multiply { mix-blend-mode: multiply; }
 </style>
 </head>
-<body class="font-body selection:bg-primary-fixed overflow-x-hidden ethereal-gradient-bg min-h-screen">
+<body class="font-body selection:bg-primary-fixed overflow-x-hidden ethereal-gradient-bg min-h-screen" data-base-path="" data-nav-active="archive" data-footer="global">
     
     <!-- Glowing Custom Cursor -->
     <div id="cursor-glow" class="fixed top-0 left-0 w-24 h-24 bg-primary-container/15 rounded-full blur-[30px] pointer-events-none z-0 mix-blend-multiply transition-opacity duration-500 hidden md:block"></div>
@@ -48,31 +49,7 @@
     <div class="fixed w-[600px] h-[600px] bg-primary-container/10 rounded-full blur-[120px] top-20 -left-40 animate-float-slow pointer-events-none z-0"></div>
     <div class="fixed w-[500px] h-[500px] bg-secondary-container/10 rounded-full blur-[100px] bottom-20 -right-20 animate-float-delayed pointer-events-none z-0"></div>
 
-<!-- Header Area -->
-<header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/45 backdrop-blur-[40px] border-b border-outline-variant/10">
-    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 h-16 md:h-24 flex items-center justify-between">
-        
-        <a class="text-fluid-lg font-display font-bold tracking-wide shrink-0 text-primary z-50" href="index.html">
-            中大读书会 <span class="italic font-normal">Light</span>
-        </a>
-        
-        <nav class="flex gap-2 sm:gap-4 md:gap-8 items-center justify-end shrink-0 ml-2">
-            <a class="group flex flex-col items-center gap-1 px-1 py-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="index.html">
-                <span class="font-label text-[10px] sm:text-xs uppercase tracking-widest text-outline group-hover:text-primary transition-colors">HOME</span>
-            </a>
-            <a class="group flex flex-col items-center gap-1 px-1 py-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="archive.html">
-                <span class="font-label text-[10px] sm:text-xs uppercase tracking-widest text-primary relative">
-                    ARCHIVE
-                    <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform origin-left"></span>
-                </span>
-            </a>
-            <a class="group flex flex-col items-center gap-1 px-1 py-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="about.html">
-                <span class="font-label text-[10px] sm:text-xs uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
-            </a>
-        </nav>
-        
-    </div>
-</header>
+<div id="site-header"></div>
 
 <main class="pt-32 pb-24 md:pb-32 px-6 md:px-12 max-w-[1440px] mx-auto">
     
@@ -208,23 +185,7 @@
 </div>
 </main>
 
-<!-- Footer (Synchronized with Global Spec) -->
-<footer class="w-full bg-surface-container-low">
-    <div class="flex flex-col md:flex-row justify-between items-center w-full px-4 sm:px-6 md:px-12 py-6 md:py-8 gap-6 md:gap-8 max-w-[1440px] mx-auto">
-        <div class="text-fluid-lg font-display font-bold text-on-surface text-center md:text-left shrink-0">
-            中大读书会 Light
-        </div>
-        <div class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 md:gap-8 flex-1">
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="assets/wechat-qr.png" target="_blank" rel="noopener noreferrer">微信公众号</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="about.html#join-community">加入社群</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="about.html#become-speaker">嘉宾推荐</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="about.html#contact-us">联系我们</a>
-        </div>
-        <div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right w-full md:w-auto shrink-0">
-            © 2025 中山大学深圳校友会读书会. All Rights Reserved.
-        </div>
-    </div>
-</footer>
+<div id="site-footer"></div>
 
 <!-- Interactive Animations Scripts -->
 <script>

@@ -1,128 +1,318 @@
-# Flowing Light Design System v2.0 (Luminescent Parchment)
+# Flowing Light Design System v3.1 (Comprehensive Edition)
 
-**This document is the Single Source of Truth for the Flowing Light design language.**
-It replaces the outdated v1 document by incorporating modern responsive frontend practices (Fluid Typography & Fluid Spacing).
-
-## 1. Overview & Creative North Star
-**Creative North Star: The Digital Curator**
-"Luminescent Parchment" is a design system that treats the screen as a gallery space rather than a software interface. It prioritizes the "weight" of intellectual content through high-end editorial layouts. The system rejects the generic "SaaS" look in favor of intentional asymmetry, varying typographic rhythms, and a sense of "flowing light." It is designed for platforms where information is meant to be savored, not just processed.
-
-## 2. Colors & Textures
-The palette is rooted in warm, earthen tones (Terracotta Primary) and intellectual blues (Slate Secondary), set against a near-white, luminous background (`bg-surface`).
-
-### Core Rules
-*   **The "No-Line" Rule:** Explicitly prohibit 1px solid borders for structural sectioning. Boundaries are created through background shifts (e.g., transitioning from `bg-surface` to `bg-surface-container-low`) or the use of generous whitespace (`gap-fluid-*`).
-*   **The "Ghost Border" Fallback:** If a separator is absolutely required, use `border-outline-variant/30`.
-*   **Surface Hierarchy:** 
-    *   `bg-surface-container-lowest` is reserved for cards and elevated panels. (Actual value defined in `tailwind-config.js`, do not hardcode hex.)
-    *   `bg-surface-container-low` is used for subtle section differentiation. (Actual value defined in `tailwind-config.js`, do not hardcode hex.)
-*   **The "Glass & Gradient" Rule:** Hero panels and floating UI elements utilize `bg-white/45 backdrop-blur-[40px]` on desktop to maintain the "light" aesthetic. **On mobile, heavy glassmorphism is removed to preserve performance and breathing room.**
-*   **Global Header Unity:** All pages MUST share the exact same top navigation styling: `bg-white/45 backdrop-blur-[40px] border-b border-outline-variant/10`. No page is allowed to use a heavier background (e.g., `bg-white/80`) to ensure global consistency.
-*   **Ethereal Gradients:** Soft, multi-stop linear and radial gradients (class: `ethereal-gradient-bg`) to create depth.
-
-## 3. Typography (Fluid Scale)
-The typography uses a three-role pairing: **Playfair Display** (`font-display`) as the cinematic display typeface reserved exclusively for the homepage Hero `<h1>`; **Noto Serif SC** (`font-headline`) as the editorial content typeface for section headings, article titles on reading pages, and pull quotes; and **Work Sans** (`font-body` / `font-label`) for all functional UI text.
-
-**We strictly use `clamp()` based fluid typography to avoid jarring breakpoints.** Do not use hardcoded `text-2xl sm:text-4xl` classes.
-
-**Typography Classes (Ground Truth):**
-*   `font-display`: Playfair Display — **Homepage Hero `<h1>` only.** No other use permitted.
-*   `font-headline`: Noto Serif SC — Section headings, reading-page article titles (`<h1>`), pull quotes, editorial links.
-*   `font-body` & `font-label`: Work Sans — Body copy, UI labels, buttons, metadata.
-
-> **Note on reading pages:** Episode detail pages do NOT use `font-display` for the article `<h1>`. Use `font-headline font-bold` instead. `font-display` is for visual drama; reading pages prioritize content authority. This is an intentional distinction.
-
-### 3a. Scene Classification (场景分级)
-This system serves two fundamentally different page contexts. Each has its own typographic ceiling. Mixing the ceilings causes the "everything sounds equally loud" problem where a detail page feels as large and loud as the homepage.
-
-*   **Display Context** (Homepage, Archive page): Goal is visual impact, first impression, and scanning. Larger, more dramatic type is appropriate and expected.
-*   **Reading Context** (Episode detail pages): Goal is sustained comprehension and immersion. Typography should be quieter and smaller so the content — not the type — holds attention.
-
-### 3b. Fluid Size Scale (with scene boundaries)
-*   `text-fluid-6xl` & `text-fluid-5xl`: **Display Context only.** Homepage Hero `<h1>` paired with `font-display`. The absolute ceiling for any text in this system.
-*   `text-fluid-4xl`: **Display Context only.** Large section headings on display pages (e.g., Archive sidebar title, Homepage philosophy `<h2>`). Never use on reading pages.
-*   `text-fluid-3xl`: **Reading Context — Article `<h1>` ceiling** (Use `font-headline font-bold`). Also valid as the minimum size for a display page `<h2>`. This is where the two contexts meet.
-*   `text-fluid-2xl`: **Reading Context — `<h2>` level.** Chapter or speaker section headings within an article. Also valid for display page intro copy.
-*   `text-fluid-xl`: **Both contexts — `<h3>` / subheading level.** Card titles, sub-section headings, editorial text links. The maximum heading size on a reading page below its `<h1>`.
-*   `text-fluid-lg`: **Intro paragraphs only.** The opening paragraph of an article, or description text on display pages. **Not** the default body size for sustained reading pages.
-*   `text-fluid-base` & `text-fluid-sm`: **Reading body default.** All sustained body paragraphs on episode detail pages use `text-fluid-base` + `leading-relaxed`. `text-fluid-sm` for captions and secondary metadata.
-*   `text-[10px]` / `text-xs`: Label/Caption. **Must** be styled with `uppercase` and extreme letter spacing (`tracking-widest` or `tracking-[0.4em]`).
-
-### 3c. font-headline Usage Frequency
-Noto Serif SC carries editorial authority only when used selectively. When it appears on every element in a viewport, it loses distinction and becomes a second default body font.
-
-**Rule:** In any single viewport, `font-headline` elements should not exceed **3 instances**. The intended count is: one `<h1>` or `<h2>`, one `<h3>`, one blockquote. If a fourth headline-styled element appears in the same view, consolidate or replace with `font-body` using weight variation (`font-medium` / `font-bold`).
-
-### 3d. Heading Hierarchy Gap Rule
-Adjacent heading levels must skip at least one fluid step. This prevents parent and child headings from reading as visual siblings.
-
-*   If `<h1>` = `text-fluid-3xl`, then `<h2>` maximum = `text-fluid-xl` (skipping `text-fluid-2xl`).
-*   If `<h1>` = `text-fluid-4xl`, then `<h2>` maximum = `text-fluid-2xl`.
-*   Body text must sit at least two fluid steps below its immediate parent heading.
-
-## 4. Spacing & Rhythm (Fluid Layout)
-Layout problems are often the root cause of interfaces feeling "off". Space is a design material—use it with intention.
-
-**Fluid Spacing Scale (`gap-fluid-*`, `m-fluid-*`, `p-fluid-*`):**
-*   `fluid-sm` / `fluid-md`: Tight grouping for related elements (e.g., paragraphs within an article).
-*   `fluid-lg`: Generous separation between distinct components.
-*   `fluid-xl` / `fluid-2xl`: Massive separation between major page sections to create a rhythmic, gallery-like feel.
-
-**Layout Constraints:**
-*   **Standard Page Width:** `max-w-[1200px] mx-auto`
-*   **Reading Flow Width:** `max-w-[800px] mx-auto` (For detail pages to ensure optimal line-length).
-*   **Hero Panel Width:** `max-w-[1440px]` (Allowed to break the standard grid for dramatic effect).
-*   **Mobile Navigation Safe Area:** The Top Navigation MUST NEVER overflow horizontally. Remove `overflow-x-auto` and `whitespace-nowrap`. On mobile (`< md`), the gap between links must be tight (`gap-2` to `gap-4`) to ensure they fit gracefully on a 320px width screen.
-*   **Refined Footer Spacing:** The global footer is an endcap, not a gallery section. It must be kept "thin" and refined. Maximum vertical padding is `py-6 md:py-8`. Do NOT use `py-12` or `py-16` for the footer.
-
-## 5. Components & Interactions
-*   **Navigation:** Touch-friendly links with a minimum hit area of `min-h-[44px] min-w-[44px]`. Hover states use a 1px expanding border from the left origin (`scale-x-100 transition-transform origin-left`).
-*   **Buttons:** Rectangular with minimal rounding (`rounded-sm`). Primary buttons use `bg-on-surface text-surface`.
-*   **Inline Contextual Links:** When a call-to-action carries strong emotional or philosophical context, do not use an isolated button. Instead, embed it within an `<h2>` or `<h3>` as an inline link with a bottom border and hover arrow (`border-b border-primary/30 pb-1 group-hover:translate-x-1`).
-*   **Cards (The "Vibrant & Frosted" Standard):** 
-    *   **Border Radius Limit:** All cards must use `rounded-2xl` or smaller (prefer `rounded-xl` or `rounded-2xl`). Do not mix extreme radii like `rounded-3xl` or `rounded-full` for content cards.
-    *   **Frost Edges (Glassmorphism Only):** Glassmorphism cards (translucent panels) must have a crisp edge to define their boundary against the background. Always use `border border-white/40` (or similar low-opacity white) on glass containers.
-    *   **Borderless (Image-Filled Cards Only):** Full-bleed image cards (like Archive cards) should be completely borderless (`border-none`). Their boundaries are defined by the image itself and a soft shadow (`shadow-lg`). Do NOT apply "Frost Edges" or solid borders to full-image cards, as it creates an undesirable "photo frame" effect.
-    *   **Vibrant Hover (No Dark Overlays):** Cards should feel alive and welcoming. Default states should be bright and visible. Do NOT use dark overlays (`bg-black/50`) that only reveal color on hover. Instead, use a "Vibrant Hover" approach: default state is fully visible, hover state elevates the card slightly (`-translate-y-1`), enhances the shadow (`shadow-xl`), or subtly scales the image (`scale-105`).
-    *   **Typography:** Archive card text must follow Editorial Layout principles: left-aligned, tight vertical rhythm, no arbitrary `<br>` line breaks.
-    *   **Image Loading:** Always use `loading="lazy"` on archive cards.
-*   **Blockquotes:** Marked by a subtle left border (`border-l-2 border-primary/30`) and generous `my-fluid-2xl` padding.
-*   **Editorial Endcap (Reading CTA):** At the end of a long-form reading page, DO NOT use the standard global footer. Instead, use a tight, vertically stacked CTA block consisting of: a Primary Action (solid dark button with icon, e.g., "Speak Now") followed by a Secondary Navigation (ghost button with left arrow, e.g., "Back to Archive"). Keep copy direct; remove marketing fluff.
-
-## 6. Layout Philosophies
-*   **Editorial Asymmetry:** On desktop breakpoints, avoid strict center-alignment. Use wide containers (`max-w-[1100px]`) and pair left-aligned text with subtle right-aligned vertical decorations (lines or vertical typography) to create a magazine-like balance.
-*   **Zero-Distraction Reading:** Reading pages (Episode Details) must strip away all background motion. Remove floating orbs, glowing cursors, and complex entrance animations. The background should be a static `ethereal-gradient-bg` to maintain absolute focus on typography and imagery.
-*   **Vertical Elongation:** For glassmorphic concept cards (like the "Core Values" block), utilize asymmetric padding (e.g., `pt-24 pb-24` on desktop) to make the card appear elongated and elegant rather than square and boxy.
-
-## 7. Do's and Don'ts
-
-### Hard Rules (Non-negotiable — breaking these breaks the system)
-*   **DO:** Use `text-fluid-*` and `gap-fluid-*` everywhere. Never use hardcoded size breakpoints like `text-2xl sm:text-4xl`.
-*   **DO:** Keep `font-display` (Playfair Display) exclusive to the Homepage Hero `<h1>` only. Reading pages (episode detail) use `font-headline font-bold` for the article `<h1>` — not `font-display`.
-*   **DO:** Use `font-headline italic` (Noto Serif SC italic) for pull-quote emphasis. This is the correct substitute for Playfair Display in non-hero contexts.
-*   **DON'T:** Use `whitespace-nowrap` on mobile navigation. It causes horizontal scroll overflow.
-*   **DON'T:** Animate layout properties (`width`, `height`, `margin`, `padding`). Use `transform` and `opacity` only.
-*   **DON'T:** Use `shadow-xl` with pure black. Always scope shadows with surface tokens: `shadow-on-surface/5` or `shadow-primary/20`.
-
-### Style Guidelines (Intentional defaults — deviation requires justification)
-*   Mix Serif italic and upright weights within the same heading for typographic rhythm.
-*   Make all touch targets at least 44×44px on mobile.
-*   Prefer background shifts and whitespace over borders for section separation.
+本文件是 Flowing Light 的单一事实来源（Single Source of Truth）。  
+目标是把审美判断、交互经验和工程约束统一为可执行、可复用、可验收的规则体系。
 
 ---
 
-## 8. Quick Reference (速查表)
+## 1. 系统定位与目标
 
-When in doubt about which token to use, consult this table before reaching for a larger size.
+### 1.1 Creative North Star
+- 关键词：**Luminescent Parchment / 数字策展 / 轻盈而有分量**
+- 本质：把页面当成“阅读展陈空间”，不是“功能密集控制台”
+- 体验目标：首屏有气质，正文可沉浸，交互有反馈，系统可迭代
 
-| Role | Display Page (Homepage / Archive) | Reading Page (Episode Detail) |
+### 1.2 适用范围
+- 生产页面：`index.html`、`archive.html`、`about.html`、`episodes/vol*/index.html`
+- 设计系统页面：`design-system/design-system.html`
+- 运行支撑：`js/tailwind-config.js`、`css/style.css`、`js/layout.js`、`js/site.js`
+
+### 1.3 三条总原则
+1. 先 token，后样式  
+2. 先模式，后页面  
+3. 先可读性，后视觉戏剧性
+
+---
+
+## 2. 信息架构（Style Guide + UI Kit + Pattern Library + Atomic Design）
+
+### 2.1 Style Guide（视觉基础层）
+- 色彩、字体、间距、层级、动效节奏
+- 定义“视觉语言”和“语气边界”
+
+### 2.2 UI Kit（组件层）
+- 最小组件与交互状态（default/hover/focus/active/disabled/loading）
+- 规定结构、尺寸、可访问性与响应式行为
+
+### 2.3 Pattern Library（模式层）
+- 组件组合策略（如 Header、Hero、Archive Grid、Reading Flow、Footer）
+- 明确“适用场景、禁用场景、替换策略”
+
+### 2.4 Atomic Design（方法层）
+- Atoms → Molecules → Organisms → Templates → Pages
+- 强调“自下而上可组合、自上而下可验收”
+
+---
+
+## 3. Foundation Tokens（基础令牌）
+
+### 3.1 Color Tokens
+- 来源：`js/tailwind-config.js`
+- 禁止：硬编码 Hex、临时魔法色
+
+**核心角色**
+- 品牌：`primary`, `primary-container`, `primary-fixed`
+- 表面：`surface`, `surface-container-lowest`, `surface-container-low`
+- 文本：`on-surface`, `on-surface-variant`
+- 边界：`outline-variant`
+
+**硬规则**
+- No-Line Rule：禁止把 `1px solid` 当结构主手段
+- Ghost Border Fallback：必要分隔仅可用 `border-outline-variant/30`
+- Surface Hierarchy：`lowest` 用于卡片抬升，`low` 用于区块换层
+- Ethereal Gradient：优先由 `ethereal-gradient-bg` + 柔和光晕提供层次
+
+### 3.2 Typography Tokens
+- `font-display`：仅首页 Hero `<h1>`
+- `font-headline`：章节标题、阅读页标题、引用
+- `font-body` / `font-label`：正文、标签、按钮、元信息
+
+**关键限制**
+- 阅读页 `<h1>` 禁止 `font-display`
+- `font-label` 必须搭配 `uppercase + tracking-widest` 或 `tracking-[0.4em]`
+- 单一视口 `font-headline` 推荐不超过 3 处
+
+### 3.3 Fluid Size Tokens
+- 文本：`text-fluid-6xl` → `text-fluid-sm`
+- 间距：`gap-fluid-sm/md/lg/xl/2xl` 与 `p-fluid-*` / `m-fluid-*`
+- 行长：
+  - 标准：`max-w-[1200px]`
+  - 阅读：`max-w-[800px]`
+  - 首屏：`max-w-[1440px]`
+
+**场景上限**
+- `text-fluid-6xl~5xl`：仅展示页 Hero
+- `text-fluid-4xl`：仅展示页大标题
+- `text-fluid-3xl`：阅读页 `<h1>` 上限
+- `text-fluid-2xl`：阅读页 `<h2>` 上限
+- `text-fluid-base`：阅读正文默认
+
+**层级规则**
+- 相邻标题层级至少跨 1 个 fluid step
+- 正文至少比父标题小 2 个 fluid step
+
+### 3.4 Radius / Shadow / Layer Tokens
+- 圆角：内容卡片上限 `rounded-2xl`
+- 阴影：优先 `shadow-on-surface/5` 或 `shadow-primary/20`
+- 禁止：纯黑重阴影压塌层级
+- 层级：固定头部 `z-50`，弹窗高于页面内容
+
+### 3.5 Motion Tokens
+- 时长：
+  - 快速反馈：`150ms~220ms`
+  - 常规过渡：`280ms~500ms`
+  - 叙事入场：`700ms~1200ms`
+- 缓动：优先 `ease-out` / `power3.out`，禁弹跳式娱乐缓动
+- 属性白名单：`transform`, `opacity`
+- 属性黑名单：`width`, `height`, `margin`, `padding`
+
+---
+
+## 4. 场景分级（Display vs Reading）
+
+### 4.1 Display Context（首页 / 归档）
+- 目标：品牌感、首屏冲击、快速扫读
+- 文本：`font-display + fluid-5xl~6xl`（仅首页 Hero）
+- 可用：适度玻璃、背景光晕、节奏型动效
+
+### 4.2 Reading Context（详情页）
+- 目标：连续阅读、认知稳定、信息吸收
+- 文本：`font-headline + fluid-3xl`（标题上限）
+- 要求：弱干扰背景、收敛动效、稳定行长
+
+---
+
+## 5. 全局结构硬规则
+
+### 5.1 Header 全站统一（强制）
+- 样式：`bg-white/45 backdrop-blur-[40px] border-b border-outline-variant/10`
+- 统一来源：`js/layout.js`
+- 禁止：页面内私有 Header 变体漂移
+
+### 5.2 Navigation 可用性
+- 命中区：`min-h-[44px] min-w-[44px]`
+- active：1px 下划线从左展开（`origin-left`）
+- mobile：`gap-2~gap-4`，禁止横向溢出方案（如 `whitespace-nowrap`）
+
+### 5.3 Footer 策略
+- 全局 Footer 是“薄尾封”，`py-6 md:py-8` 为上限
+- 页面行为：
+  - `data-footer=global`：跳转 about 锚点
+  - `data-footer=about-local`：关于页内锚点
+  - `data-footer=none`：详情页可关闭
+
+---
+
+## 6. UI Kit 组件规范（完整）
+
+### 6.1 Button
+- 结构：文字 + 可选图标
+- 变体：Primary / Secondary / Ghost / Disabled
+- 状态：
+  - hover：色相或边界轻变化
+  - focus-visible：可见高对比焦点环
+  - active：轻微压下反馈（scale 或色阶）
+  - disabled：视觉变灰 + 交互禁用
+
+### 6.2 Inline Context Link
+- 用于“叙事中 CTA”，不打断阅读节奏
+- 结构：文本下边线 + 箭头位移
+- 禁止：替代所有按钮；只用于语义上“嵌入式行动”
+
+### 6.3 Navigation Item
+- 标签：`font-label` + `uppercase` + `tracking-widest`
+- active 与 hover 行为一致化，避免多套导航语言
+
+### 6.4 Archive Card
+- 结构：图像层 + 轻遮罩 + 左对齐文本层
+- 强约束：
+  - `border-none`
+  - `loading="lazy"`
+  - 圆角上限 `rounded-2xl`
+  - 禁暗图反显（默认需可读）
+  - 禁 `<br>` 强制断行破坏节奏
+- 交互：
+  - hover：`-translate-y-1` + 阴影增强 + 图像轻缩放
+
+### 6.5 Blockquote
+- 标记：`border-l-2 border-primary/30`
+- 留白：`my-fluid-2xl`
+- 文体：`font-headline italic`
+
+### 6.6 Hero Panel Container
+- 展示页桌面允许：`md:bg-white/45 md:backdrop-blur-[40px]`
+- 移动端降级：减少 blur 与过重玻璃
+- 避免与全局背景层叠加后发灰
+
+---
+
+## 7. Pattern Library 模式规范（完整）
+
+### 7.1 Global Header Pattern
+- 由 `layout.js` 注入
+- 参数：
+  - `data-base-path`
+  - `data-nav-active`
+  - `data-footer`
+
+### 7.2 Hero Pattern
+- 目标：信息灯箱而非视觉炫技
+- 替换策略：
+  - 背景已足够丰富 → 去局部玻璃，保全局层
+  - 内容对比不足 → 加轻量玻璃而非整体加白
+
+### 7.3 Archive Grid Pattern
+- 目标：归档快速浏览 + 视觉记忆锚点
+- 规则：图像优先、文案左对齐、卡片交互统一节奏
+
+### 7.4 Reading Flow Pattern
+- 骨架：导语 → 分节 → 正文 → 引用 → Endcap CTA
+- 行长固定阅读区，避免横向扫视负担
+
+### 7.5 Endcap CTA Pattern
+- 主动作在上，次动作在下
+- 文案直接，不做营销口号堆叠
+
+---
+
+## 8. Atomic Design 映射
+
+| 层级 | 定义 | Flowing Light 示例 |
 |---|---|---|
-| **Page `<h1>`** | `text-fluid-5xl~6xl` + `font-display font-black` | `text-fluid-3xl` + `font-headline font-bold` |
-| **Section `<h2>`** | `text-fluid-3xl~4xl` + `font-headline font-bold` | `text-fluid-xl~2xl` + `font-headline font-bold` |
-| **Sub-section `<h3>`** | `text-fluid-xl` + `font-headline font-bold` | `text-fluid-xl` + `font-headline font-bold` |
-| **Opening paragraph** | `text-fluid-lg` + `font-body font-light` | `text-fluid-lg` + `font-body font-light` (first para only) |
-| **Body copy** | (Display pages have minimal sustained body) | `text-fluid-base` + `font-body font-light leading-relaxed` |
-| **Blockquote** | `text-fluid-lg` + `font-headline italic` | `text-fluid-lg` + `font-headline italic` |
-| **Metadata / Label** | `text-[10px]~text-xs` + `font-label uppercase tracking-widest` | Same |
+| Atoms | 最小视觉单位 | 标签、标题、正文、图标、色块 |
+| Molecules | 原子组合单元 | 导航项、按钮+图标、卡片标题区 |
+| Organisms | 区块级组件 | Header、Archive Grid、Footer |
+| Templates | 布局骨架 | 首页模板、归档模板、关于模板、详情模板 |
+| Pages | 生产页面实例 | `index.html`、`archive.html`、`about.html`、`episodes/vol*/index.html` |
 
-> **Critical rule:** `font-display` (Playfair Display) never appears on reading pages. The reading page `<h1>` uses `font-headline` at a much smaller scale (`fluid-3xl` vs `fluid-5xl~6xl`). This is what prevents detail pages from sounding as loud as the homepage.
+---
+
+## 9. 交互、动效、可访问性
+
+### 9.1 状态矩阵要求
+- 所有可交互组件必须声明：default / hover / focus-visible / active / disabled
+- 复杂组件额外声明：loading / empty / error / success
+
+### 9.2 Motion Policy
+- 页面入场动效用于叙事，不用于装饰炫技
+- 阅读页动效总量低于展示页
+- `prefers-reduced-motion` 必须可降级到静态终态
+
+### 9.3 Accessibility Baseline
+- 命中区 ≥ 44×44
+- 焦点态可见
+- 文本对比满足基础可读
+- 不仅靠颜色传达唯一语义
+
+---
+
+## 10. 生产页面映射（规范落地）
+
+### 10.1 首页 `index.html`
+- 角色：Display Context
+- 重点：Hero 视觉叙事、品牌标题、展示级排版
+
+### 10.2 归档页 `archive.html`
+- 角色：Display Context
+- 重点：Archive Card 模式、侧栏信息结构、卡片网格节奏
+
+### 10.3 关于页 `about.html`
+- 角色：Display + 信息说明混合
+- 重点：组织叙事、CTA 区块、页内锚点 Footer
+
+### 10.4 详情页 `episodes/vol*/index.html`
+- 角色：Reading Context
+- 重点：阅读流、低干扰背景、正文可读性优先
+
+---
+
+## 11. 设计系统治理（Governance）
+
+### 11.1 变更流程
+1. 先在 `design-system.html` 增加/修正样例
+2. 再更新本规范文档对应章节
+3. 最后改生产页面并做回归检查
+
+### 11.2 提交门槛（Checklist）
+- 是否复用既有 token
+- 是否复用既有组件/模式
+- 是否破坏 Display/Reading 分级
+- 是否引入边界漂移（Header/Footer/导航）
+- 是否影响移动端导航安全区
+- 是否引入不必要实线分割
+- 是否导致阅读页字体与动效过重
+
+### 11.3 回归检查（页面级）
+- 首页：Hero 冲击与透明导航共存
+- 归档：卡片亮态可读 + hover 增强一致
+- 关于：Footer 锚点正确
+- 详情：`<h1>` 仍为 `font-headline + text-fluid-3xl` 且低干扰
+
+---
+
+## 12. 快速索引
+
+- 系统看板：`design-system/design-system.html`
+- 规范文档：`design-system/DESIGN_SYSTEM_V2.md`
+- tokens：`js/tailwind-config.js`
+- 全局样式：`css/style.css`
+- 共享布局：`js/layout.js`
+- 交互脚本：`js/site.js`
+
+---
+
+## 13. 速查对照
+
+| 角色 | 展示页（首页/归档） | 阅读页（详情） |
+|---|---|---|
+| Page `<h1>` | `text-fluid-5xl~6xl` + `font-display font-black` | `text-fluid-3xl` + `font-headline font-bold` |
+| Section `<h2>` | `text-fluid-3xl~4xl` + `font-headline` | `text-fluid-xl~2xl` + `font-headline` |
+| Sub `<h3>` | `text-fluid-xl` + `font-headline` | `text-fluid-xl` + `font-headline` |
+| Opening Paragraph | `text-fluid-lg` + `font-body font-light` | `text-fluid-lg`（仅首段） |
+| Body Copy | 短说明为主 | `text-fluid-base + leading-relaxed` |
+| Metadata | `text-[10px]~text-xs` + `font-label uppercase tracking-widest` | 同左 |
+
+---
+
+> Flowing Light 不是“一次性视觉稿”，而是“长期可演化的系统资产”。  
+> 新页面必须可在本系统中被解释、被复用、被验收。

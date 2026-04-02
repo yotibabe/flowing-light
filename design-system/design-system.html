@@ -2,239 +2,338 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Design System v2.0 - Flowing Light</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Flowing Light System Board</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script src="../js/tailwind-config.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="font-body text-on-surface bg-background antialiased selection:bg-primary-fixed">
-
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white/45 backdrop-blur-[40px] border-b border-outline-variant/10 py-4 px-4 sm:px-6 md:px-12">
-        <div class="max-w-[1440px] mx-auto flex items-center justify-between">
-            <div class="font-display text-fluid-lg font-bold text-primary">Flowing Light Design System v2.0</div>
-            <div class="font-label text-[10px] uppercase tracking-widest text-outline hidden sm:block">Component Library Sandbox</div>
+<body class="font-body text-on-surface bg-surface antialiased selection:bg-primary-fixed min-h-screen">
+    <div class="fixed inset-0 z-0 ethereal-gradient-bg pointer-events-none"></div>
+    <div class="fixed inset-0 z-0 fluid-focus-gradient pointer-events-none opacity-40"></div>
+    <header class="sticky top-0 z-50 bg-white/45 backdrop-blur-[40px] border-b border-outline-variant/10">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
+            <div class="font-display text-fluid-lg font-bold text-primary tracking-wide">Flowing Light System Board</div>
+            <div class="font-label text-[10px] uppercase tracking-widest text-outline hidden md:block">UI Kit · Style Guide · Pattern Library · Atomic Design</div>
         </div>
     </header>
-
-    <main class="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-24 space-y-32">
-        
-        <!-- Section: Design Principles -->
-        <section class="bg-surface-container-low p-8 md:p-12 rounded-lg border border-outline-variant/30">
-            <h2 class="font-headline text-fluid-2xl font-bold mb-6">The "Luminescent Parchment" Concept</h2>
-            <div class="font-body text-fluid-base text-on-surface-variant space-y-4 max-w-3xl leading-relaxed">
-                <p>This design system treats the screen as a gallery space rather than a software interface. It prioritizes the "weight" of intellectual content through high-end editorial layouts.</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>No-Line Rule:</strong> Avoid 1px solid borders for structural sectioning. Use background shifts (surface to surface_container) or generous whitespace.</li>
-                    <li><strong>Ghost Border Fallback:</strong> If a separator is required, use `outline-variant` at 30% opacity.</li>
-                    <li><strong>Ambient Shadows:</strong> Hierarchy is established through Tonal Layering and diffused light (`shadow-2xl` with `on-surface/5` opacity) rather than harsh physical shadows.</li>
-                    <li><strong>Ethereal Gradients:</strong> Soft, multi-stop radial gradients to create depth in hero backgrounds.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Section: Typography -->
-        <section>
-            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">1. Typography (流体排版)</h2>
-            <div class="space-y-12">
-                <div>
-                    <span class="text-xs font-label text-outline mb-2 block">Display (Playfair Display) - 英雄区大标题</span>
-                    <h1 class="font-display text-fluid-5xl font-black tracking-tighter leading-tight">Moments of <span class="italic text-primary font-normal">Light</span></h1>
+    <main class="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 py-8 md:py-12">
+        <section class="grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-8">
+            <aside class="xl:col-span-3 xl:sticky xl:top-28 self-start space-y-4">
+                <div class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-5">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-3">导航</p>
+                    <nav class="space-y-2">
+                        <a href="#board-overview" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">01 Overview</a>
+                        <a href="#board-style" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">02 Style Guide</a>
+                        <a href="#board-uikit" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">03 UI Kit</a>
+                        <a href="#board-motion" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">04 Motion</a>
+                        <a href="#board-pattern" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">05 Pattern Library</a>
+                        <a href="#board-atomic" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">06 Atomic Design</a>
+                        <a href="#board-mapping" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">07 Prod Mapping</a>
+                        <a href="#board-quality" class="block font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">08 Quality Gate</a>
+                    </nav>
                 </div>
-                <div>
-                    <span class="text-xs font-label text-outline mb-2 block">Headline (Noto Serif SC) - 展示型：章节标题 / 阅读型：文章 h1（上限 fluid-3xl）</span>
-                    <h2 class="font-headline text-fluid-3xl font-bold leading-snug">穿越周期的力量：在不确定性中锚定坐标</h2>
+                <div class="bg-surface-container-low rounded-xl p-5 border border-outline-variant/20">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-3">系统摘要</p>
+                    <ul class="space-y-2 font-body text-sm text-on-surface-variant">
+                        <li>展示页与阅读页分级管理</li>
+                        <li>全站 Header/ Footer 统一注入</li>
+                        <li>Token 优先，禁止样式漂移</li>
+                        <li>组件状态 + 动效 + 可访问性协同约束</li>
+                    </ul>
                 </div>
-                <div>
-                    <span class="text-xs font-label text-outline mb-2 block">Body (Work Sans) - 正文阅读</span>
-                    <p class="font-body text-fluid-lg text-on-surface-variant font-light leading-relaxed max-w-2xl">
-                        作为中大深圳校友会读书会旗下的分享栏目，我们聚焦于真实的个体生命，邀请各行各业的湾区校友，呈现生命里极具重量的转折时刻。
+            </aside>
+            <section class="xl:col-span-9 space-y-8 md:space-y-10">
+                <article id="board-overview" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-4">01 · Overview</p>
+                    <h1 class="font-headline text-fluid-3xl md:text-fluid-4xl font-bold tracking-tight mb-4">系统看板视图</h1>
+                    <p class="font-body text-fluid-base text-on-surface-variant leading-relaxed max-w-4xl">
+                        这个页面是设计与开发的共用工作台，不是单纯的展示页。所有真实页面都应能在这里找到对应的 Token、组件、模式与组装路径。
                     </p>
-                </div>
-                <div>
-                    <span class="text-xs font-label text-outline mb-2 block">Label (Work Sans / Uppercase) - 装饰性标签 / 元数据</span>
-                    <span class="font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold">Est. 2023 • SYSU Reading Club</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Colors -->
-        <section>
-            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">2. Color Palette (色彩体系)</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Primary -->
-                <div class="space-y-2">
-                    <div class="h-24 rounded-lg bg-primary flex items-end p-4 text-white font-label text-xs">bg-primary</div>
-                    <div class="h-16 rounded-lg bg-primary-container flex items-end p-4 text-on-primary-container font-label text-xs">bg-primary-container</div>
-                    <div class="h-16 rounded-lg bg-primary-fixed flex items-end p-4 text-on-primary-fixed font-label text-xs">bg-primary-fixed</div>
-                </div>
-                <!-- Surface -->
-                <div class="space-y-2">
-                    <div class="h-24 rounded-lg bg-surface border border-outline-variant/20 flex items-end p-4 text-on-surface font-label text-xs">bg-surface</div>
-                    <div class="h-16 rounded-lg bg-surface-container-low flex items-end p-4 text-on-surface-variant font-label text-xs">bg-surface-container-low</div>
-                    <div class="h-16 rounded-lg bg-surface-container-highest flex items-end p-4 text-on-surface font-label text-xs">bg-surface-container-highest</div>
-                </div>
-                <!-- Outline & Text -->
-                <div class="space-y-2">
-                    <div class="h-24 rounded-lg bg-outline flex items-end p-4 text-white font-label text-xs">bg-outline</div>
-                    <div class="h-16 rounded-lg bg-outline-variant flex items-end p-4 text-on-surface font-label text-xs">bg-outline-variant</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Components -->
-        <section>
-            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">3. UI Components (核心组件)</h2>
-            
-            <div class="space-y-16">
-                <!-- Buttons -->
-                <div>
-                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Buttons & Links</h3>
-                    <div class="flex flex-wrap gap-8 items-center">
-                        <button class="px-10 py-5 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-sm font-label text-xs tracking-widest uppercase">
-                            Primary Button
-                        </button>
-                        <a href="#" class="px-10 py-5 bg-surface border border-outline-variant/50 hover:border-primary text-on-surface hover:text-primary transition-all duration-300 rounded-sm font-label text-xs tracking-widest uppercase">
-                            Secondary Outline
-                        </a>
-                        <a href="#" class="inline-flex items-center gap-3 text-primary font-medium group">
-                            <span class="font-headline italic text-fluid-xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Text Link With Arrow</span> 
-                            <span class="material-symbols-outlined text-fluid-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Cards -->
-                <div>
-                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Editorial Cards (Vibrant & Borderless)</h3>
-                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">Image-filled cards use `rounded-xl` or `rounded-2xl`, and must be completely borderless (`border-none`). <strong>No white edges. No dark overlays.</strong> The image is bright by default, text is strictly left-aligned, and hover states trigger elevation (`-translate-y-1`) and scale, not color reveals.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Removed border border-white/40, changed text-center to text-left -->
-                        <a href="#" class="group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col justify-end cursor-pointer shadow-lg shadow-on-surface/5 border-none hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-4">
-                            <!-- Placeholder Image -->
-                            <div class="absolute inset-0 bg-surface-container-high w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"></div>
-                            <!-- Subtle gradient just for text legibility, fully transparent at the top -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10"></div>
-                            <div class="relative z-20 p-6 md:p-8 text-left">
-                                <span class="font-label text-[10px] text-primary-fixed uppercase tracking-widest mb-3 block">Vol 4. 2026</span>
-                                <h3 class="font-headline text-fluid-xl font-bold text-white leading-tight mb-2 group-hover:text-primary-fixed transition-colors duration-300">穿越周期的力量</h3>
-                                <p class="font-body text-sm text-white/90 font-light transition-all duration-500">
-                                    嘉宾：王建强 / 张辉权
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Blockquote -->
-                <div>
-                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Editorial Blockquote</h3>
-                    <blockquote class="my-8 pl-6 md:pl-12 border-l-2 border-primary/30 relative">
-                        <span class="absolute -top-4 -left-2 text-6xl text-primary/10 font-display italic">"</span>
-                        <p class="font-headline text-fluid-lg text-primary leading-relaxed italic">
-                            不要去追寻确定性，去拥抱不确定性，在不确定性中建立自己的坐标系。
-                        </p>
-                    </blockquote>
-                </div>
-                
-                <!-- Editorial Endcap (Reading CTA) -->
-                <div>
-                    <h3 class="font-headline text-fluid-xl font-bold mb-6">Editorial Endcap (Reading CTA)</h3>
-                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">For long-form reading pages (episodes), replace the global footer with this focused CTA block. Primary action on top, secondary navigation below. Clean, minimal, zero distraction.</p>
-                    <div class="bg-surface border border-outline-variant/30 rounded-lg p-8 md:p-16 flex flex-col items-center gap-6">
-                        <div class="w-full max-w-md flex flex-col items-center">
-                            <button class="group relative inline-flex items-center justify-center w-full py-4 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-sm overflow-hidden">
-                                <span class="font-label text-xs tracking-[0.2em] uppercase z-10 flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-lg">mic</span>
-                                    就现在，来讲吧
-                                </span>
-                            </button>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                        <div class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Style Guide</p>
+                            <p class="font-body text-sm text-on-surface-variant mt-2">定义颜色、字体、间距与层级规则。</p>
                         </div>
-                        <div class="w-full max-w-md flex flex-col items-center">
-                            <a href="#" class="group relative inline-flex items-center justify-center w-full py-4 bg-surface/50 backdrop-blur-sm border border-outline-variant/50 hover:border-primary hover:bg-surface text-on-surface hover:text-primary transition-all duration-300 rounded-sm overflow-hidden">
-                                <span class="font-label text-xs tracking-[0.2em] uppercase z-10 flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
-                                    回到目录
-                                </span>
+                        <div class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">UI Kit</p>
+                            <p class="font-body text-sm text-on-surface-variant mt-2">定义组件结构、状态与变体。</p>
+                        </div>
+                        <div class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Pattern Library</p>
+                            <p class="font-body text-sm text-on-surface-variant mt-2">定义组件组合与页面骨架模式。</p>
+                        </div>
+                    </div>
+                </article>
+                <article id="board-style" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8 space-y-8">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary">02 · Style Guide</p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-4">Color Tokens</h2>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="h-20 rounded-lg bg-primary text-white p-3 font-label text-[10px] uppercase tracking-widest">primary</div>
+                                <div class="h-20 rounded-lg bg-primary-container text-on-primary-container p-3 font-label text-[10px] uppercase tracking-widest">primary-container</div>
+                                <div class="h-20 rounded-lg bg-surface border border-outline-variant/20 p-3 font-label text-[10px] uppercase tracking-widest">surface</div>
+                                <div class="h-20 rounded-lg bg-surface-container-low p-3 font-label text-[10px] uppercase tracking-widest">surface-low</div>
+                                <div class="h-20 rounded-lg bg-outline text-white p-3 font-label text-[10px] uppercase tracking-widest">outline</div>
+                                <div class="h-20 rounded-lg bg-outline-variant p-3 font-label text-[10px] uppercase tracking-widest">outline-variant</div>
+                            </div>
+                            <p class="font-body text-xs text-outline mt-4">生产引用：index.html、archive.html、about.html、episodes/vol*/index.html（全站 token 共享）</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-4">Typography Scale</h2>
+                            <div class="space-y-3">
+                                <p class="font-display text-fluid-5xl leading-none">Display</p>
+                                <p class="font-headline text-fluid-3xl font-bold leading-tight">Headline 3xl</p>
+                                <p class="font-headline text-fluid-2xl font-bold leading-tight">Headline 2xl</p>
+                                <p class="font-body text-fluid-lg text-on-surface-variant">Lead paragraph level</p>
+                                <p class="font-body text-fluid-base text-on-surface-variant">Body paragraph level</p>
+                                <p class="font-label text-[10px] uppercase tracking-widest text-outline">Meta label level</p>
+                            </div>
+                            <p class="font-body text-xs text-outline mt-4">生产引用：index Hero 使用 Display；episodes 使用 Headline + fluid-3xl</p>
+                        </section>
+                    </div>
+                    <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                        <h2 class="font-headline text-fluid-xl font-bold mb-4">Spacing Rhythm & Container Rules</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+                            <div class="bg-surface-container-low rounded-md p-fluid-sm font-label text-[10px] uppercase tracking-widest text-outline">fluid-sm</div>
+                            <div class="bg-surface-container-low rounded-md p-fluid-md font-label text-[10px] uppercase tracking-widest text-outline">fluid-md</div>
+                            <div class="bg-surface-container-low rounded-md p-fluid-lg font-label text-[10px] uppercase tracking-widest text-outline">fluid-lg</div>
+                            <div class="bg-surface-container-low rounded-md p-fluid-xl font-label text-[10px] uppercase tracking-widest text-outline">fluid-xl</div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                            <div class="rounded-md border border-outline-variant/20 p-3 font-body text-xs text-on-surface-variant">标准容器：max-w-[1200px]</div>
+                            <div class="rounded-md border border-outline-variant/20 p-3 font-body text-xs text-on-surface-variant">阅读容器：max-w-[800px]</div>
+                            <div class="rounded-md border border-outline-variant/20 p-3 font-body text-xs text-on-surface-variant">首屏容器：max-w-[1440px]</div>
+                        </div>
+                        <p class="font-body text-xs text-outline mt-4">生产引用：index Hero / archive 主体 / episodes 正文容器</p>
+                    </section>
+                </article>
+                <article id="board-uikit" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8 space-y-8">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary">03 · UI Kit</p>
+                    <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                        <h2 class="font-headline text-fluid-xl font-bold mb-4">Buttons & Interactive States</h2>
+                        <div class="flex flex-wrap gap-4 items-center mb-4">
+                            <button class="px-8 py-4 bg-on-surface text-surface rounded-sm font-label text-xs uppercase tracking-widest">Primary</button>
+                            <button class="px-8 py-4 bg-surface border border-outline-variant/50 text-on-surface rounded-sm font-label text-xs uppercase tracking-widest">Secondary</button>
+                            <button class="px-8 py-4 bg-surface-container-low text-outline rounded-sm font-label text-xs uppercase tracking-widest cursor-not-allowed">Disabled</button>
+                            <a href="#" class="inline-flex items-center gap-2 text-primary group">
+                                <span class="font-headline italic text-fluid-xl border-b border-primary/30 pb-1">Inline Link</span>
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Complex Layout Patterns -->
-        <section>
-            <h2 class="font-label text-sm text-primary tracking-[0.4em] uppercase mb-12 border-b border-outline-variant/30 pb-4">4. Layout Patterns (布局模式)</h2>
-            
-            <div class="space-y-24">
-                
-                <!-- Pattern 1: Navigation -->
-                <div class="space-y-6">
-                    <h3 class="font-headline text-fluid-xl font-bold">1. Standard Navigation (标准导航)</h3>
-                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">Touch-friendly links with `min-h-[44px] min-w-[44px]`. Hover states use a 1px expanding border from the left origin. <strong>Never use `overflow-x-auto` or `whitespace-nowrap` on mobile.</strong> Ensure `gap-2` to `gap-4` on mobile so items fit perfectly on a 320px screen.</p>
-                    <div class="bg-surface border border-outline-variant/30 rounded-lg p-4 sm:p-8 relative overflow-hidden">
-                        <!-- Removed overflow-x-auto and whitespace-nowrap. Tighter mobile gaps. -->
-                        <div class="flex justify-between items-center w-full px-2 sm:px-6 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto bg-surface-container-low/50">
-                            <a class="text-fluid-lg font-display tracking-wide text-on-surface shrink-0" href="#">Flowing Light</a>
-                            <!-- Tighter mobile gaps: gap-2 sm:gap-4 md:gap-8 -->
-                            <div class="flex gap-2 sm:gap-4 md:gap-8 items-center justify-end shrink-0 ml-2">
-                                <a class="group flex flex-col items-center gap-1 px-1 py-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="#">
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">default</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">hover</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">focus-visible</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">active</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">disabled</div>
+                        </div>
+                        <p class="font-body text-xs text-outline mt-4">生产引用：about CTA 按钮、episodes 结尾 CTA</p>
+                    </section>
+                    <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                        <h2 class="font-headline text-fluid-xl font-bold mb-4">Navigation Item</h2>
+                        <div class="bg-surface-container-low/60 p-4 rounded-md">
+                            <div class="flex gap-2 sm:gap-4 md:gap-8 items-center">
+                                <a class="group flex flex-col items-center gap-1 px-1 py-2 min-h-[44px] min-w-[44px] justify-center" href="#">
                                     <span class="font-label text-[10px] sm:text-xs uppercase tracking-widest text-primary relative">
                                         HOME
                                         <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform origin-left"></span>
                                     </span>
                                 </a>
-                                <a class="group flex flex-col items-center gap-1 px-1 py-2 sm:p-0 min-h-[44px] min-w-[44px] justify-center" href="#">
+                                <a class="group flex flex-col items-center gap-1 px-1 py-2 min-h-[44px] min-w-[44px] justify-center" href="#">
                                     <span class="font-label text-[10px] sm:text-xs uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ARCHIVE</span>
+                                </a>
+                                <a class="group flex flex-col items-center gap-1 px-1 py-2 min-h-[44px] min-w-[44px] justify-center" href="#">
+                                    <span class="font-label text-[10px] sm:text-xs uppercase tracking-widest text-outline group-hover:text-primary transition-colors">ABOUT</span>
                                 </a>
                             </div>
                         </div>
+                        <p class="font-body text-xs text-outline mt-4">生产引用：layout.js 注入的全站 Header（index/archive/about/episodes）</p>
+                    </section>
+                    <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                        <h2 class="font-headline text-fluid-xl font-bold mb-4">Archive Card（含容器细节）</h2>
+                        <div class="max-w-xs">
+                            <a href="#" class="group relative w-full aspect-[4/5] bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col justify-end shadow-lg shadow-on-surface/5 border-none hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
+                                <div class="absolute inset-0 bg-surface-container-high transform group-hover:scale-105 transition-transform duration-700"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10"></div>
+                                <div class="relative z-20 p-6 text-left">
+                                    <span class="font-label text-[10px] text-primary-fixed uppercase tracking-widest mb-2 block">VOL. 05</span>
+                                    <h3 class="font-headline text-fluid-xl font-bold text-white leading-tight">归档卡片标题</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">圆角上限：rounded-2xl</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">必须：border-none + loading=lazy</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">默认亮态可读，禁止暗图反显</div>
+                            <div class="border border-outline-variant/20 rounded-md p-2 font-body text-xs text-on-surface-variant">hover：抬升 + 阴影 + 轻缩放</div>
+                        </div>
+                        <p class="font-body text-xs text-outline mt-4">生产引用：archive.html 的 Vol 卡片网格</p>
+                    </section>
+                    <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                        <h2 class="font-headline text-fluid-xl font-bold mb-4">Blockquote / Reading Text</h2>
+                        <blockquote class="my-4 pl-5 border-l-2 border-primary/30">
+                            <p class="font-headline italic text-fluid-lg text-primary">保持轻盈，但在核心价值上扎根极深。</p>
+                        </blockquote>
+                        <p class="font-body text-fluid-base text-on-surface-variant leading-relaxed">阅读页正文默认使用 text-fluid-base + leading-relaxed，避免长文疲劳。</p>
+                        <p class="font-body text-xs text-outline mt-4">生产引用：episodes/vol1~vol4 正文区与引用段</p>
+                    </section>
+                </article>
+                <article id="board-motion" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8 space-y-6">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary">04 · Motion System</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Duration</p>
+                            <ul class="mt-2 space-y-1 font-body text-xs text-on-surface-variant">
+                                <li>快速反馈：150~220ms</li>
+                                <li>常规过渡：280~500ms</li>
+                                <li>叙事入场：700~1200ms</li>
+                            </ul>
+                        </section>
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Easing</p>
+                            <ul class="mt-2 space-y-1 font-body text-xs text-on-surface-variant">
+                                <li>推荐：ease-out / power3.out</li>
+                                <li>禁止：弹跳娱乐型缓动</li>
+                            </ul>
+                        </section>
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Property Policy</p>
+                            <ul class="mt-2 space-y-1 font-body text-xs text-on-surface-variant">
+                                <li>白名单：transform / opacity</li>
+                                <li>黑名单：width/height/margin/padding</li>
+                            </ul>
+                        </section>
                     </div>
-                </div>
-
-                <!-- Pattern 2: Hero Panel -->
-                <div class="space-y-6">
-                    <h3 class="font-headline text-fluid-xl font-bold">2. Hero Glass Panel (首屏玻璃卡片)</h3>
-                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">On desktop: `bg-white/45` with `backdrop-blur-[40px]` and `shadow-2xl`. On mobile: these heavy effects are removed to provide breathing room. Uses fluid gap spacing.</p>
-                    <div class="relative min-h-[400px] flex items-center justify-center overflow-hidden ethereal-gradient-bg rounded-xl border border-outline-variant/20 p-4">
-                        <div class="hero-panel relative z-10 w-full md:w-[92%] max-w-[1100px] md:bg-white/45 md:backdrop-blur-[40px] px-6 py-12 md:p-12 lg:p-24 md:shadow-2xl md:shadow-on-surface/5 md:border md:border-white/40 flex flex-col md:flex-row items-center gap-fluid-lg md:gap-16 lg:gap-24">
-                            <div class="flex-1 space-y-fluid-md w-full text-center md:text-left">
-                                <span class="font-label text-fluid-sm uppercase tracking-[0.4em] text-primary font-bold block">Tagline</span>
-                                <h1 class="font-display text-fluid-5xl font-black text-on-surface leading-[0.85] tracking-tighter">
-                                    Hero<br><span class="italic font-normal text-primary">Title</span>
-                                </h1>
-                            </div>
-                            <div class="hero-image relative w-full md:w-5/12 h-[200px] md:h-[300px] rounded-2xl overflow-hidden group shadow-2xl shadow-primary/20 bg-surface-container-highest">
-                                <!-- Image Placeholder -->
-                            </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Display Motion</p>
+                            <p class="font-body text-sm text-on-surface-variant mt-2">展示页允许首屏分层入场，但不允许眩晕式持续动画。</p>
+                            <p class="font-body text-xs text-outline mt-3">生产引用：index Hero、archive 卡片入场</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Reading Motion</p>
+                            <p class="font-body text-sm text-on-surface-variant mt-2">阅读页动效总量必须收敛，并支持 reduced-motion 降级。</p>
+                            <p class="font-body text-xs text-outline mt-3">生产引用：episodes 内容区</p>
+                        </section>
+                    </div>
+                </article>
+                <article id="board-pattern" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8 space-y-8">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary">05 · Pattern Library</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">Global Header Pattern</h2>
+                            <p class="font-body text-sm text-on-surface-variant leading-relaxed">由 layout.js 注入，使用 data-base-path 与 data-nav-active 驱动，避免多页面手写漂移。</p>
+                            <p class="font-body text-xs text-outline mt-3">生产引用：index.html、archive.html、about.html、episodes/vol*/index.html</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">Hero Panel Pattern</h2>
+                            <p class="font-body text-sm text-on-surface-variant leading-relaxed">展示页保留戏剧性，阅读页降低视觉干扰。桌面可用玻璃面板，移动端优先轻量化。</p>
+                            <p class="font-body text-xs text-outline mt-3">生产引用：index.html Hero、about.html 首屏叙事段</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">Reading Flow Pattern</h2>
+                            <p class="font-body text-sm text-on-surface-variant leading-relaxed">导语、分节、正文、引用、收束 CTA 的连续阅读流，正文行长限制在 max-w-[800px]。</p>
+                            <p class="font-body text-xs text-outline mt-3">生产引用：episodes/vol1~vol4/index.html</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-5 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">Footer Pattern</h2>
+                            <p class="font-body text-sm text-on-surface-variant leading-relaxed">页脚是“薄尾封”，统一薄内边距，不抢主体。详情页可通过 data-footer=none 关闭。</p>
+                            <p class="font-body text-xs text-outline mt-3">生产引用：layout.js + about local/footer global 配置</p>
+                        </section>
+                    </div>
+                </article>
+                <article id="board-atomic" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8 space-y-6">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary">06 · Atomic Design</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[760px] border-collapse">
+                            <thead>
+                                <tr class="border-b border-outline-variant/30">
+                                    <th class="text-left py-3 font-label text-[10px] uppercase tracking-widest text-outline">层级</th>
+                                    <th class="text-left py-3 font-label text-[10px] uppercase tracking-widest text-outline">定义</th>
+                                    <th class="text-left py-3 font-label text-[10px] uppercase tracking-widest text-outline">Flowing Light 示例</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-body text-sm text-on-surface-variant">
+                                <tr class="border-b border-outline-variant/20">
+                                    <td class="py-3 text-on-surface font-medium">Atoms</td>
+                                    <td class="py-3">不可再分的基础元素</td>
+                                    <td class="py-3">标签、标题、正文、图标、颜色块</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant/20">
+                                    <td class="py-3 text-on-surface font-medium">Molecules</td>
+                                    <td class="py-3">由 Atoms 构成的小单元</td>
+                                    <td class="py-3">导航项、按钮+图标、卡片标题区</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant/20">
+                                    <td class="py-3 text-on-surface font-medium">Organisms</td>
+                                    <td class="py-3">可独立使用的复杂区块</td>
+                                    <td class="py-3">Header、Archive Grid、Footer</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant/20">
+                                    <td class="py-3 text-on-surface font-medium">Templates</td>
+                                    <td class="py-3">页面骨架模板</td>
+                                    <td class="py-3">首页模板、归档模板、详情模板</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 text-on-surface font-medium">Pages</td>
+                                    <td class="py-3">真实业务实例</td>
+                                    <td class="py-3">index / archive / about / episodes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article id="board-mapping" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8 space-y-4">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary">07 · Production Page Mapping</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">index.html</h2>
+                            <p class="font-body text-sm text-on-surface-variant">Display Context；Hero 戏剧化排版；共享 Header + global Footer。</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">archive.html</h2>
+                            <p class="font-body text-sm text-on-surface-variant">Display Context；Archive Card 网格；侧栏年序与标签系统。</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">about.html</h2>
+                            <p class="font-body text-sm text-on-surface-variant">品牌叙事 + CTA；Footer 使用 about-local 锚点。</p>
+                        </section>
+                        <section class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <h2 class="font-headline text-fluid-xl font-bold mb-2">episodes/vol*/index.html</h2>
+                            <p class="font-body text-sm text-on-surface-variant">Reading Context；正文可读优先；Header 共享，Footer 可关闭。</p>
+                        </section>
+                    </div>
+                </article>
+                <article id="board-quality" class="bg-white/50 backdrop-blur-md border border-white/40 rounded-xl p-6 md:p-8">
+                    <p class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-4">08 · Quality Gate</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-headline text-fluid-xl font-bold mb-2">Do</p>
+                            <ul class="space-y-2 font-body text-sm text-on-surface-variant">
+                                <li>使用 text-fluid 与 gap-fluid 体系</li>
+                                <li>复用 layout.js 统一头尾</li>
+                                <li>保证交互态与焦点态可见</li>
+                                <li>移动端触控目标保持 44×44</li>
+                                <li>组件必须有生产引用与状态说明</li>
+                            </ul>
+                        </div>
+                        <div class="bg-surface rounded-lg p-4 border border-outline-variant/20">
+                            <p class="font-headline text-fluid-xl font-bold mb-2">Don’t</p>
+                            <ul class="space-y-2 font-body text-sm text-on-surface-variant">
+                                <li>跨页面手写独立 Header 样式</li>
+                                <li>硬编码颜色值与断点字号</li>
+                                <li>在移动端使用横向溢出导航</li>
+                                <li>动效直接修改 width/height/margin</li>
+                                <li>只做 UI 展示不写状态/场景边界</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-
-                <!-- Pattern 3: Article Content -->
-                <div class="space-y-6">
-                    <h3 class="font-headline text-fluid-xl font-bold">3. Editorial Article Flow (正文阅读流 — 阅读型页面标准)</h3>
-                    <p class="font-body text-sm text-on-surface-variant max-w-2xl mb-8">阅读型页面（Episode 详情）的字体天花板低于展示型页面。<code>max-w-[800px]</code> 容器保证最优行长。<strong>h2 上限 fluid-2xl</strong>，正文默认 <strong>fluid-base + leading-relaxed</strong>，仅首段允许用 fluid-lg。衬线体在一个视口内不超过 3 个实例。</p>
-                    <div class="bg-surface border border-outline-variant/30 rounded-lg p-8 md:p-16">
-                        <!-- READING CONTEXT: h2 ceiling = fluid-2xl, body default = fluid-base -->
-                        <article class="max-w-[800px] w-full mx-auto space-y-fluid-md">
-                            <h2 class="font-headline text-fluid-2xl font-bold text-on-surface mb-fluid-md mt-fluid-xl">1. 内容的骨架：建立坐标系</h2>
-                            <p class="font-body text-fluid-base leading-relaxed text-on-surface-variant font-light">在动荡的环境中，个体的叙事往往比宏大的理论更具有穿透力。我们的每一场分享，都是在试图还原那些真实的挣扎与突破。</p>
-                            <blockquote class="my-fluid-2xl pl-6 md:pl-12 border-l-2 border-primary/30 relative">
-                                <p class="font-headline text-fluid-lg text-primary leading-relaxed italic">"保持轻盈，但在核心价值上扎根极深。"</p>
-                            </blockquote>
-                            <p class="font-body text-fluid-base leading-relaxed text-on-surface-variant font-light">这是我们在设计这个系统时，始终贯彻的原则。不追求表面的繁复，而是让光影与留白去说话。</p>
-                        </article>
-                    </div>
-                </div>
-
-            </div>
+                </article>
+            </section>
         </section>
-
     </main>
-
 </body>
 </html>
