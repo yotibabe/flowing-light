@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html class="light" lang="zh-CN"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us - Flowing Light</title>
+<title>关于 Light｜中大深圳校友会读书会分享栏目</title>
+<meta name="description" content="了解 Flowing Light 的栏目理念、组织根基与加入方式，认识中大深圳校友会读书会如何连接真实故事与长期主义。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="关于 Light｜中大深圳校友会读书会分享栏目"/>
+<meta property="og:description" content="认识 Flowing Light 的栏目理念、组织根基与加入方式。"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="关于 Light｜中大深圳校友会读书会分享栏目"/>
+<meta name="twitter:description" content="认识 Flowing Light 的栏目理念、组织根基与加入方式。"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <script src="js/tailwind-config.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/site.js" defer></script>
 
     <!-- Injecting GSAP & Lenis for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -161,7 +169,7 @@
                         <div class="w-full lg:w-1/2 space-y-8 root-text">
                             <p class="font-label text-primary text-[10px] tracking-[0.4em] font-bold uppercase flex items-center gap-3">
                                 <span class="w-8 h-[1px] bg-primary"></span>
-                                Our Root
+                                我们的来处
                             </p>
                             <h2 class="font-headline text-fluid-4xl font-black leading-tight text-on-surface">
                                 Light 从哪里来？
@@ -173,7 +181,7 @@
                                 我们在历史人文中涵养格局，也用科技前沿洞见未来。从最初的一束微光，到如今的一片星海，读书会始终致力于让中大校友找回“家”。
                             </p>
                             
-                            <a href="https://mp.weixin.qq.com/s/MeZB_3UIWETAEAYrdL6tIA" target="_blank" class="inline-flex items-center gap-3 mt-8 text-primary hover:text-primary/80 transition-colors group">
+                            <a href="https://mp.weixin.qq.com/s/MeZB_3UIWETAEAYrdL6tIA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 mt-8 text-primary hover:text-primary/80 transition-colors group">
                                 <span class="font-label text-xs uppercase tracking-widest">阅读读书会三周年纪实</span>
                                 <span class="material-symbols-outlined text-sm transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
                             </a>
@@ -202,7 +210,7 @@
             </article>
 
             <!-- Section 3: Call to Action -->
-            <article class="pt-16 pb-24 text-center max-w-3xl mx-auto cta-section opacity-0 translate-y-10">
+            <article class="pt-16 pb-24 text-center max-w-3xl mx-auto cta-section opacity-0 translate-y-10" id="contact-us">
                 <div class="mb-16">
                     <span class="material-symbols-outlined text-primary/20 text-6xl mb-6">wb_twilight</span>
                     <h2 class="font-headline text-fluid-2xl md:text-fluid-3xl font-bold text-on-surface mb-6 tracking-tight">
@@ -214,21 +222,22 @@
                 </div>
                 
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <!-- Join Community Button -->
-                    <button onclick="alert('请扫描公众号二维码加入社群')" class="speaker-trigger-btn group relative inline-flex items-center justify-center px-10 py-5 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-sm overflow-hidden transform active:scale-95">
+                    <div id="join-community">
+                    <button type="button" data-modal-trigger data-modal-tag="加入社群" data-modal-title="欢迎加入<br>中大读书会 Light" data-modal-description="扫码关注公众号或加入社群<br>和我们一起继续寻光" data-modal-image="assets/wechat-qr.png" data-modal-alt="中大读书会 Light 公众号二维码" class="group relative inline-flex items-center justify-center px-10 py-5 bg-on-surface text-surface hover:bg-primary transition-all duration-300 rounded-sm overflow-hidden transform active:scale-95">
                         <span class="font-label text-xs tracking-[0.2em] uppercase z-10 flex items-center gap-3">
                             <span class="material-symbols-outlined text-lg">qr_code_scanner</span>
                             加入社群
                         </span>
                     </button>
-                    
-                    <!-- Become Speaker Button -->
-                    <a href="#" class="speaker-trigger-btn group relative inline-flex items-center justify-center px-10 py-5 bg-surface/50 backdrop-blur-sm border border-outline-variant/50 hover:border-primary hover:bg-surface text-on-surface hover:text-primary transition-all duration-300 rounded-sm overflow-hidden transform active:scale-95">
+                    </div>
+                    <div id="become-speaker">
+                    <button type="button" data-modal-trigger data-modal-tag="成为讲者" data-modal-title="期待在这里<br>听到你的声音" data-modal-description="扫码添加主理人微信<br>开启你的表达之旅" data-modal-image="assets/wechat-qr-yoti.jpg" data-modal-alt="主理人微信二维码" class="group relative inline-flex items-center justify-center px-10 py-5 bg-surface/50 backdrop-blur-sm border border-outline-variant/50 hover:border-primary hover:bg-surface text-on-surface hover:text-primary transition-all duration-300 rounded-sm overflow-hidden transform active:scale-95">
                         <span class="font-label text-xs tracking-[0.2em] uppercase z-10 flex items-center gap-3">
                             <span class="material-symbols-outlined text-lg">mic</span>
                             成为讲者
                         </span>
-                    </a>
+                    </button>
+                    </div>
                 </div>
             </article>
 
@@ -243,10 +252,10 @@
             中大读书会 Light
         </div>
         <div class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 md:gap-8 flex-1">
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">微信公众号</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">加入社群</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">嘉宾推荐</a>
-            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#">联系我们</a>
+            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="assets/wechat-qr.png" target="_blank" rel="noopener noreferrer">微信公众号</a>
+            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#join-community">加入社群</a>
+            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#become-speaker">嘉宾推荐</a>
+            <a class="font-label text-[10px] md:text-xs uppercase tracking-widest text-on-surface-variant hover:underline decoration-orange-500/30 underline-offset-4" href="#contact-us">联系我们</a>
         </div>
         <div class="font-label text-[9px] md:text-xs uppercase tracking-widest text-on-surface-variant text-center md:text-right w-full md:w-auto shrink-0">
             © 2025 中山大学深圳校友会读书会. All Rights Reserved.
@@ -259,28 +268,21 @@
 
 
 <!-- Wechat QR Code Modal -->
-<div id="wechat-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
-    <!-- Backdrop -->
+<div id="wechat-modal" class="fixed inset-0 z-[100] hidden items-center justify-center" aria-hidden="true">
     <div class="absolute inset-0 bg-surface/80 backdrop-blur-md transition-opacity duration-300 opacity-0" id="wechat-modal-backdrop"></div>
-    
-    <!-- Modal Content -->
-    <div class="relative z-10 bg-white rounded-2xl shadow-2xl w-[90%] max-w-sm p-8 transform scale-95 opacity-0 transition-all duration-300" id="wechat-modal-content">
-        <button id="close-modal-btn" class="absolute top-4 right-4 text-outline hover:text-on-surface transition-colors z-20">
+    <div id="wechat-modal-content" class="relative z-10 bg-white rounded-2xl shadow-2xl w-[90%] max-w-sm p-8 transform scale-95 opacity-0 transition-all duration-300" role="dialog" aria-modal="true" aria-labelledby="wechat-modal-title" aria-describedby="wechat-modal-description" tabindex="-1">
+        <button id="close-modal-btn" type="button" aria-label="关闭弹窗" class="absolute top-4 right-4 text-outline hover:text-on-surface transition-colors z-20">
             <span class="material-symbols-outlined">close</span>
         </button>
-        
         <div class="text-center space-y-6">
             <div class="space-y-2">
-                <h3 class="font-headline text-fluid-xl font-bold text-on-surface">期待在这里<br>听到你的声音</h3>
-                <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">BECOME A SPEAKER</p>
+                <h3 id="wechat-modal-title" class="font-headline text-fluid-xl font-bold text-on-surface">期待在这里<br>听到你的声音</h3>
+                <p id="wechat-modal-tag" class="font-label text-xs uppercase tracking-widest text-on-surface-variant">成为讲者</p>
             </div>
-            
-            <!-- QR Code Area -->
             <div class="w-56 h-56 mx-auto flex items-center justify-center overflow-hidden bg-white">
-                <img src="assets/wechat-qr-yoti.jpg" onerror="this.onerror=null; this.src='assets/wechat-qr.jpg';" onerror="this.onerror=null; this.src='assets/wechat-qr.jpg';" alt="WeChat QR Code" class="w-full h-full object-contain">
+                <img id="wechat-modal-image" src="assets/wechat-qr-yoti.jpg" alt="主理人微信二维码" width="560" height="560" decoding="async" class="w-full h-full object-contain">
             </div>
-            
-            <p class="font-body text-sm text-on-surface-variant">
+            <p id="wechat-modal-description" class="font-body text-sm text-on-surface-variant">
                 扫码添加主理人微信<br>开启你的表达之旅
             </p>
         </div>
@@ -288,194 +290,139 @@
 </div>
 
 <script>
-    // Modal Logic
     document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('wechat-modal');
-        const backdrop = document.getElementById('wechat-modal-backdrop');
-        const content = document.getElementById('wechat-modal-content');
-        const closeBtn = document.getElementById('close-modal-btn');
-        
-        const triggerBtns = document.querySelectorAll('.speaker-trigger-btn');
-        
-        const openModal = () => {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            void modal.offsetWidth;
-            backdrop.classList.remove('opacity-0');
-            backdrop.classList.add('opacity-100');
-            content.classList.remove('scale-95', 'opacity-0');
-            content.classList.add('scale-100', 'opacity-100');
-            document.body.style.overflow = 'hidden';
-        };
-        
-        const closeModal = () => {
-            backdrop.classList.remove('opacity-100');
-            backdrop.classList.add('opacity-0');
-            content.classList.remove('scale-100', 'opacity-100');
-            content.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        };
-        
-        triggerBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                openModal();
-            });
+        window.FlowingLight.setupModal({
+            modalId: 'wechat-modal',
+            backdropId: 'wechat-modal-backdrop',
+            contentId: 'wechat-modal-content',
+            closeButtonId: 'close-modal-btn',
+            titleId: 'wechat-modal-title',
+            tagId: 'wechat-modal-tag',
+            descriptionId: 'wechat-modal-description',
+            imageId: 'wechat-modal-image',
+            triggerSelector: '[data-modal-trigger]'
         });
-        
-        if(closeBtn) closeBtn.addEventListener('click', closeModal);
-        if(backdrop) backdrop.addEventListener('click', closeModal);
     });
 
-    // --- New GSAP Animations ---
-
-    // 1. Lenis Smooth Scroll Setup
-    const lenis = new Lenis({
-        duration: 1.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smooth: true,
-        smoothTouch: false,
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // 2. GSAP Setup
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     gsap.registerPlugin(ScrollTrigger);
 
-    // Update ScrollTrigger on Lenis scroll
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time)=>{
-        lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0, 0);
+    if (!prefersReducedMotion) {
+        const lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true,
+            smoothTouch: false,
+        });
 
-    // 3. Custom Glowing Cursor (Follows Mouse)
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+        lenis.on('scroll', ScrollTrigger.update);
+    }
+
     const cursor = document.getElementById('cursor-glow');
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (!prefersReducedMotion && window.matchMedia("(min-width: 768px)").matches) {
         gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+        const moveCursorX = gsap.quickTo(cursor, "x", { duration: 0.8, ease: "power3.out" });
+        const moveCursorY = gsap.quickTo(cursor, "y", { duration: 0.8, ease: "power3.out" });
         window.addEventListener('mousemove', (e) => {
-            gsap.to(cursor, {
-                x: e.clientX,
-                y: e.clientY,
-                duration: 0.8,
-                ease: "power3.out"
-            });
+            moveCursorX(e.clientX);
+            moveCursorY(e.clientY);
         });
     }
 
-    // 4. Hero Section Animations
-    const heroTl = gsap.timeline();
-    
-    // Watermark text fade & blur out (starts dark)
-    heroTl.fromTo(".hero-watermark h1", 
-        { opacity: 0, filter: "blur(20px)", scale: 1.05 },
-        { opacity: 1, filter: "blur(0px)", scale: 1, duration: 2.5, ease: "power2.out" }
-    )
-    // Scroll indicator fade in
-    .fromTo(".hero-scroll-indicator",
-        { opacity: 0, y: 20 },
-        { opacity: 0.5, y: 0, duration: 1, ease: "power2.out" },
-        "-=1"
-    );
+    if (prefersReducedMotion) {
+        document.querySelectorAll('.value-item, .root-stats, .cta-section').forEach((element) => {
+            element.style.opacity = '1';
+            element.style.transform = 'none';
+        });
+    } else {
+        gsap.fromTo(".hero-watermark h1",
+            { opacity: 0, filter: "blur(20px)", scale: 1.05 },
+            { opacity: 1, filter: "blur(0px)", scale: 1, duration: 2.5, ease: "power2.out" }
+        );
 
-    // Color transition and Parallax effect on watermark when scrolling
-    // Uses the primary color with 5% opacity as the end state to match the orb glow
-    gsap.to(".hero-watermark h1", {
-        scrollTrigger: {
-            trigger: "body",
-            start: "top top",
-            // Changed from "bottom bottom" to complete the transition exactly when 
-            // "The Core" (values-list) reaches the top 20% of the viewport.
-            // This makes the fade out much faster and more responsive to the first scroll action.
-            endTrigger: "#values-list",
-            end: "top 20%",
-            scrub: true
-        },
-        y: "-15vh", // Subtle upward movement as you scroll down
-        color: "rgba(166, 58, 25, 0.05)", // #a63a19 with 5% opacity (matches text-primary/5)
-        ease: "none"
-    });
+        gsap.to(".hero-watermark h1", {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                endTrigger: "#values-list",
+                end: "top 20%",
+                scrub: true
+            },
+            y: "-15vh",
+            color: "rgba(166, 58, 25, 0.05)",
+            ease: "none"
+        });
 
-    // 5. Values List (Staggered Scroll Reveal)
-    const valuesTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#values-list",
-            start: "top 75%",
-            toggleActions: "play none none reverse"
-        }
-    });
+        const valuesTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#values-list",
+                start: "top 75%",
+                toggleActions: "play none none reverse"
+            }
+        });
 
-    valuesTl.to(".value-item", {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power3.out"
-    })
-    .to(".value-icon", {
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "back.out(1.2, 0.5)" // Very subtle back easing, not a hard bounce
-    }, "-=1.5");
+        valuesTl.to(".value-item", {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power3.out"
+        }).to(".value-icon", {
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out"
+        }, "-=1.5");
 
-    // 6. Our Root Section
-    const rootTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#root-section",
-            start: "top 75%",
-            toggleActions: "play none none reverse"
-        }
-    });
+        const rootTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#root-section",
+                start: "top 75%",
+                toggleActions: "play none none reverse"
+            }
+        });
 
-    // Left text fade in with parallax
-    rootTl.from(".root-text", {
-        y: 40,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power3.out"
-    })
-    // Right stats card float up
-    .to(".root-stats", {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: "power3.out"
-    }, "-=1.2");
+        rootTl.from(".root-text", {
+            y: 40,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out"
+        }).to(".root-stats", {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out"
+        }, "-=1.2");
 
-    // Parallax on root text
-    gsap.to(".root-text", {
-        scrollTrigger: {
-            trigger: "#root-section",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1
-        },
-        y: -30,
-        ease: "none"
-    });
+        gsap.to(".root-text", {
+            scrollTrigger: {
+                trigger: "#root-section",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            y: -30,
+            ease: "none"
+        });
 
-    // 7. CTA Section
-    gsap.to(".cta-section", {
-        scrollTrigger: {
-            trigger: ".cta-section",
-            start: "top 80%",
-            toggleActions: "play none none reverse"
-        },
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: "power3.out"
-    });
-
+        gsap.to(".cta-section", {
+            scrollTrigger: {
+                trigger: ".cta-section",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+    }
 </script>
 
 </body></html>
