@@ -15,7 +15,7 @@
         .font-body, .font-label { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="font-body text-on-surface bg-surface antialiased selection:bg-primary-fixed min-h-screen">
+<body class="font-body text-on-surface bg-surface antialiased selection:bg-primary-fixed min-h-screen font-light">
     <!-- 全局渐变背景，所有容器必须保持通透 -->
     <div class="fixed inset-0 z-0 ethereal-gradient-bg pointer-events-none"></div>
     <div class="fixed inset-0 z-0 fluid-focus-gradient pointer-events-none opacity-40"></div>
@@ -50,7 +50,7 @@
                         <section class="bg-transparent border border-outline-variant/20 rounded-xl p-6">
                             <h2 class="font-label text-[10px] uppercase tracking-widest text-outline mb-4">Display / Headline Font</h2>
                             <p class="font-display text-fluid-4xl font-bold text-[#1A1A1A] leading-tight mb-2">Playfair Display</p>
-                            <p class="font-body text-sm text-on-surface-variant">用于页面大标题、Hero区和核心金句。优雅、高对比度、带有杂志主编视角的情绪表达。</p>
+                            <p class="font-body text-sm text-on-surface-variant font-light">用于页面大标题、Hero区和核心金句。优雅、高对比度、带有杂志主编视角的情绪表达。</p>
                             
                             <div class="mt-6 space-y-4">
                                 <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl text-[#1A1A1A]">About H2: 克制的标题</h3>
@@ -61,10 +61,10 @@
                         <section class="bg-transparent border border-outline-variant/20 rounded-xl p-6">
                             <h2 class="font-label text-[10px] uppercase tracking-widest text-outline mb-4">Body / Label Font</h2>
                             <p class="font-body text-fluid-3xl font-bold text-[#1A1A1A] leading-tight mb-2">Inter</p>
-                            <p class="font-body text-sm text-on-surface-variant">用于正文、标签、按钮和所有UI功能区。清晰、现代、高度可读。</p>
+                            <p class="font-body text-sm text-on-surface-variant font-light">用于正文、标签、按钮和所有UI功能区。清晰、现代、高度可读。</p>
                             
                             <div class="mt-6 space-y-4">
-                                <p class="font-body text-base md:text-lg text-on-surface-variant leading-relaxed">
+                                <p class="font-body text-base md:text-lg text-on-surface-variant leading-relaxed font-light">
                                     About P: 正文统一调整为 text-base md:text-lg。开放且不设门槛，不追求宏大的成功叙事，而是俯身倾听。
                                 </p>
                                 <div class="flex flex-wrap items-center gap-3">
@@ -85,14 +85,14 @@
                             <div class="h-32 rounded-2xl bg-white/40 backdrop-blur-[60px] border border-white/50 flex items-center justify-center shadow-lg shadow-black/5">
                                 <p class="font-label text-xs tracking-widest">Hero Panel<br/>bg-white/40 backdrop-blur-[60px]</p>
                             </div>
-                            <p class="font-body text-sm text-on-surface-variant">主视觉面板：提供最高级别的玻璃质感，同时确保底层渐变背景依然透出（不使用实色遮挡）。</p>
+                            <p class="font-body text-sm text-on-surface-variant font-light">主视觉面板：提供最高级别的玻璃质感，同时确保底层渐变背景依然透出（不使用实色遮挡）。</p>
                         </div>
                         
                         <div class="space-y-4">
                             <div class="h-16 rounded-xl bg-white/30 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-sm">
                                 <p class="font-label text-xs tracking-widest">Narrow Footer<br/>py-6 md:py-8</p>
                             </div>
-                            <p class="font-body text-sm text-on-surface-variant">极窄毛玻璃尾封：大幅减少占地面积，轻量化收尾。</p>
+                            <p class="font-body text-sm text-on-surface-variant font-light">极窄毛玻璃尾封：大幅减少占地面积，轻量化收尾。</p>
                         </div>
                     </div>
                 </article>
@@ -104,7 +104,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <section class="bg-transparent border border-outline-variant/20 rounded-xl p-5">
                             <h3 class="font-display text-xl mb-3">GSAP Performance</h3>
-                            <ul class="space-y-2 font-body text-sm text-on-surface-variant">
+                            <ul class="space-y-2 font-body text-sm text-on-surface-variant font-light">
                                 <li><strong class="text-primary">Duration:</strong> 统一为 0.8s，加速反馈。</li>
                                 <li><strong class="text-primary">Easing:</strong> power2.out，自然顺滑。</li>
                                 <li><strong class="text-primary">No Blur:</strong> 严禁使用 blur 滤镜参与动画，防止掉帧。</li>
@@ -114,7 +114,7 @@
                         
                         <section class="bg-transparent border border-outline-variant/20 rounded-xl p-5">
                             <h3 class="font-display text-xl mb-3">Golden Quote Space</h3>
-                            <ul class="space-y-2 font-body text-sm text-on-surface-variant">
+                            <ul class="space-y-2 font-body text-sm text-on-surface-variant font-light">
                                 <li><strong class="text-primary">Min-height:</strong> min-h-[70vh] (摒弃 h-screen 避免过度留白)。</li>
                                 <li><strong class="text-primary">Leading:</strong> 极宽行距 leading-[2.5]。</li>
                                 <li><strong class="text-primary">Spacing:</strong> 段落间距 space-y-12。</li>
@@ -123,7 +123,7 @@
 
                         <section class="bg-transparent border border-outline-variant/20 rounded-xl p-5">
                             <h3 class="font-display text-xl mb-3">Responsive Wrapping</h3>
-                            <ul class="space-y-2 font-body text-sm text-on-surface-variant">
+                            <ul class="space-y-2 font-body text-sm text-on-surface-variant font-light">
                                 <li><strong class="text-primary">Flex-wrap:</strong> 多标签强制换行，防止移动端出画。</li>
                                 <li><strong class="text-primary">Hidden Dividers:</strong> 移动端隐藏 (hidden md:block) 纯装饰性斜线。</li>
                             </ul>
