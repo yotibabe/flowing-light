@@ -117,11 +117,11 @@ img {
 
 .drop-cap::first-letter {
     font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     float: left;
-    line-height: 1;
+    line-height: 0.8;
     padding-right: 0.5rem;
-    padding-top: 0.5rem;
+    padding-top: 0.2rem;
     color: #a63a19;
     font-weight: 900;
     font-style: italic;
