@@ -134,6 +134,19 @@ img {
     color: #1a1c1c; /* on-surface */
 }
 
+@media (max-width: 767px) {
+    /* Mobile-only reading tune for long Chinese-form articles. */
+    .detail-mobile-reading .font-body.text-fluid-lg {
+        line-height: 1.9;
+        text-wrap: pretty;
+    }
+
+    .detail-mobile-reading .font-body.text-fluid-base {
+        line-height: 1.95;
+        text-wrap: pretty;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
