@@ -195,15 +195,15 @@ img {
     }
 
     .detail-desktop-reading-vol2 .font-body.text-fluid-lg {
-        line-height: 1.64;
+        line-height: 1.68;
     }
 
     .detail-desktop-reading-vol2 .font-body.text-fluid-base {
-        line-height: 1.74;
+        line-height: 1.78;
     }
 
     .detail-desktop-reading-vol2 .space-y-8.max-w-3xl > p + p {
-        margin-top: 1.25rem;
+        margin-top: 1.5rem;
     }
 
     .detail-desktop-reading-vol2 .desktop-reading-section {
