@@ -203,8 +203,8 @@ img {
     }
 
     .detail-desktop-reading-vol2 .font-body.text-fluid-base.font-light {
-        font-weight: 400;
-        color: #454847;
+        font-weight: 300;
+        color: #535756;
     }
 
     .detail-desktop-reading-vol2 .space-y-8.max-w-3xl > p + p {
