@@ -185,6 +185,53 @@ img {
     }
 }
 
+@media (min-width: 768px) {
+    .detail-desktop-reading-vol2 > * + * {
+        margin-top: 3.25rem;
+    }
+
+    .detail-desktop-reading-vol2 .max-w-3xl {
+        max-width: 45rem;
+    }
+
+    .detail-desktop-reading-vol2 .font-body.text-fluid-lg {
+        line-height: 1.64;
+    }
+
+    .detail-desktop-reading-vol2 .font-body.text-fluid-base {
+        line-height: 1.74;
+    }
+
+    .detail-desktop-reading-vol2 .space-y-8.max-w-3xl > p + p {
+        margin-top: 1.25rem;
+    }
+
+    .detail-desktop-reading-vol2 .desktop-reading-section {
+        padding-top: 2.5rem;
+    }
+
+    .detail-desktop-reading-vol2 .desktop-reading-section-spaced {
+        margin-top: 2.5rem;
+    }
+
+    .detail-desktop-reading-vol2 .desktop-reading-figure {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .detail-desktop-reading-vol2 .desktop-reading-pullquote {
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .detail-desktop-reading-vol2 .desktop-reading-endquote {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
