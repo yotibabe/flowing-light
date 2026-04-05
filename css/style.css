@@ -135,20 +135,26 @@ img {
 }
 
 @media (max-width: 767px) {
+    .detail-mobile-reading-vol1 .font-body.text-fluid-lg,
     .detail-mobile-reading-vol2 .font-body.text-fluid-lg,
+    .detail-mobile-reading-vol3 .font-body.text-fluid-lg,
     .detail-mobile-reading-vol4 .font-body.text-fluid-lg {
         line-height: 1.76;
         text-wrap: pretty;
     }
 
+    .detail-mobile-reading-vol1 .font-body.text-fluid-base,
     .detail-mobile-reading-vol2 .font-body.text-fluid-base,
+    .detail-mobile-reading-vol3 .font-body.text-fluid-base,
     .detail-mobile-reading-vol4 .font-body.text-fluid-base {
         line-height: 1.82;
         text-wrap: pretty;
     }
 
+    .detail-mobile-reading-vol1 .space-y-8.max-w-3xl > p + p,
     .detail-mobile-reading-vol2 .space-y-8.max-w-3xl > p + p,
     .detail-mobile-reading-vol2 .space-y-5.max-w-3xl > p + p,
+    .detail-mobile-reading-vol3 .space-y-8.max-w-3xl > p + p,
     .detail-mobile-reading-vol4 .space-y-8.max-w-3xl > p + p {
         margin-top: 0.875rem;
     }
