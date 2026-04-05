@@ -135,33 +135,32 @@ img {
 }
 
 @media (max-width: 767px) {
-    /* Mobile-only reading tune for long Chinese-form articles. */
-    .detail-mobile-reading .font-body.text-fluid-lg {
-        line-height: 1.9;
-        text-wrap: pretty;
-    }
-
-    .detail-mobile-reading .font-body.text-fluid-base {
-        line-height: 1.95;
-        text-wrap: pretty;
-    }
-
-    /* Vol.02 needs a tighter mobile reading rhythm for the light sans-serif body copy. */
-    .detail-mobile-reading-vol2 .font-body.text-fluid-lg {
+    .detail-mobile-reading-vol2 .font-body.text-fluid-lg,
+    .detail-mobile-reading-vol4 .font-body.text-fluid-lg {
         line-height: 1.76;
+        text-wrap: pretty;
     }
 
-    .detail-mobile-reading-vol2 .font-body.text-fluid-base {
+    .detail-mobile-reading-vol2 .font-body.text-fluid-base,
+    .detail-mobile-reading-vol4 .font-body.text-fluid-base {
         line-height: 1.82;
-    }
-
-    .detail-mobile-reading-vol2 .space-y-8.max-w-3xl {
-        row-gap: 1rem;
+        text-wrap: pretty;
     }
 
     .detail-mobile-reading-vol2 .space-y-8.max-w-3xl > p + p,
-    .detail-mobile-reading-vol2 .space-y-5.max-w-3xl > p + p {
+    .detail-mobile-reading-vol2 .space-y-5.max-w-3xl > p + p,
+    .detail-mobile-reading-vol4 .space-y-8.max-w-3xl > p + p {
         margin-top: 0.875rem;
+    }
+
+    .detail-mobile-reading-vol4 figure.my-8 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .detail-mobile-reading-vol4 blockquote.my-fluid-2xl {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
