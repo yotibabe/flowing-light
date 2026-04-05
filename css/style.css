@@ -148,11 +148,11 @@ img {
 
     /* Vol.02 needs a tighter mobile reading rhythm for the light sans-serif body copy. */
     .detail-mobile-reading-vol2 .font-body.text-fluid-lg {
-        line-height: 1.74;
+        line-height: 1.76;
     }
 
     .detail-mobile-reading-vol2 .font-body.text-fluid-base {
-        line-height: 1.8;
+        line-height: 1.82;
     }
 
     .detail-mobile-reading-vol2 .space-y-8.max-w-3xl {
