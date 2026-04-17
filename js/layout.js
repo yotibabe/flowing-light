@@ -6,7 +6,7 @@
   const activeNav = (body.dataset.navActive || "").toLowerCase();
   const footerMode = (body.dataset.footer || "none").toLowerCase();
 
-  const navClass = "font-label font-normal text-[10px] sm:text-xs uppercase tracking-widest";
+  const navClass = "font-label text-[10px] sm:text-xs uppercase tracking-widest";
   const inactiveClass = `${navClass} text-outline group-hover:text-primary transition-colors`;
   const activeClass = `${navClass} text-primary relative`;
 
@@ -52,16 +52,13 @@
 
   const renderFooter = () => `<footer class="w-full bg-white/30 backdrop-blur-md border-t border-outline-variant/10">
     <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-6 md:py-8 gap-4 md:gap-8 max-w-[1440px] mx-auto">
-        <div class="text-lg font-display font-medium text-[#6D3D32] text-center md:text-left tracking-wide">
+        <div class="text-lg font-display text-[#6D3D32] text-center md:text-left tracking-wide">
             中大读书会 Light
         </div>
         <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
-            <a class="font-label font-normal text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${basePath}assets/wechat-qr.png" target="_blank" rel="noopener noreferrer">微信公众号</a>
-            <a class="font-label font-normal text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${footerLinks.join}">加入社群</a>
-            <a class="font-label font-normal text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${footerLinks.speaker}">嘉宾推荐</a>
-            <a class="font-label font-normal text-[10px] uppercase tracking-widest text-[#555555] hover:text-[#C8523A] transition-colors" href="${footerLinks.contact}">联系我们</a>
+            <!-- Footer links removed per user request -->
         </div>
-        <div class="font-label font-normal text-[9px] uppercase tracking-widest text-[#555555]/60 text-center md:text-right w-full md:w-auto mt-2 md:mt-0">
+        <div class="font-label text-[9px] uppercase tracking-widest text-[#555555]/60 text-center md:text-right w-full md:w-auto mt-2 md:mt-0">
             © 2025 中山大学深圳校友会读书会
         </div>
     </div>
