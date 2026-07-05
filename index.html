@@ -12,17 +12,18 @@
     <meta name="twitter:title" content="Flowing Light｜中大深圳校友会读书会分享栏目"/>
     <meta name="twitter:description" content="以高质感数字排版，点亮每一个平凡而独特的生命故事。"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Google Fonts: Inter for UI, Noto Serif SC for headlines, Playfair Display for accents -->
+    <!-- Google Fonts: Inter for UI, Playfair Display for accents -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="js/tailwind-config.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/layout.js" defer></script>
 
-    <!-- Injecting GSAP for animations -->
+    <!-- Injecting GSAP & Lenis for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
 
     <script>
         // Merge extra animations into the loaded tailwind config
@@ -58,7 +59,7 @@
     <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
         <div class="space-y-4">
             <!-- Empty container to replace the Trust Badge -->
-            <span class="hero-text font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
+            <span class="hero-text font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2025 • SYSU Reading Club</span>
             <h1 class="hero-text font-display text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-on-surface leading-[0.85] tracking-tighter">
                 Flowing <br>
                 <span class="italic font-normal text-primary">Light</span>
@@ -81,14 +82,14 @@
                     <span class="w-1 h-1 rounded-full bg-outline/40 hidden md:block"></span>
                     <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80 ml-1">真实叙述</span></span>
                     <span class="w-1 h-1 rounded-full bg-outline/40 hidden md:block"></span>
-                    <span>COMMUNITY <span class="font-body tracking-widest opacity-80 ml-1">湾区精英</span></span>
+                    <span>COMMUNITY <span class="font-body tracking-widest opacity-80 ml-1">湾区校友</span></span>
                 </div>
             </div>
         </div>
     </div>
     <div class="hero-text hidden lg:flex flex-col items-center justify-center">
         <div class="h-64 w-px bg-primary/30"></div>
-        <span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
+        <span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">Stories in Flow</span>
         <div class="h-16 w-px bg-primary/30"></div>
     </div>
 </div>
@@ -133,6 +134,30 @@
     </div>
 </section>
 
+<!-- Latest Moment Section -->
+<section class="relative z-10 py-20 md:py-28 px-6 md:px-12 lg:px-20">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-5 space-y-6">
+            <span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary font-bold">LATEST LIGHT</span>
+            <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-bold text-on-surface leading-tight tracking-tight">
+                AI 时代浪潮来袭，<br>个体该如何进化？
+            </h2>
+            <p class="font-body text-base sm:text-lg md:text-xl leading-relaxed text-on-surface-variant font-light">
+                第五期 Light 邀请三位在 AI 浪潮中深度实践的校友，谈工具、工作流与个体不可替代的部分。
+            </p>
+            <a href="episodes/vol5/index.html" class="inline-flex items-center gap-3 text-primary font-medium group pt-2">
+                <span class="font-display italic text-xl md:text-2xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Read Vol.05</span>
+                <span class="material-symbols-outlined text-base md:text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+        <a href="episodes/vol5/index.html" class="lg:col-span-7 group block overflow-hidden rounded-xl bg-surface-container-lowest shadow-lg shadow-on-surface/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-4">
+            <div class="aspect-[16/10] overflow-hidden">
+                <img src="assets/vol5/vol5-07.jpg" alt="第五期 Light 圆桌现场照片" loading="lazy" decoding="async" width="1080" height="564" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.4s] ease-out">
+            </div>
+        </a>
+    </div>
+</section>
+
 <!-- Independent Golden Quote Section -->
 <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-transparent">
     <!-- Parallax Element (Removed Image, keeping the subtle movement container for consistency if needed) -->
@@ -171,8 +196,22 @@
     gsap.registerPlugin(ScrollTrigger);
     const cursor = document.getElementById('cursor-glow');
 
-    // Keep the home page on native scroll so footer entry and section
-    // transitions don't feel like they rebound or fight the parallax.
+    if (!prefersReducedMotion) {
+        const lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true,
+            smoothTouch: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+        lenis.on('scroll', ScrollTrigger.update);
+    }
 
     if (!prefersReducedMotion && window.matchMedia("(min-width: 768px)").matches) {
         gsap.set(cursor, { xPercent: -50, yPercent: -50 });
