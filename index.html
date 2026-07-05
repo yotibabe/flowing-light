@@ -20,10 +20,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/layout.js" defer></script>
 
-    <!-- Injecting GSAP & Lenis for animations -->
+    <!-- Injecting GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
 
     <script>
         // Merge extra animations into the loaded tailwind config
@@ -59,7 +58,7 @@
     <div class="flex-1 space-y-6 md:space-y-8 w-full text-center md:text-left">
         <div class="space-y-4">
             <!-- Empty container to replace the Trust Badge -->
-            <span class="hero-text font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2025 • SYSU Reading Club</span>
+            <span class="hero-text font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary font-bold block">Est. 2023 • SYSU Reading Club</span>
             <h1 class="hero-text font-display text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-black text-on-surface leading-[0.85] tracking-tighter">
                 Flowing <br>
                 <span class="italic font-normal text-primary">Light</span>
@@ -82,14 +81,14 @@
                     <span class="w-1 h-1 rounded-full bg-outline/40 hidden md:block"></span>
                     <span>AUTHENTICITY <span class="font-body tracking-widest opacity-80 ml-1">真实叙述</span></span>
                     <span class="w-1 h-1 rounded-full bg-outline/40 hidden md:block"></span>
-                    <span>COMMUNITY <span class="font-body tracking-widest opacity-80 ml-1">湾区校友</span></span>
+                    <span>COMMUNITY <span class="font-body tracking-widest opacity-80 ml-1">湾区精英</span></span>
                 </div>
             </div>
         </div>
     </div>
     <div class="hero-text hidden lg:flex flex-col items-center justify-center">
         <div class="h-64 w-px bg-primary/30"></div>
-        <span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">Stories in Flow</span>
+        <span class="py-8 font-label text-xs uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180 opacity-40">The Curator's Choice</span>
         <div class="h-16 w-px bg-primary/30"></div>
     </div>
 </div>
@@ -135,27 +134,27 @@
 </section>
 
 <!-- Latest Moment Section -->
-<section class="relative z-10 py-20 md:py-28 px-6 md:px-12 lg:px-20">
-    <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-        <div class="lg:col-span-5 space-y-6">
-            <span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary font-bold">LATEST LIGHT</span>
-            <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-bold text-on-surface leading-tight tracking-tight">
-                AI 时代浪潮来袭，<br>个体该如何进化？
-            </h2>
-            <p class="font-body text-base sm:text-lg md:text-xl leading-relaxed text-on-surface-variant font-light">
-                第五期 Light 邀请三位在 AI 浪潮中深度实践的校友，谈工具、工作流与个体不可替代的部分。
-            </p>
-            <a href="episodes/vol5/index.html" class="inline-flex items-center gap-3 text-primary font-medium group pt-2">
-                <span class="font-display italic text-xl md:text-2xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Read Vol.05</span>
-                <span class="material-symbols-outlined text-base md:text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </a>
-        </div>
-        <a href="episodes/vol5/index.html" class="lg:col-span-7 group block overflow-hidden rounded-xl bg-surface-container-lowest shadow-lg shadow-on-surface/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-4">
-            <div class="aspect-[16/10] overflow-hidden">
-                <img src="assets/vol5/vol5-07.jpg" alt="第五期 Light 圆桌现场照片" loading="lazy" decoding="async" width="1080" height="564" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.4s] ease-out">
+<section class="relative z-10 py-16 md:py-24 px-6 md:px-12 lg:px-20">
+    <a href="episodes/vol5/index.html" class="group block max-w-[1200px] mx-auto focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-stretch bg-white/35 border border-white/50 shadow-xl shadow-on-surface/5 overflow-hidden rounded-xl">
+            <div class="lg:col-span-7 overflow-hidden bg-surface-container-low">
+                <img src="assets/vol5/vol5-11.png" alt="第五期 Light 现场合照" loading="lazy" decoding="async" width="1080" height="719" class="w-full h-full min-h-[260px] md:min-h-[420px] object-cover object-center group-hover:scale-[1.03] transition-transform duration-[1.4s] ease-out">
             </div>
-        </a>
-    </div>
+            <div class="lg:col-span-5 p-7 sm:p-9 md:p-12 flex flex-col justify-center">
+                <span class="font-label text-[10px] uppercase tracking-[0.36em] text-primary font-bold mb-5">LATEST LIGHT · VOL.05</span>
+                <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl font-bold text-on-surface leading-tight tracking-tight mb-6">
+                    AI 时代浪潮来袭，<br>个体该如何进化？
+                </h2>
+                <p class="font-body text-base md:text-lg leading-loose text-on-surface-variant font-light mb-8">
+                    4 月 19 日，三位校友从产品、出海与人机协同的实践现场出发，分享 AI 时代里个体重新理解工作、工具与自我的方式。
+                </p>
+                <div class="inline-flex items-center gap-3 text-primary font-medium">
+                    <span class="font-display italic text-xl md:text-2xl tracking-tight border-b border-primary/30 pb-1 group-hover:border-primary transition-colors">Read Vol.05</span>
+                    <span class="material-symbols-outlined text-base md:text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </div>
+        </div>
+    </a>
 </section>
 
 <!-- Independent Golden Quote Section -->
@@ -196,22 +195,8 @@
     gsap.registerPlugin(ScrollTrigger);
     const cursor = document.getElementById('cursor-glow');
 
-    if (!prefersReducedMotion) {
-        const lenis = new Lenis({
-            duration: 1.5,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            smooth: true,
-            smoothTouch: false,
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-        lenis.on('scroll', ScrollTrigger.update);
-    }
+    // Keep the home page on native scroll so footer entry and section
+    // transitions don't feel like they rebound or fight the parallax.
 
     if (!prefersReducedMotion && window.matchMedia("(min-width: 768px)").matches) {
         gsap.set(cursor, { xPercent: -50, yPercent: -50 });
