@@ -1,0 +1,26 @@
+/* Cover-only responses. The collection and galleries keep their existing motion. */
+.cover-heart-sketch{padding:0;border:0;background:none;cursor:pointer;pointer-events:auto;z-index:4}
+.cover-heart-sketch>svg{display:block;width:100%;height:100%;overflow:visible}
+.cover-heart-sketch:hover{filter:drop-shadow(1px 4px 2px #9b65442b)}
+.heart-confetti{position:fixed;z-index:20;font-size:23px;line-height:1;color:#c88b9f;pointer-events:none;font-family:Georgia,serif;text-shadow:1px 2px #fff4dc}
+.cover-camera.shutter-flash .camera-flash{stroke:#fff8dc;stroke-width:5}
+.cover-camera.shutter-flash svg{filter:drop-shadow(0 0 10px #fff0b0)}
+#reader.hello-popover{position:fixed;inset:0;width:min(550px,calc(100vw - 44px));height:fit-content;max-height:calc(100svh - 40px);margin:auto;padding:0;border:0;background:transparent;box-shadow:0 18px 65px #422d2c33;overflow:auto;outline:none}
+#reader.hello-popover::backdrop{background:#422d2c38;backdrop-filter:blur(3px)}
+#reader.hello-popover .reader-top{display:none}
+#reader.hello-popover #reader-content{overflow:visible}
+#reader.hello-popover .reader-inner{padding:0;margin:0;max-width:none}
+#reader.hello-popover .hello-sheet{margin:0;max-width:none;padding:34px 40px 28px;background:#fff8e7;transform:none;border:1px solid #d6c5a5;box-shadow:none;text-align:left}
+#reader.hello-popover .hello-sheet>.eyebrow{font-size:8px;letter-spacing:1.5px}
+#reader.hello-popover .hello-sheet h2{font-size:65px;line-height:1;margin:18px 0 23px;font-family:Caveat,cursive;letter-spacing:-1px}
+#reader.hello-popover .hello-sheet p{font-size:14px;line-height:1.85;margin:12px 0}
+#reader.hello-popover .hello-sheet .letter-postscript{font-size:13px;margin-top:22px}
+#reader.hello-popover .hello-sheet .signature{display:block;font-size:29px;margin:20px 0;text-align:right}
+#reader.hello-popover .hello-sheet>a{font-size:11px}
+.hello-countdown{display:block;height:2px;background:#9f6b4822;overflow:hidden;margin:20px 0 18px}
+.hello-countdown>i{display:block;width:100%;height:100%;background:#b58279;transform-origin:left;animation:letter-countdown 4s linear .45s both}
+@keyframes letter-countdown{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@media(max-width:760px){#reader.hello-popover .hello-sheet{padding:28px 25px 25px}#reader.hello-popover .hello-sheet h2{font-size:55px}#reader.hello-popover .hello-sheet p{font-size:12px}#reader.hello-popover .hello-sheet .signature{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.hello-countdown>i{animation-delay:0s}.cover-camera.shutter-flash svg{filter:none}}
+/* Keep the visible camera clickable beside the portrait on narrow screens. */
+@media(max-width:760px){.cover-camera{z-index:10}}

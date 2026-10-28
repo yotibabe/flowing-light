@@ -1,0 +1,42 @@
+/* Load after workbench-narrative.css. Only a mounted conclusion is affected. */
+.wb-tactile .wb-next-steps{min-width:0}
+.wb-tactile .wb-principles{
+  position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(6px,1.4vw,18px);padding-bottom:5px;touch-action:pan-y;user-select:none;
+  -webkit-user-select:none;isolation:isolate;cursor:grab;
+}
+.wb-tactile .wb-principles button{
+  position:relative;min-width:0;min-height:44px;padding:11px 2px 12px;
+  font-size:clamp(11px,1.15vw,14px);text-align:center;cursor:inherit;
+  transform-origin:50% 85%;background:transparent;z-index:1;
+  transition:transform .28s cubic-bezier(.2,.75,.2,1),color .2s;
+}
+.wb-tactile .wb-principles button::before{
+  content:'';position:absolute;inset:2px -3px 4px;z-index:-1;
+  background:#fff9ee;box-shadow:0 3px 8px #6c433d12;opacity:0;
+  transition:opacity .25s;pointer-events:none;
+}
+.wb-tactile .wb-principles button::after{display:none}
+.wb-tactile .wb-principles button[aria-pressed=true]{transform:translateY(-3px) rotate(-1.2deg)}
+.wb-tactile .wb-principles button[aria-pressed=true]::before{opacity:.82}
+.wb-tactile .wb-principles button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.wb-tactile .wb-tactile-rail{
+  position:absolute;left:0;bottom:2px;width:1px;height:1.5px;background:var(--red);
+  transform-origin:left center;pointer-events:none;z-index:2;
+}
+.wb-tactile .wb-principles.is-dragging,.wb-tactile .wb-principles.is-dragging button{cursor:grabbing}
+.wb-tactile .wb-principle-detail{min-height:34px;padding-top:13px;overflow:hidden}
+.wb-tactile .wb-principle-detail p{padding:0 6px;font-size:12px;line-height:1.9}
+.wb-tactile .wb-tactile-hint{display:block;text-align:right;font-size:9px;line-height:1.5;color:#9d8271;margin-top:5px;letter-spacing:.06em}
+@media(max-width:760px){
+  .wb-tactile.wb-conclusion{gap:16px}
+  .wb-tactile .wb-principles{gap:8px}
+  .wb-tactile .wb-principles button{font-size:12px}
+  .wb-tactile .wb-principle-detail{min-height:32px;padding-top:10px}
+  .wb-tactile .wb-principle-detail p{font-size:11px}
+  .wb-tactile .wb-tactile-hint{font-size:9px;margin-top:4px}
+}
+@media(prefers-reduced-motion:reduce){
+  .wb-tactile .wb-principles button,.wb-tactile .wb-principles button::before{transition:none;transform:none}
+  .wb-tactile .wb-principles button[aria-pressed=true]{transform:none}
+}

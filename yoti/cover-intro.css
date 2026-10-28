@@ -1,0 +1,30 @@
+/* The collage assembles once; its established layout remains the final frame. */
+html.cover-intro-pending #home :is(.folio-pink-paper,.paper-port,.paper-folio,.cutout-person,.cover-camera,.cover-heart-sketch,.cover-hello-envelope,.cover-star-sketch,.paper-label,.collage-thread,.paper-notes,.progress-tape,.paper-open) {
+  visibility: hidden;
+  animation: cover-intro-safety 1ms steps(1,end) 2200ms forwards;
+}
+@keyframes cover-intro-safety { to { visibility: visible; } }
+
+html.cover-intro-finished #home :is(.cover-camera,.cover-hello-envelope,.cover-heart-sketch) {
+  animation: cover-sticker-breathe 7.4s ease-in-out .4s infinite backwards;
+}
+html.cover-intro-finished #home .cover-hello-envelope { animation-delay: 1.5s; animation-duration: 8.2s; }
+html.cover-intro-finished #home .cover-heart-sketch { animation-delay: .9s; animation-duration: 6.7s; }
+html.cover-intro-finished #home :is(.cover-camera,.cover-hello-envelope,.cover-heart-sketch):is(:hover,:focus-visible) { animation-play-state: paused; }
+@keyframes cover-sticker-breathe {
+  0%,100% { translate: 0 0; rotate: 0deg; }
+  35% { translate: 2px -4px; rotate: .4deg; }
+  70% { translate: -2px -1px; rotate: -.25deg; }
+}
+@media(max-width:760px) {
+  html.cover-intro-finished #home :is(.cover-camera,.cover-hello-envelope,.cover-heart-sketch) { animation-name: cover-sticker-breathe-compact; }
+}
+@keyframes cover-sticker-breathe-compact {
+  0%,100% { translate: 0 0; rotate: 0deg; }
+  35% { translate: 1px -2px; rotate: .3deg; }
+  70% { translate: -1px -.5px; rotate: -.2deg; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html.cover-intro-pending #home :is(.folio-pink-paper,.paper-port,.paper-folio,.cutout-person,.cover-camera,.cover-heart-sketch,.cover-hello-envelope,.cover-star-sketch,.paper-label,.collage-thread,.paper-notes,.progress-tape,.paper-open) { visibility: visible; animation: none; }
+  html.cover-intro-finished #home :is(.cover-camera,.cover-hello-envelope,.cover-heart-sketch) { animation: none; }
+}

@@ -1,0 +1,78 @@
+/* Three light paper entries; keep existing photos, readers, and spring motion. */
+.idea-note,.olive-ticket,.why-stamp{display:none}
+.cover-heart-sketch{left:3.5%;top:13%;width:75px;height:75px}
+.cover-camera{left:4.5%;bottom:23%;width:190px}
+.collage-thread{left:2.5%;top:47%;width:100px}
+.personal-objects{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:62px;max-width:1090px;height:auto;margin:110px auto 95px;padding:0 12px}
+.personal-objects .object-slot{position:relative;width:auto;height:370px;min-width:0;left:auto;top:auto;display:flex;align-items:center;justify-content:center}
+.personal-objects .object-drift{width:100%;max-width:290px}
+.personal-objects .keepsake{width:100%;--lift:0px}
+.personal-objects .folder{height:325px;--r:-5deg}
+.folder-type{top:132px;font-size:83px}.folder-type .hand{font-size:24px}
+.personal-objects .object-slot.is-hovered .keepsake,.personal-objects .object-slot.is-focused .keepsake{--lift:0px;filter:drop-shadow(3px 28px 15px #64473738)}
+.personal-objects .object-footnote{bottom:-38px;left:0;width:100%;text-align:center;font-size:8px;letter-spacing:1.3px}
+.personal-objects .entry-annotation{font-size:24px;line-height:1;white-space:normal}
+.personal-objects .folder-slot .entry-annotation{left:-33px;top:-6px;width:100px;transform:rotate(-12deg)}
+.personal-objects .folder-slot .entry-annotation svg{left:30px;top:30px;width:60px;height:52px}
+.personal-objects .workbench-slot .entry-annotation{left:45px;top:418px;width:150px;transform:rotate(-5deg)}
+.personal-objects .workbench-slot .entry-annotation svg{left:-39px;top:-40px;width:43px;height:58px}
+.personal-objects .moments-slot .entry-annotation{left:auto;right:-10px;top:-20px;width:105px;transform:rotate(8deg)}
+.personal-objects .moments-slot .entry-annotation svg{left:7px;top:34px;width:44px;height:37px;transform:rotate(95deg)}
+.workbench-slot .object-drift{top:-15px}.moments-slot .object-drift{top:8px}
+/* A loose research sheet, with just one offset sheet underneath. */
+.personal-objects .research-paper{--r:2deg;height:315px;background:none;padding:0;overflow:visible;color:#8f3431}
+.research-underleaf{position:absolute;inset:7px -5px -5px 7px;background:#e4c398;border:1px solid #cbaa7c;transform:rotate(-2deg);transition:transform .6s var(--ease)}
+.research-leaf{position:absolute;inset:0;background:#f6e2bb;padding:25px 24px 20px;border:1px solid #d5b988;box-shadow:0 2px 3px #70502f18;display:block}
+.research-kicker{display:flex;justify-content:space-between;gap:7px;font-size:7px;letter-spacing:1px;padding-bottom:13px;border-bottom:1px solid #9b62432b}
+.research-title{display:block;font-family:Georgia,'Songti SC',serif;font-size:36px;line-height:1.35;font-weight:500;letter-spacing:1px;margin-top:20px}
+.research-note{display:block;font-size:26px;line-height:1.15;transform:rotate(-4deg);margin-top:7px;color:#9b5849}
+.research-chart{display:block;width:100%;height:68px;margin-top:22px;color:#9f4a3f;overflow:visible}
+.research-chart .research-line{stroke-dasharray:260;stroke-dashoffset:0;transition:stroke-dashoffset 1s var(--ease)}
+.research-paper:hover .research-line{stroke-dashoffset:20}
+.research-bottom{position:absolute;left:24px;right:24px;bottom:20px;display:flex;justify-content:space-between;font-size:10px;border-top:1px solid #9b624337;padding-top:13px}.research-bottom i{font-style:normal}
+.workbench-slot.is-hovered .research-underleaf,.workbench-slot.is-focused .research-underleaf{transform:translate(-6px,-8px) rotate(-4deg)}
+/* Restore the simple circular planet card. */
+.personal-objects .feeling-card{--r:4deg;height:315px;padding:25px!important;background:#faf3e2;border:1px solid #cdbd9d;box-shadow:5px 5px 0 #e4d2b1,6px 6px 0 #bfa987}
+.personal-objects .feeling-card:after{display:none}
+.personal-objects .card-top{font-size:6.5px;letter-spacing:1px}
+.personal-objects .feeling-title{font-size:39px;line-height:1.05;letter-spacing:-1.2px;margin-top:34px}
+.personal-objects .feeling-hand{font-size:29px;max-width:110px;margin-top:29px;color:#8c6852}
+.personal-objects .planet-sticker{width:79px;height:79px;right:23px;bottom:66px}
+.personal-objects .card-rule{position:absolute;bottom:48px;left:25px;right:25px;margin:0;border-color:#a98b6959}
+.personal-objects .feeling-bottom{position:absolute;left:25px;right:25px;bottom:23px;font-size:10px}
+.personal-footer{margin-top:85px}
+@media(min-width:1500px){.cover-camera{left:7.5%;width:220px}.cover-heart-sketch{left:6.2%;top:15%;width:85px;height:85px}}
+@media(min-width:761px) and (max-width:1100px){
+ .cover-camera{width:153px;left:4%;bottom:23%}.cover-heart-sketch{left:3%;top:15%;width:65px;height:65px}
+ .personal-objects{gap:32px;padding:0;margin-top:95px;max-width:900px}
+ .personal-objects .object-slot{height:340px}.personal-objects .folder{height:290px}.folder-type{font-size:67px;top:120px;left:18px}.folder-type .hand{font-size:21px}.folder-photo{width:90px!important}
+ .personal-objects .research-paper,.personal-objects .feeling-card{height:290px}.research-leaf{padding:22px 19px 18px}.research-title{font-size:29px;margin-top:19px}.research-note{font-size:23px}.research-chart{height:61px;margin-top:19px}.research-bottom{font-size:9px;left:19px;right:19px;bottom:18px}
+ .personal-objects .feeling-card{padding:22px 19px!important}.personal-objects .card-top{font-size:6px;letter-spacing:.6px}.personal-objects .feeling-title{font-size:32px;margin-top:32px}.personal-objects .feeling-hand{font-size:25px;margin-top:25px}.personal-objects .planet-sticker{width:65px;height:65px;right:17px;bottom:64px}.personal-objects .card-rule,.personal-objects .feeling-bottom{left:19px;right:19px}.personal-objects .feeling-bottom{font-size:9px}
+ .personal-objects .entry-annotation{font-size:21px}.personal-objects .folder-slot .entry-annotation{left:-8px;top:-9px}.personal-objects .folder-slot .entry-annotation svg{width:40px;left:20px}.personal-objects .workbench-slot .entry-annotation{top:386px;left:30px}.personal-objects .moments-slot .entry-annotation{right:-7px;top:-15px}
+}
+@media(max-width:760px){
+ .cover-camera{left:3%;top:61%;bottom:auto;width:110px}.cover-camera>span{font-size:13px}.cover-heart-sketch{left:4%;top:51%;width:55px;height:55px}.collage-thread{left:3%;top:55%;width:65px}
+ .personal-objects{grid-template-columns:1fr;gap:95px;max-width:330px;padding:0 12px;margin:90px auto 75px}
+ .personal-objects .object-slot{width:100%;height:350px}.personal-objects .object-drift{max-width:285px;top:auto}.personal-objects .folder{height:318px}.folder-type{font-size:77px;top:130px}.folder-type .hand{font-size:24px}
+ .personal-objects .research-paper,.personal-objects .feeling-card{height:315px}.research-title{font-size:34px}.personal-objects .feeling-title{font-size:38px}
+ .personal-objects .object-footnote{bottom:-25px;font-size:7px;letter-spacing:1.4px}
+ .personal-objects .object-slot .entry-annotation{display:block!important;left:auto;right:3px;top:-36px;width:145px;font-size:23px;transform:rotate(5deg)}
+ .personal-objects .folder-slot .entry-annotation{left:-8px;right:auto;top:-16px;width:95px;transform:rotate(-8deg)}
+ .personal-objects .folder-slot .entry-annotation svg{width:43px;left:18px;top:35px}
+ .personal-objects .workbench-slot .entry-annotation svg{width:39px;height:49px;left:-35px;top:9px;transform:rotate(165deg)}
+ .personal-objects .moments-slot .entry-annotation{right:-12px;width:95px}.personal-objects .moments-slot .entry-annotation svg{width:38px;left:0;top:27px}
+ .personal-footer .hand{font-size:20px}.personal-footer{margin-top:65px}
+}
+@media(prefers-reduced-motion:reduce){.research-underleaf,.research-line{transition:none!important}}
+/* Same hand-drawn family and placement as the original cover smile. */
+.cover-hello-envelope{position:absolute;right:4.3%;top:28%;width:156px;z-index:4;border:0;padding:0;background:none;color:#8c302e;cursor:pointer;transform:rotate(9deg);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.cover-hello-envelope svg{display:block;width:100%;overflow:visible;filter:drop-shadow(2px 3px 0 #fff2da) drop-shadow(3px 6px 2px #57342318)}
+.cover-hello-envelope>span{display:block;white-space:nowrap;font-size:23px;line-height:1;margin-top:-4px;transform:rotate(-4deg)}
+.cover-hello-envelope .hello-paper{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.cover-hello-envelope:hover,.cover-hello-envelope:focus-visible{transform:translateY(-8px) rotate(3deg)}
+.cover-hello-envelope:hover .hello-paper,.cover-hello-envelope:focus-visible .hello-paper{transform:translateY(-14px) rotate(-2deg);transform-origin:105px 100px}
+.cover-hello-envelope:focus-visible{outline:2px dashed var(--red);outline-offset:8px}
+@media(min-width:1500px){.cover-hello-envelope{right:6.5%;top:31%;width:171px}}
+@media(min-width:761px) and (max-width:1050px){.cover-hello-envelope{right:4.5%;top:33%;width:132px}.cover-hello-envelope>span{font-size:20px}}
+@media(max-width:760px){.cover-hello-envelope{right:4.5%;top:75%;width:104px;transform:rotate(8deg)}.cover-hello-envelope>span{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.cover-hello-envelope,.cover-hello-envelope .hello-paper{transition:none}}

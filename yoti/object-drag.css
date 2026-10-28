@@ -1,0 +1,55 @@
+/* Load last. The outer card transform is owned by object-drag.js. */
+.personal-objects .object-slot {
+  perspective: 1100px;
+}
+.personal-objects .object-slot .keepsake {
+  --lift: 0px;
+  transform: translate3d(var(--mx,0px),var(--my,0px),0)
+    rotate(calc(var(--r,0deg) + var(--rz,0deg)))
+    rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transition: filter .28s, box-shadow .28s;
+  touch-action: pan-y pinch-zoom;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  will-change: auto;
+}
+.personal-objects .keepsake img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.personal-objects .object-slot:is(.is-hovered,.is-focused,.is-dragging,.is-returning) {
+  z-index: 25;
+}
+.personal-objects .object-slot.is-moving .keepsake {
+  will-change: transform;
+}
+.personal-objects .object-slot:is(.is-hovered,.is-focused,.is-dragging) .keepsake {
+  --lift: 0px;
+  filter: drop-shadow(3px 29px 16px #64473736);
+}
+.personal-objects .object-slot.is-dragging .keepsake {
+  cursor: grabbing;
+  filter: drop-shadow(7px 38px 20px #64473740);
+}
+.personal-objects .object-slot:is(.is-dragging,.is-returning,.object-idle-paused) .object-drift {
+  animation-play-state: paused;
+}
+.personal-objects .object-slot.is-dragging .hover-hint {
+  opacity: 0;
+}
+@media (max-width: 760px) {
+  .personal-objects .object-slot { translate: 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .personal-objects .object-slot .keepsake {
+    transform: rotate(var(--r,0deg)) !important;
+    transition: none;
+    cursor: pointer;
+  }
+  .personal-objects .object-slot {
+    translate: 0 0;
+    transition: none;
+  }
+  .personal-objects .object-drift { animation: none !important; }
+}

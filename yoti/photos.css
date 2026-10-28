@@ -1,0 +1,40 @@
+/* Three original photographs; existing album sizes and photo order are preserved. */
+.about-album{position:relative;min-width:0;width:100%;max-width:380px;margin:0 auto}
+.album-stage{position:relative;aspect-ratio:.72;isolation:isolate;animation:album-drift 7s ease-in-out infinite;transform-origin:50% 65%}
+.about-album .album-card{position:absolute;width:87%;margin:0;padding:12px 12px 18px;box-sizing:border-box;transform-origin:50% 75%;transition:transform .6s cubic-bezier(.22,.75,.22,1),filter .6s;box-shadow:3px 8px 16px #67473322;background:#fbf4e5;will-change:transform}
+.about-album .album-card:before{display:none}
+.about-album .about-photo-mat{height:auto;aspect-ratio:2/3;background:#e4d9c6;display:block}
+.about-album .about-photo-mat img{height:100%;width:100%;object-fit:cover;object-position:center;transform:none}
+.about-album figcaption{font-size:24px;padding:13px 3px 0;line-height:1}
+.album-card[data-photo-slot="0"]{z-index:3;transform:translate(0,0) rotate(-5deg)}
+.album-card[data-photo-slot="1"]{z-index:2;transform:translate(22px,-5px) rotate(4deg);filter:brightness(.93)}
+.album-card[data-photo-slot="2"]{z-index:1;transform:translate(32px,12px) rotate(9deg);filter:brightness(.88)}
+.album-card:not([data-photo-slot="0"]) .about-photo-tape{opacity:0}
+.album-turn{position:absolute;inset:-12px 0 12px;z-index:5;cursor:pointer;background:none;border:0;transform:rotate(-2deg)}
+.album-turn:focus-visible{outline:2px dashed var(--red);outline-offset:8px;border-radius:2px}
+.about-album[data-moving="true"] .album-card{transition:none}
+.album-controls{position:relative;display:flex;align-items:center;justify-content:space-between;margin:8px 5px 0;gap:10px;padding-bottom:9px}
+.album-controls button{border:1px solid #9f4f4a65;border-radius:50%;width:36px;height:36px;padding:0;font-size:19px;background:#f7ecd8;transition:transform .2s,background .2s}
+.album-controls button:hover{transform:rotate(-9deg);background:#ebbac6}
+.album-status{font-size:10px;letter-spacing:1px;color:#73382f}
+.album-hint{display:block;text-align:center;font-size:23px;color:#8e3a3a;margin-top:12px;transform:rotate(-3deg)}
+@media(max-width:1050px) and (min-width:761px){.about-album figcaption{font-size:19px}.about-album .album-card{padding:10px 10px 16px}.album-status{font-size:9px}}
+@media(max-width:760px){.about-album{max-width:300px;margin:12px auto 0}.about-album .album-card{padding:10px 10px 15px}.about-album figcaption{font-size:21px}.album-controls{margin-top:15px}.album-hint{font-size:22px}.album-card[data-photo-slot="1"]{transform:translate(15px,-5px) rotate(4deg)}.album-card[data-photo-slot="2"]{transform:translate(25px,10px) rotate(9deg)}}
+@media(prefers-reduced-motion:reduce){.about-album .album-card,.album-controls button{transition:none}}
+
+/* Animation is confined to the existing album, with an unobtrusive playback control. */
+.about-album[data-autoplay="paused"] .album-stage{animation-play-state:paused}
+.album-controls .album-play-toggle{width:29px;height:29px;flex:0 0 29px;font-size:14px;line-height:1;margin-left:0}
+.album-progress{position:absolute;left:3px;right:3px;bottom:0;height:2px;background:#9b4c3920;overflow:hidden}
+.album-progress i{display:block;width:100%;height:100%;background:#9c3835;transform:scaleX(0);transform-origin:left}
+@keyframes album-drift{0%,100%{transform:translate(0,0) rotate(-.25deg)}25%{transform:translate(7px,-6px) rotate(.65deg)}55%{transform:translate(-4px,-10px) rotate(-.5deg)}80%{transform:translate(-7px,-3px) rotate(.3deg)}}
+@media(prefers-reduced-motion:reduce){.album-stage{animation:none!important}.album-progress{display:none}}
+
+/* Keep the flying paper inside this section instead of widening the mobile page. */
+.about-spread{overflow-x:clip}
+
+/* Independent pointer plane: tilting the stack does not interrupt automatic turns. */
+.album-pointer-frame{position:relative;perspective:1000px;isolation:isolate}
+.album-pointer-plane{position:relative;transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0) scale(1);transform-origin:50% 58%;transition:transform .8s cubic-bezier(.2,1.3,.3,1);will-change:transform}
+.album-pointer-frame[data-interacting="true"] .album-pointer-plane{transition:transform .16s ease-out}
+@media(prefers-reduced-motion:reduce){.album-pointer-plane{transform:none!important;transition:none!important}}

@@ -1,0 +1,33 @@
+/* One animation owner for opening a reader: app.js. */
+#reader[open]{animation:none;transform:none;transform-origin:center;isolation:isolate}
+#reader-content{overflow-x:clip}
+#reader::backdrop{background:#422d2c42;backdrop-filter:blur(3px)}
+.personal-objects .keepsake{transform:translate3d(var(--mx,0px),calc(var(--my,0px) + var(--lift,0px)),0) rotate(var(--r)) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:filter .35s,box-shadow .35s}
+.object-slot{z-index:1;translate:var(--neighbor-x,0px) 0;transition:translate .5s cubic-bezier(.22,1,.36,1)}
+.object-slot.is-hovered,.object-slot.is-focused{z-index:5}
+.object-slot.is-hovered .keepsake,.object-slot.is-focused .keepsake{--lift:-34px;filter:drop-shadow(3px 37px 19px #64473738)}
+.object-slot.is-hovered .object-drift,.object-slot.is-focused .object-drift{animation-play-state:paused}
+.object-slot.is-hovered .sheet-one,.object-slot.is-focused .sheet-one{transform:translate(10px,-58px) rotate(8deg)}
+.object-slot.is-hovered .sheet-two,.object-slot.is-focused .sheet-two{transform:translate(-12px,-31px) rotate(-10deg)}
+.object-slot.is-hovered .letter,.object-slot.is-focused .letter{transform:translate(5px,-57px) rotate(-3deg)}
+.object-slot .folder-photo{transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.object-slot.is-hovered .folder-photo,.object-slot.is-focused .folder-photo{transform:translate(-4px,-3px) rotate(-6deg)}
+.object-slot .planet-sticker{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.object-slot.is-hovered .planet-sticker,.object-slot.is-focused .planet-sticker{transform:translate(12px,-17px) rotate(11deg)}
+.object-slot .feeling-card:after{content:"";position:absolute;inset:10px -16px -10px auto;width:16px;border:1px solid #6e795f;background:repeating-linear-gradient(transparent 0 22px,#83916c42 23px,transparent 24px),#bac1a4;z-index:-1;transition:transform .6s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.object-slot.is-hovered .feeling-card:after,.object-slot.is-focused .feeling-card:after{transform:translate(-12px,-25px) rotate(-8deg)}
+.object-slot.is-focused .hover-hint{opacity:1;transform:translate(-50%,0)}
+.object-slot .envelope-flap{transform-origin:top center;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.object-slot.is-hovered .envelope-flap,.object-slot.is-focused .envelope-flap{transform:rotateX(20deg)}
+
+@media(max-width:760px){
+ .object-slot{translate:0 0}
+}
+@media(prefers-reduced-motion:reduce){
+ .object-slot{translate:0 0;transition:none}
+ .personal-objects .keepsake{transform:rotate(var(--r))!important;transition:none}
+ .object-slot .object-drift{animation:none!important}
+ .object-slot .sheet-one,.object-slot .sheet-two,.object-slot .letter,.object-slot .folder-photo,.object-slot .planet-sticker,.object-slot .feeling-card:after,.object-slot .envelope-flap{transition:none!important}
+ .object-slot.is-hovered .keepsake,.object-slot.is-focused .keepsake{--lift:0px}
+ #reader::backdrop{backdrop-filter:none}
+}

@@ -1,0 +1,24 @@
+/* A brief welcome, on a soft sheet. Scoped to this one reader. */
+#reader.hello-popover{width:min(450px,calc(100vw - 64px));max-height:calc(100svh - 56px);overflow:visible;box-shadow:none}
+#reader.hello-popover::backdrop{background:#46352e24;backdrop-filter:blur(2px)}
+#reader.hello-popover .hello-sheet{position:relative;isolation:isolate;min-height:300px;padding:38px 42px 26px;border:0;background:#fff8e8;box-shadow:3px 18px 35px #4c352422;transform:rotate(-2deg)}
+#reader.hello-popover .hello-sheet.has-welcome-surface{background:none;box-shadow:none}
+.welcome-surface{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:-1;pointer-events:none;filter:drop-shadow(4px 19px 17px #4c35242a)}
+#reader.hello-popover .welcome-copy{position:relative}
+#reader.hello-popover .welcome-copy>.eyebrow{font-size:8px;letter-spacing:2px;color:#8b6551}
+#reader.hello-popover .hello-sheet h2{font-size:64px;line-height:1;margin:14px 0 21px;letter-spacing:-1px}
+#reader.hello-popover .hello-sheet p{font-size:15px;line-height:1.95;margin:0;color:#6c4035}
+#reader.hello-popover .hello-sheet .signature{font-size:30px;line-height:1;margin:24px 8px 0;text-align:right;transform:rotate(-5deg)}
+#reader.hello-popover .hello-countdown{width:52px;height:1px;margin:17px 0 0;background:#a37b5c22}
+#reader.hello-popover .hello-countdown>i{background:#b18b74;animation:letter-countdown 3s linear .7s both}
+#reader.hello-popover .hello-sheet.is-floating{animation:welcome-paper-float 4.7s ease-in-out .7s infinite}
+@keyframes welcome-paper-float{0%,100%{transform:translate3d(0,0,0) rotate(-2deg)}35%{transform:translate3d(3px,-8px,0) rotate(-.8deg)}70%{transform:translate3d(-3px,-3px,0) rotate(-2.8deg)}}
+@media(max-width:760px){
+ #reader.hello-popover{width:min(420px,calc(100vw - 48px))}
+ #reader.hello-popover .hello-sheet{min-height:276px;padding:32px 29px 24px}
+ #reader.hello-popover .hello-sheet h2{font-size:57px;margin-bottom:18px}
+ #reader.hello-popover .hello-sheet p{font-size:14px}
+ #reader.hello-popover .hello-sheet .signature{font-size:28px;margin-top:24px}
+}
+@media(max-height:400px){#reader.hello-popover{max-height:calc(100svh - 20px)}#reader.hello-popover .hello-sheet{min-height:0;padding:20px 35px}#reader.hello-popover .hello-sheet h2{font-size:45px;margin:8px 0 12px}#reader.hello-popover .hello-sheet .signature{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){#reader.hello-popover .hello-sheet.is-floating{animation:none}#reader.hello-popover .hello-countdown>i{animation-delay:0s}#reader.hello-popover::backdrop{backdrop-filter:none}}
