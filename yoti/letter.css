@@ -1,0 +1,16 @@
+/* Red checkerboard envelope, inspired by the user's illustrated invitation. */
+.personal-objects .illustrated-envelope{width:268px;height:352px;margin-top:0;--r:5deg;box-shadow:none;background:transparent;overflow:visible}
+.illustrated-envelope-back{position:absolute;inset:auto 0 0;height:175px;z-index:0;background:#ac302f;clip-path:polygon(0 23%,13% 0,87% 0,100% 23%,100% 100%,0 100%);border-radius:3px;filter:drop-shadow(2px 6px 8px #69423225)}
+.illustrated-letter{display:block;position:absolute;left:14px;right:14px;bottom:58px;height:291px;background:#fbf3df;box-shadow:0 2px 8px #69423230;z-index:1;transform:rotate(-2deg);transition:transform .6s cubic-bezier(.2,.8,.2,1);color:#aa2e2b;overflow:hidden;text-align:left;padding:17px 18px}
+.letter-checker{position:absolute;top:0;bottom:0;width:7px;background:repeating-conic-gradient(#b3332d 0 25%,#fbf3df 0 50%) 0 0/14px 14px}.left-edge{left:0}.right-edge{right:0}
+.illustrated-letter>small{font-size:6px;letter-spacing:1.6px;display:block;text-align:center;position:relative;z-index:2}
+.illustrated-letter-title{font-size:35px;line-height:.79;display:block;position:absolute;right:24px;top:40px;transform:rotate(3deg);z-index:2;color:#3a342c}
+.letter-drawing{position:absolute;left:13px;right:13px;top:22px;width:calc(100% - 26px);height:229px}
+.letter-handnote{position:absolute;left:29px;bottom:28px;font-size:18px;line-height:1;color:#3a342c;transform:rotate(-5deg)}
+.illustrated-envelope-front{position:absolute;inset:auto 0 0;height:153px;z-index:3;background:repeating-conic-gradient(#bc3037 0 25%,#c9383b 0 50%) 0 0/32px 32px;clip-path:polygon(0 0,50% 51%,100% 0,100% 100%,0 100%);border-radius:0 0 4px 4px;filter:drop-shadow(0 -2px 1px #7d1e2a19)}
+.illustrated-envelope-front:after{content:'';position:absolute;inset:0;background:linear-gradient(32deg,transparent 49.8%,#e46c5e33 50%,transparent 50.5%),linear-gradient(-32deg,transparent 49.8%,#6d1b2422 50%,transparent 50.5%)}
+.illustrated-envelope-label{position:absolute;left:19px;right:18px;bottom:18px;z-index:4;color:#fff2de;font-size:7px;letter-spacing:1.2px;display:flex;justify-content:space-between;align-items:center}.illustrated-envelope-label i{font-size:15px;font-style:normal}
+.object-slot.is-hovered .illustrated-letter,.object-slot.is-focused .illustrated-letter{transform:translateY(-36px) rotate(-5deg)}
+@media(min-width:761px) and (max-width:1100px){.personal-objects .illustrated-envelope{width:222px;height:320px}.illustrated-letter{left:12px;right:12px;height:268px;bottom:46px}.letter-drawing{top:28px;height:209px}.illustrated-letter-title{font-size:31px;right:18px;top:45px}.letter-handnote{font-size:16px;left:26px;bottom:20px}.illustrated-envelope-front{height:130px}.illustrated-envelope-label{font-size:6px;letter-spacing:.7px}.illustrated-envelope-back{height:155px}}
+@media(max-width:760px){.personal-objects .illustrated-envelope{width:256px;height:340px;margin-top:0}.illustrated-letter{height:282px;bottom:53px}.letter-drawing{height:221px}.illustrated-letter-title{font-size:34px}.illustrated-envelope-front{height:146px}.illustrated-envelope-label{font-size:6px}.letter-handnote{font-size:17px}.letter-slot{height:380px}}
+@media(prefers-reduced-motion:reduce){.illustrated-letter{transition:none}.object-slot.is-hovered .illustrated-letter,.object-slot.is-focused .illustrated-letter{transform:rotate(-2deg)}}

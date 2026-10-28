@@ -1,0 +1,39 @@
+/* Approved six-part update: retain the existing paper design and reader layouts. */
+.cover-smile-sketch{display:block;padding:0;border:0;background:none;cursor:pointer;pointer-events:auto;transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .4s}
+.cover-smile-sketch svg{display:block;width:100%;height:100%;filter:drop-shadow(2px 3px 0 #fff2da) drop-shadow(4px 8px 3px #57342325)}
+.cover-smile-sketch:hover,.cover-smile-sketch:focus-visible{transform:translateY(-10px) rotate(3deg);filter:drop-shadow(3px 12px 5px #57342320)}
+.cover-smile-sketch:focus-visible{outline:2px dashed var(--red);outline-offset:7px;border-radius:45%}
+.album-card[data-photo-slot="3"],.album-card[data-photo-slot="4"]{opacity:0;z-index:0;transform:translate(28px,12px) rotate(9deg) scale(.97);pointer-events:none}
+.album-card[data-photo-slot="0"],.album-card[data-photo-slot="1"],.album-card[data-photo-slot="2"]{opacity:1}
+.about-photo-mat.full-photo img{object-position:52% center}
+.collection-heading .collection-invitation{font-size:27px;line-height:1.15;transform:rotate(-5deg);color:#8c473d;max-width:300px}
+.personal-objects{grid-template-columns:repeat(2,minmax(0,1fr));max-width:960px;column-gap:110px;row-gap:145px;margin-top:115px}
+.personal-objects .object-slot{height:380px;min-width:0}
+.personal-objects .folder{width:300px;height:310px}
+.folder-type{font-size:83px;line-height:.86;top:125px;letter-spacing:-4px}
+.folder-type .hand{display:block;font-size:25px;letter-spacing:0;line-height:1.2;margin-top:11px;transform:rotate(-4deg)}
+.entry-annotation{position:absolute;top:-59px;left:15px;z-index:6;font-size:27px;line-height:1.1;transform:rotate(-7deg);color:#984438;pointer-events:none}
+.entry-annotation svg{position:absolute;width:82px;height:60px;left:100%;top:-8px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:translate .45s cubic-bezier(.2,.8,.2,1)}
+.object-slot:nth-child(even) .entry-annotation{left:25px;transform:rotate(4deg);color:#8b7950}
+.object-slot.is-hovered .entry-annotation svg,.object-slot.is-focused .entry-annotation svg{translate:6px 7px}
+.personal-objects .research-notebook{--r:5deg;width:290px;height:338px;background:repeating-linear-gradient(transparent 0 27px,#7b876221 28px,transparent 29px),#c5c9aa;color:#4d5f47;border:1px solid #839070;box-shadow:8px 10px 0 #ebe4ce,9px 11px 0 #a7a58c;padding:28px 27px;text-align:left;overflow:visible}
+.notebook-binding{position:absolute;left:-4px;top:15px;bottom:15px;width:15px;background:repeating-linear-gradient(transparent 0 18px,#7a7966 19px 21px,transparent 22px 28px);transform:rotate(-1deg)}
+.notebook-title{display:block;margin:25px 0 0;font-family:Georgia,'Songti SC',serif;font-size:41px;line-height:1.2;letter-spacing:2px;color:#4b5c45}
+.notebook-note{display:block;font-size:26px;margin-top:6px;transform:rotate(-4deg)}
+.notebook-chart{position:absolute;width:205px;height:55px;left:42px;bottom:43px;transform:rotate(-3deg)}
+.notebook-bottom{position:absolute;bottom:19px;left:27px;right:20px;border-top:1px solid #52604455;padding-top:10px;font-size:10px;display:flex;justify-content:space-between}
+.notebook-bottom i{font-style:normal}
+.workbench-slot .object-drift{animation-name:paper-drift-b;animation-delay:-1.4s}
+.project-end{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid #723e342b;margin:65px 0 5px;padding-top:25px}
+.project-end button{padding:14px 0;font-size:13px;color:var(--red);text-align:left;transition:translate .25s}
+.project-end button:last-child{text-align:right}
+.project-end button:hover{translate:0 -3px}
+.project-story{margin:70px 0;padding:38px 0;border-top:1px solid #723e342b}
+.project-story h3{font-family:Georgia,'Songti SC',serif;font-size:34px;font-weight:400;line-height:1.5;color:var(--red);margin:22px 0 25px}
+.story-columns{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.story-columns p{font-size:14px;line-height:2;margin:0;max-width:44em}
+.birthday-story{margin:28px 0 40px;padding-top:15px;border-top:none}
+.birthday-stage iframe{display:block;width:100%;border:0}
+@media(min-width:761px) and (max-width:1050px){.personal-objects{column-gap:35px;max-width:800px}.personal-objects .folder{width:270px}.folder-type{font-size:75px;top:124px}.personal-objects .research-notebook{width:260px}.notebook-chart{width:180px}.entry-annotation{font-size:24px;left:0}.collection-heading .collection-invitation{font-size:23px}}
+@media(max-width:760px){.personal-objects{grid-template-columns:1fr;row-gap:115px;margin-top:100px;max-width:360px}.personal-objects .object-slot{height:355px}.personal-objects .folder{width:270px;height:300px}.folder-type{font-size:76px;top:125px}.folder-type .hand{font-size:23px}.entry-annotation{font-size:24px;top:-46px;left:16px}.entry-annotation svg{width:70px;top:-11px}.object-slot:nth-child(even) .entry-annotation{left:23px}.collection-heading .collection-invitation{font-size:23px;margin-top:28px}.personal-objects .research-notebook{width:265px;height:330px}.notebook-chart{width:185px;left:39px}.project-story{margin:40px 0;padding-top:25px}.project-story h3{font-size:26px;margin:17px 0 20px}.story-columns{grid-template-columns:1fr;gap:16px}.story-columns p{font-size:13px;line-height:2}.project-end{gap:12px;margin-top:40px}.project-end button{font-size:12px}.birthday-story{margin-top:20px}.cover-smile-sketch:hover{transform:translateY(-6px) rotate(5deg)}}
+@media(prefers-reduced-motion:reduce){.cover-smile-sketch,.entry-annotation svg,.project-end button{transition:none}.cover-smile-sketch:hover{transform:rotate(12deg)}}

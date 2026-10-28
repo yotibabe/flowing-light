@@ -1,0 +1,45 @@
+/* One original hosting cutout; supporting handmade camera, heart and stars. */
+.idea-note,.olive-ticket{display:none}
+.cover-camera{position:absolute;z-index:4;left:5.5%;bottom:24%;width:213px;padding:0;background:none;border:0;transform:rotate(-11deg);transition:transform .4s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.cover-camera svg{display:block;width:100%;filter:drop-shadow(2px 3px 0 #fff2da) drop-shadow(3px 6px 2px #57342318)}
+.cover-camera>span{display:block;color:#8f2a32;font-size:22px;margin-top:-6px;white-space:nowrap;transform:rotate(4deg)}
+.cover-camera:hover,.cover-camera:focus-visible{transform:translateY(-9px) rotate(-5deg)}
+.cover-camera:focus-visible{outline:2px dashed var(--red);outline-offset:8px}
+.camera-flash{opacity:.35;transition:opacity .25s}
+.cover-camera:hover .camera-flash,.cover-camera:focus-visible .camera-flash{opacity:1}
+.cover-heart-sketch{position:absolute;left:7%;top:21%;width:125px;height:140px;transform:rotate(-16deg);z-index:3;pointer-events:none}
+.cover-little-stars{position:absolute;left:39%;bottom:12%;width:115px;transform:rotate(9deg);z-index:3;pointer-events:none}
+.collage-thread{left:3.5%;top:46%;width:130px;opacity:.8;transform:rotate(-20deg)}
+@media(min-width:1500px){.cover-camera{left:9%;width:240px;bottom:23%}.cover-heart-sketch{left:10%;top:24%;width:140px}.cover-little-stars{left:43%;bottom:12%;width:140px}}
+@media(min-width:761px) and (max-width:1050px){.cover-camera{width:170px;left:4%;bottom:23%}.cover-camera>span{font-size:18px}.cover-heart-sketch{left:5%;top:24%;width:100px}.cover-little-stars{width:90px;left:38%;bottom:15%}.collage-thread{width:92px;top:47%}}
+@media(max-width:760px){.cover-camera{left:6%;top:9%;bottom:auto;width:116px;transform:rotate(-10deg)}.cover-camera>span{font-size:13px;margin-top:-4px}.cover-heart-sketch{left:5%;top:57%;width:68px;height:78px;transform:rotate(-18deg)}.cover-little-stars{left:43%;top:18%;bottom:auto;width:63px;transform:rotate(12deg)}.collage-thread{left:6%;top:51%;width:70px;transform:rotate(-15deg)}}
+@media(prefers-reduced-motion:reduce){.cover-camera,.camera-flash{transition:none}}
+
+/* Requested cover emphasis: more visible personal title and original cutout. */
+.paper-label{font-family:Mansalva,Caveat,cursive;font-size:34px;line-height:1.03;right:6%;top:7%;transform:rotate(5deg);color:#842b2a}
+.paper-label .label-owner{display:inline-block;font-size:1.12em;position:relative;padding-bottom:7px}
+.paper-label .label-owner:after{content:'';position:absolute;left:0;right:-7px;bottom:2px;height:3px;background:#a1392d;transform:rotate(-4deg);clip-path:polygon(0 30%,98% 0,100% 58%,4% 100%)}
+.cutout-person{height:360px;width:269px;right:19.5%}
+.cover-camera svg{filter:drop-shadow(2px 3px 0 #fff2da) drop-shadow(3px 6px 2px #57342318)}
+@media(min-width:1500px){.paper-label{font-size:38px;top:7%;right:8%}.cutout-person{height:420px;width:312px;right:20.5%}}
+@media(max-height:800px) and (min-width:1051px){.cutout-person{height:312px;width:228px;right:19%}.paper-label{font-size:34px;top:7%;right:6%}}
+@media(min-width:761px) and (max-width:1050px){.cutout-person{height:324px;width:240px;right:17%}.paper-label{font-size:29px;top:11%;right:5.5%}}
+@media(max-width:760px){.paper-label{font-size:25px;line-height:1.02;top:11%;right:6%;transform:rotate(5deg)}.paper-label .label-owner{font-size:1.13em}.cutout-person{height:270px;width:198px;right:23.5%;bottom:10%}}
+
+/* Loose marks requested in place of the regular stars and the circular word badge. */
+.paper-label{font-family:Caveat,cursive;font-weight:500;font-size:40px;line-height:.9;right:10%;top:8%;color:var(--red)}
+.paper-label .label-owner{font-size:1em;padding-bottom:0}
+.paper-label .label-owner:after{display:none}
+.cover-heart-sketch{width:115px;height:115px;left:7%;top:23%;transform:rotate(-13deg)}
+.cover-star-sketch{position:absolute;right:13%;top:17%;width:104px;height:77px;transform:rotate(8deg);z-index:2;pointer-events:none}
+.cover-smile-sketch{position:absolute;right:4.8%;top:29%;width:132px;height:130px;transform:rotate(12deg);z-index:3;pointer-events:none}
+@media(min-width:1500px){.paper-label{font-size:44px;right:11%;top:8%}.cover-heart-sketch{left:10%;width:130px;height:130px}.cover-star-sketch{top:18%;right:14%;width:118px;height:87px}.cover-smile-sketch{right:7%;top:32%;width:145px;height:141px}}
+@media(min-width:761px) and (max-width:1050px){.paper-label{font-size:35px;top:11%;right:7%}.cover-heart-sketch{left:5%;top:26%;width:97px;height:97px}.cover-star-sketch{top:20%;right:12%;width:86px;height:66px}.cover-smile-sketch{right:5%;top:34%;width:112px;height:110px}}
+@media(max-width:760px){.paper-label{font-size:31px;line-height:.9;top:11.5%;right:6%}.paper-label .label-owner{font-size:1em}.cover-heart-sketch{left:4%;top:57%;width:72px;height:72px;transform:rotate(-14deg)}.cover-star-sketch{right:7%;top:22%;width:68px;height:51px;transform:rotate(8deg)}.cover-smile-sketch{right:5%;top:76%;width:86px;height:84px;transform:rotate(12deg)}}
+
+/* Small approved cover adjustment: move only the folio line right. */
+.paper-cover-title h1 .paper-folio{position:relative;left:72px}
+@media(max-width:760px){.paper-cover-title h1 .paper-folio{left:20px}}
+
+/* Bring the original hosting portrait closer to the title visually. */
+.cutout-person{scale:1.06;transform-origin:50% 100%}

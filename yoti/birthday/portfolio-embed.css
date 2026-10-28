@@ -1,0 +1,13 @@
+/* Only the portfolio's passive preview uses the host page's controls. */
+.portfolio-preview header .tools,
+.portfolio-preview footer,
+.portfolio-preview #back-wrap,
+.portfolio-preview #detail-controls,
+.portfolio-preview #more-panel{display:none!important}
+.portfolio-preview #scene{inset:70px 0 90px}
+.portfolio-preview .caption{bottom:20px}
+@media(max-width:760px){
+ .portfolio-preview #scene{inset:70px 0 80px}
+ .portfolio-preview .caption{bottom:16px}
+ .portfolio-preview #status{font-size:16px}
+}

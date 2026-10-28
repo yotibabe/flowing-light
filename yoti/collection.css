@@ -1,0 +1,51 @@
+/* A second page of personal objects; the approved cover stays intact. */
+.personal-collection{max-width:1400px;margin:0 auto;padding:100px 6% 25px;border-top:1px solid #632a2730;background:#f5eddfbb}
+.collection-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:35px}
+.collection-heading h2{font-family:Georgia,'Songti SC',serif;font-size:clamp(25px,3.3vw,43px);font-weight:400;line-height:1.6;margin:24px 0 0;color:var(--red);letter-spacing:1px}
+.collection-heading h2 em{font-style:normal}
+.collection-heading p{font-size:12px;line-height:2.1;margin-bottom:12px}
+.personal-objects{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin:90px auto 70px;max-width:1060px}
+.object-slot{height:350px;position:relative;display:flex;align-items:center;justify-content:center;perspective:1200px}
+.personal-objects .keepsake{position:relative;left:auto;top:auto;flex-shrink:0}
+.personal-objects .folder{width:290px;height:260px;--r:-7deg}
+.folder-type{position:absolute;left:23px;top:63px;font-family:Fraunces,Georgia,serif;font-size:39px;line-height:1.05;color:#8c2c3b;letter-spacing:-2px}
+.folder-type em{font-weight:700;font-size:46px;letter-spacing:-3px}
+.personal-objects .envelope{width:280px;height:200px;--r:-6deg;margin-top:48px}
+.personal-objects .envelope .seal{left:109px;font-size:20px;top:60px}
+.personal-objects .envelope .seal span{font-family:Fraunces,serif;font-size:28px;line-height:1;letter-spacing:-2px}
+.feeling-card{width:270px;height:316px;background:#f7f0df;border:1px solid #cabd9d;--r:5deg;padding:24px!important;box-shadow:7px 7px 0 #b6ba9d,8px 8px 0 #899170}
+.card-top{font-size:7px;letter-spacing:1.2px;display:block}
+.feeling-title{font-family:Fraunces,Georgia,serif;color:var(--red);font-size:38px;letter-spacing:-2px;line-height:1.06;display:block;margin-top:35px}
+.feeling-title em{font-weight:700}
+.feeling-hand{display:block;margin:19px 0 0;font-size:26px;transform:rotate(-5deg);color:#627052}
+.card-rule{display:block;border-top:1px solid #62705270;margin:28px 0 14px}
+.feeling-bottom{font-size:10px;display:flex;justify-content:space-between}
+.feeling-bottom i{font-style:normal}
+.object-footnote{position:absolute;bottom:-36px;font-size:8px;letter-spacing:1.6px;color:#6c4c43}
+.personal-footer{border-top:1px solid #632a2730;display:flex;align-items:center;justify-content:space-between;padding:22px 0 8px;margin-top:110px}
+.personal-footer .hand{font-size:26px;color:var(--red)}
+.personal-footer button{font-size:11px;padding:12px 0}
+.letter-postscript{font-size:12px!important;margin:28px 0;color:var(--red)}
+.moment-deck{perspective:1400px;max-width:650px;margin:45px auto 0}
+.moment-flip{position:relative;display:block;width:100%;height:490px;padding:0;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1);transform:rotate(-2deg);text-align:center}
+.moment-flip.is-flipped{transform:rotate(1deg) rotateY(180deg)}
+.moment-face{position:absolute;inset:0;padding:18px 18px 38px;background:#fffcf4;box-shadow:2px 10px 25px #694b3320;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column}
+.moment-front img{width:100%;height:calc(100% - 66px);object-fit:cover}
+.moment-front .hand{font-size:30px;line-height:1.2;margin-top:17px}
+.flip-cue{position:absolute;bottom:12px;right:18px;font-size:9px;letter-spacing:.5px;opacity:.65}
+.moment-back{transform:rotateY(180deg);align-items:center;justify-content:center;background-color:#fff7e5;background-image:repeating-linear-gradient(transparent 0 35px,#9b7d701c 36px,transparent 37px);padding:35px;gap:25px}
+.moment-back .hand{font-size:47px;color:var(--red)}
+#moment-note{font-size:17px;line-height:2;max-width:350px}
+#moment-place{font-size:11px;letter-spacing:2px;margin-top:25px}
+.moment-controls{display:flex;gap:30px;align-items:center;justify-content:center;margin:40px auto 0}
+.moment-controls button{width:42px;height:42px;border:1px solid #632a2740;border-radius:50%}
+.moment-controls button:hover{background:var(--pink)}
+.moment-controls span{font-size:11px;letter-spacing:2px}
+.moment-instruction{text-align:center;font-size:10px;opacity:.7;line-height:1.8;margin-top:17px}
+.pink .personal-collection{background:#efc7d080}
+@media(min-width:761px) and (max-width:1100px){.personal-objects{gap:10px}.personal-objects .folder{width:230px;height:225px}.folder-type{font-size:31px;left:18px}.folder-type em{font-size:36px}.personal-objects .envelope{width:225px;height:175px}.personal-objects .envelope .seal{left:83px;top:48px}.feeling-card{width:220px;height:280px;padding:20px!important}.feeling-title{font-size:32px}.feeling-hand{font-size:23px}.card-rule{margin-top:20px}.card-top{font-size:6px}}
+@media(max-width:760px){.personal-collection{padding:65px 7% 20px}.collection-heading{display:block}.collection-heading .eyebrow{font-size:8px;letter-spacing:1.4px}.collection-heading h2{font-size:26px;letter-spacing:0;line-height:1.65}.collection-heading p{font-size:11px;margin-top:24px}.personal-objects{grid-template-columns:1fr;gap:62px;margin:38px auto 60px}.object-slot{height:330px}.personal-objects .folder{width:260px;height:250px}.folder-type{font-size:35px}.folder-type em{font-size:42px}.personal-objects .envelope{width:260px;height:190px;--r:-5deg}.personal-objects .envelope .letter{inset:-37px 17px 20px;padding:20px 15px}.personal-objects .envelope .letter .hand{font-size:35px}.personal-objects .envelope .letter>span:last-child{font-size:9px}.personal-objects .envelope .seal{width:63px;height:63px;left:98px;top:57px}.personal-objects .envelope .envelope-caption{font-size:8px;bottom:16px;left:18px;right:18px}.object-footnote{bottom:-20px}.personal-footer{margin-top:70px}.personal-footer .hand{font-size:22px}.personal-footer button{font-size:10px}.moment-flip{height:410px}.moment-face{padding:10px 10px 37px}.moment-front .hand{font-size:24px}.moment-back{padding:22px;gap:18px}.moment-back .hand{font-size:36px}#moment-note{font-size:14px}.moment-controls{margin-top:32px}.reader-heading h2{font-size:59px}.hello-sheet h2{font-size:64px}}
+@media(max-width:370px){.collection-heading h2{font-size:23px}.moment-flip{height:370px}.personal-objects .folder{width:245px}.feeling-card{width:245px}.personal-objects .envelope{width:245px}.personal-objects .envelope .seal{left:91px}.reader-heading h2{font-size:52px}}
+@media(prefers-reduced-motion:reduce){.moment-flip{transition:none}.keepsake{transition:none}}
+.folder-type,.feeling-title{letter-spacing:-.7px;word-spacing:3px}
+.folder-type em{letter-spacing:-1.3px}

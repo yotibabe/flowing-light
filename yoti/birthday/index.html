@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#eee8db"><title>Fancy · 生日小屋</title><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./portfolio-embed.css?v=20261028-1"></head><body class="night">
+<header><div class="brand"><span class="eyebrow">A LITTLE BIRTHDAY WORLD</span><h1>Fancy 的小小世界<span>✦</span></h1></div><div class="tools"><button id="home" aria-label="回到房间全景" title="回到全景">⌂</button><button id="night" aria-label="切换白天与夜晚" title="昼夜">☾</button><button id="sound" aria-label="开启声音" title="声音">♫<span class="mute-dot"></span></button></div></header>
+<main id="scene" aria-label="Fancy 的可互动三维生日小屋"><div id="loading">正在把小屋里的灯点亮<span>✦</span></div><div id="pins"></div><div id="hover"></div></main>
+<aside id="back-wrap" hidden><button id="back">← 回到小屋</button></aside>
+<div id="greeting" aria-live="polite"><small>MAKE A WISH</small><strong>生日快乐，Fancy。</strong></div>
+<section class="caption" aria-live="polite"><span id="status">一间可以慢慢探索的小屋</span><p id="hint">拖动看看，点点里面的小东西。</p></section>
+<footer><div class="playback"><button id="tour" aria-label="播放生日小片">▷ 播放生日小片</button><button id="pause" aria-label="暂停动画" hidden>Ⅱ</button><span id="mode">点播放，或自己点点小屋里的物件</span><div class="progress"><i id="progress"></i></div></div><nav aria-label="探索小屋"><button data-action="rest">Ⅱ<span>休息一下</span></button><button data-action="album">▤<span>立体书</span></button><button data-action="camera">▣<span>拍立得</span></button><button data-action="pets">♧<span>小伙伴</span></button><button data-action="gallery">▧<span>合照</span></button><button data-action="cake" class="wish">✦<span>许个愿</span></button><button id="more" aria-label="更多小屋互动" aria-expanded="false">···<span>更多</span></button></nav></footer>
+<div id="more-panel" hidden><button data-action="cd">放一张 CD</button><button data-action="tv">换个电视频道</button><button data-action="phone">接起小电话</button><button data-action="calendar">翻到 10 月 13 日</button><button data-action="lamp">点亮落地灯</button><button data-action="letter">给 Fancy 的信</button></div>
+<dialog id="letter-dialog" aria-label="给 Fancy 的信"><button id="close-letter" aria-label="收起信">×</button><div class="letter-heading"><span>A LETTER FOR YOU</span><span>✦</span></div><h2>Dear Fancy,</h2><div class="blank-letter letter-body" aria-label="给 Fancy 的信件正文" tabindex="0">
+<p>我时常庆幸你出现在我的生命里，像阳光一样，带给我很多快乐和幸福的瞬间。</p>
+<p>当青春似乎到了尽头，我们各自奔赴不同的人生章节。未来，我们会在某个路口再次重逢。</p>
+<p>亲爱的朋友，我希望你永远快乐、勇敢、明亮。</p>
+<p>很幸运遇见你。在我心里，我永远需要你。</p>
+</div><p class="signature"></p><button class="fold-letter" id="fold-letter">把信收好 ↗</button></dialog>
+<div id="detail-controls" hidden><button id="previous" aria-label="上一张">←</button><button id="detail-replay">翻到背面</button><button id="next" aria-label="下一张">→</button><button id="open-photos" hidden>放大合照</button><button id="next-stop" hidden></button></div>
+<div id="wish" hidden><h2>许个愿吧。</h2><p id="wish-note">慢慢许愿，烛光会等你。</p><button id="blow-candles">许好了，吹蜡烛 ✦</button></div>
+<dialog id="photo-dialog" aria-label="我和 Fancy 的合照"><button id="close-photo" aria-label="收起合照">×</button><div class="photo-caption">OUR LITTLE MOMENTS</div><button id="polaroid" aria-label="翻看照片背面"><span class="photo-front"><span id="photo-viewport"><img id="photo-image" alt="我和 Fancy 的合照"></span><span id="photo-title"></span></span><span class="photo-back">Dear Fancy,<br><br>10.13</span></button><div class="photo-controls"><button id="photo-prev" aria-label="上一张合照">←</button><button id="photo-flip">↻ 翻到背面</button><button id="photo-next" aria-label="下一张合照">→</button></div></dialog>
+<div id="error" hidden></div><script type="module" src="./app.js?v=20261028-embed-controls-2"></script></body></html>

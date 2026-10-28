@@ -1,0 +1,60 @@
+/* A persistent photo pile inside the existing Light album footprint. */
+.light-motion-gallery .light-photo-stage{
+  position:relative;
+  height:490px;
+  overflow:hidden;
+  isolation:isolate;
+  perspective:1200px;
+  background:#e3d6c1;
+}
+.light-editorial .light-motion-gallery .light-photo-stage>.project-hero{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width:86%;
+  height:83%;
+  max-height:none;
+  z-index:5;
+  transform-origin:50% 55%;
+  backface-visibility:hidden;
+  object-fit:contain;
+  background:#f7f0e1;
+  box-shadow:0 6px 16px #60412d38;
+}
+.light-editorial .light-motion-gallery .light-photo-stage>.light-photo-stacked{
+  pointer-events:none;
+}
+.light-motion-gallery .light-photo-progress{
+  position:absolute;
+  z-index:6;
+  left:10px;
+  right:10px;
+  bottom:6px;
+  height:3px;
+  background:var(--red);
+  transform:scaleX(0);
+  transform-origin:left;
+  pointer-events:none;
+}
+.light-motion-gallery .light-play-toggle{
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  letter-spacing:-1px;
+}
+.light-motion-gallery .gallery-thumbs button{
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .45s;
+}
+.light-motion-gallery .gallery-thumbs button[aria-pressed="true"]{
+  transform:translateY(-3px) rotate(-2deg);
+  box-shadow:2px 4px 8px #7f3b2921;
+}
+@media(max-width:760px){
+  .light-motion-gallery .light-photo-stage{height:270px;}
+  .light-editorial .light-motion-gallery .light-photo-stage>.project-hero{width:84%;height:82%;}
+  .light-motion-gallery .light-photo-progress{left:6px;right:6px;bottom:3px;height:2px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .light-motion-gallery .gallery-thumbs button{transition:none;}
+  .light-motion-gallery .gallery-thumbs button[aria-pressed="true"]{transform:none;}
+  .light-motion-gallery .light-photo-progress{display:none;}
+}
