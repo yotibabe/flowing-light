@@ -26,9 +26,14 @@
 
   const renderHeader = () => `<header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/45 backdrop-blur-[40px] border-b border-outline-variant/10">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 h-16 md:h-24 flex items-center justify-between">
-        <a class="text-fluid-lg font-display font-bold tracking-wide shrink-0 text-primary z-50" href="${basePath}index.html">
-            中大读书会 <span class="italic font-normal">Light</span>
-        </a>
+        <div class="flex flex-col items-start gap-0.5 shrink-0 z-50">
+            <a class="text-fluid-lg font-display font-bold tracking-wide text-primary" href="${basePath}index.html">
+                中大读书会 <span class="italic font-normal">Light</span>
+            </a>
+            <a class="group inline-flex items-center gap-1.5 min-h-[24px] px-2 rounded-full border border-primary/25 bg-white/50 text-primary font-body text-[11px] sm:text-xs transition-colors hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/yoti">
+                <span>Yoti 个人作品集</span><span aria-hidden="true" class="inline-block transition-transform group-hover:translate-x-0.5">↗</span>
+            </a>
+        </div>
         <nav class="flex gap-2 sm:gap-4 md:gap-8 items-center justify-end shrink-0 ml-2">
             ${navItem("HOME", `${basePath}index.html`, "home")}
             ${navItem("ARCHIVE", `${basePath}archive.html`, "archive")}
