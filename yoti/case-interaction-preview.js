@@ -4,23 +4,23 @@
     workbench({head,endNav}) {
       return head('02 / RESEARCH INTO PRACTICE','交易工作台','把研究中的问题，<br>变成自己用得上的工具。').replace('reader-inner','reader-inner workbench-refined wb-editorial wb-restored') + `
       <div class="case-tags"><span>投资研究</span><span>信息组织</span><span>AI 工具实践</span></div>
-      <figure class="wb-market-opening" id="wb-market"><button class="wb-full-screen" data-wb-zoom="assets/workbench-deck/market.jpg" data-wb-title="今日市场：完整大盘与工作台全貌" aria-label="放大完整大盘截图"><img src="assets/workbench-deck/market.jpg" alt="完整工作台界面，展示指数、涨跌范围、量能与板块入口"><span>查看完整截图 ↗</span></button><figcaption><span>01 / 先看市场全貌</span><span>真实界面 · 行情日期 2026.10.23</span></figcaption></figure>
+      <figure class="wb-market-opening" id="wb-market"><div class="wb-full-screen"><img src="assets/workbench-display/market.jpg" alt="完整工作台界面，展示指数、涨跌范围、量能与板块入口" loading="eager" width="1070" height="602"></div><figcaption><span>01 / 先看市场全貌</span><span>真实界面 · 行情日期 2026.10.23</span></figcaption></figure>
       <nav class="wb-reading-path" aria-label="工作台阅读顺序"><a href="#wb-market" data-jump="wb-market">大盘全貌</a><span>→</span><a href="#wb-details" data-jump="wb-details">板块与个股</a><span>→</span><a href="#wb-alerts" data-jump="wb-alerts">跟踪与提醒</a></nav>
       <section class="wb-market-context"><h3>先有背景，<br>再看个股。</h3><p>把指数、上涨范围、量能和板块方向放在一起。先判断是普遍活跃，还是局部变化，再往具体板块和公司看。</p></section>
       <section class="wb-detail-pair" id="wb-details" aria-label="板块与个股的真实界面">
         <header class="wb-detail-heading"><div><span class="eyebrow">02–03 / 板块与个股</span><h3>从板块，看到个股。</h3></div><p>查看板块成员，再对照个股走势。</p></header>
         <div class="wb-detail-grid">
-          <figure><span class="wb-detail-label">板块</span><button class="wb-detail-crop" data-wb-zoom="assets/workbench-sector.png" data-wb-title="板块详情：MLOps 概念与成员" aria-label="放大板块详情截图"><img src="assets/workbench-sector.png" alt="MLOps 板块详情，上涨比例与代表公司列表" loading="lazy"></button><figcaption>板块详情 · 2026.10.23 · 点击放大 ↗</figcaption></figure>
-          <figure><span class="wb-detail-label">个股</span><button class="wb-detail-crop" data-wb-zoom="assets/workbench-stock.png" data-wb-title="个股走势：奥比中光分时与分钟成交额" aria-label="放大个股走势截图"><img src="assets/workbench-stock.png" alt="奥比中光的分时曲线、逐分钟成交额与量能比较" loading="lazy"></button><figcaption>个股走势 · 2026.10.23 · 点击放大 ↗</figcaption></figure>
+          <figure><span class="wb-detail-label">板块</span><div class="wb-detail-crop"><img src="assets/workbench-display/sector.jpg" alt="MLOps 板块详情，上涨比例与代表公司列表" loading="eager" width="384" height="600"></div><figcaption>板块详情 · 2026.10.23</figcaption></figure>
+          <figure><span class="wb-detail-label">个股</span><div class="wb-detail-crop"><img src="assets/workbench-display/stock.jpg" alt="奥比中光的分时曲线、逐分钟成交额与量能比较" loading="eager" width="384" height="600"></div><figcaption>个股走势 · 2026.10.23</figcaption></figure>
         </div>
       </section>
       <section class="wb-alert-story" id="wb-alerts">
         <div class="wb-records">
           <div class="wb-record-tabs" role="tablist" aria-label="查看重点跟踪与提醒截图"><button data-wb-tab="tracking">重点跟踪</button><button data-wb-tab="review">提醒与复盘</button></div>
-          <figure class="wb-record-panel" data-wb-panel="tracking"><div class="wb-record-stage"><button class="wb-tracking-panorama" data-wb-zoom="assets/workbench-interaction/tracking-overview.png" data-wb-title="个股异动与重点跟踪：2026.10.27 09:46 历史界面" aria-label="放大重点跟踪原始截图"><img src="assets/workbench-interaction/tracking-overview.png" alt="个股异动与重点跟踪整体画面，包含变化记录和跟踪卡片" loading="eager" width="2826" height="1614"></button></div><figcaption>重点跟踪 · 原始界面局部 · 点击查看完整截图 ↗</figcaption></figure>
-          <figure class="wb-record-panel" data-wb-panel="review" hidden><div class="wb-record-stage"><button class="wb-review-screen" data-wb-zoom="assets/workbench-interaction/alerts-20261028.png" data-wb-title="变化提醒：2026.10.28 真实提醒列表" aria-label="放大变化提醒截图"><img src="assets/workbench-interaction/alerts-20261028.png" alt="变化提醒页，包含事件时间、当时报价和信号阶段" loading="eager" width="796" height="797"></button></div><figcaption>变化提醒 · 2026.10.28 · 点击放大 ↗</figcaption></figure>
+          <figure class="wb-record-panel" data-wb-panel="tracking"><div class="wb-record-stage"><div class="wb-tracking-panorama"><img src="assets/workbench-display/tracking.jpg" alt="个股异动与重点跟踪整体画面，包含变化记录和跟踪卡片" loading="eager" width="430" height="412"></div></div><figcaption>重点跟踪 · 原始界面局部</figcaption></figure>
+          <figure class="wb-record-panel" data-wb-panel="review" hidden><div class="wb-record-stage"><div class="wb-review-screen"><img src="assets/workbench-display/review.jpg" alt="变化提醒页，包含事件时间、当时报价和信号阶段" loading="eager" width="412" height="413"></div></div><figcaption>变化提醒 · 2026.10.28</figcaption></figure>
         </div>
-        <div class="wb-alert-copy"><span class="eyebrow">04 / 跟踪与回看</span><h3>值得关注的变化，<br>留在眼前。</h3><p>重点跟踪回答：现在有哪些股票值得继续观察？<br>变化提醒记录：刚刚发生了什么？</p><p>卡片留下首次记录、价格与入选依据。看到提示后，再回到市场背景与走势里核对，也把当时的依据留在复盘中。</p><span class="wb-small-note">切换查看重点跟踪与复盘记录；点击图片，可以放大细看。</span><span class="hand">notice. understand. look back.</span></div>
+        <div class="wb-alert-copy"><span class="eyebrow">04 / 跟踪与回看</span><h3>值得关注的变化，<br>留在眼前。</h3><p>重点跟踪回答：现在有哪些股票值得继续观察？<br>变化提醒记录：刚刚发生了什么？</p><p>卡片留下首次记录、价格与入选依据。看到提示后，再回到市场背景与走势里核对，也把当时的依据留在复盘中。</p><span class="wb-small-note">切换查看重点跟踪与复盘记录。</span><span class="hand">notice. understand. look back.</span></div>
       </section>
       <section class="project-intro wb-making"><div><span class="eyebrow">THE THINKING BEHIND IT</span><h3>从自己的问题，<br>开始做一个工具。</h3></div><div><p>研究过程中，信息、判断和后续变化常常散落在不同地方。我尝试用 AI，把信息整理、市场观察和复盘记录连接起来，让每一次关注有依据，也能在之后回看和验证。</p><p>我来定义问题、选择观察重点，再用实际体验调整功能。AI 协助实现界面与数据处理，让这些想法逐步变成自己用得上的工具。</p><details class="wb-context-note"><summary>一次使用后的重新思考</summary><p>起初，我更担心错过变化，希望看到更多提醒。用起来以后，又开始重新判断：哪些变化值得占用注意力？工作台也随之不断调整。</p></details></div></section>
       <section class="wb-conclusion" aria-label="继续探索的三个方向">

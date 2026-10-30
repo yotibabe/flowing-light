@@ -1,8 +1,8 @@
 /* Read from the market as a whole into the details, then the signals. */
 .wb-market-opening{margin:0;scroll-margin-top:95px}
-.wb-full-screen{display:block;width:100%;padding:10px;background:#fff8e9;position:relative;cursor:zoom-in;text-align:left}
+.wb-full-screen{display:block;width:100%;padding:10px;background:#fff8e9;position:relative;cursor:default;text-align:left}
 .wb-full-screen img{display:block;width:100%;height:auto}
-.wb-full-screen>span{position:absolute;right:25px;bottom:24px;padding:11px 14px;background:#fff9eeeb;color:var(--red);font-size:11px;border:1px solid #8c615a30}
+
 .wb-market-opening figcaption{display:flex;justify-content:space-between;gap:20px;font-size:10px;color:#8d715f;line-height:1.8;margin-top:14px}
 .wb-reading-path{display:flex;align-items:center;gap:27px;border-top:1px solid #895a4533;border-bottom:1px solid #895a4533;margin:32px 0 0;font-size:12px}
 .wb-reading-path a{padding:18px 0;min-height:44px;text-decoration:none;color:var(--red)}
@@ -15,8 +15,8 @@
 .wb-detail-pair h3{font-family:Georgia,'Songti SC',serif;font-weight:400;font-size:29px;color:var(--red);line-height:1.5;margin:15px 0 10px}
 .wb-detail-pair article>p{font-size:13px;line-height:1.9;color:#8a6b59;margin:0 0 24px}
 .wb-detail-pair figure{margin:0;background:#e6dfd3;padding:25px 25px 14px}
-.wb-detail-crop{display:block;position:relative;width:100%;max-width:390px;aspect-ratio:640/1000;padding:0;overflow:hidden;cursor:zoom-in;background:white;margin:auto;box-shadow:0 6px 18px #543e2310}
-.wb-detail-crop img{position:absolute;top:0;left:-125%;width:225%;max-width:none;height:auto;pointer-events:none}
+.wb-detail-crop{display:block;position:relative;width:100%;max-width:390px;aspect-ratio:640/1000;padding:0;overflow:hidden;cursor:default;background:white;margin:auto;box-shadow:0 6px 18px #543e2310}
+.wb-detail-crop img{display:block;width:100%;max-width:100%;height:100%;object-fit:fill;pointer-events:none}
 .wb-detail-pair figcaption,.wb-alert-story figcaption{font-size:10px;text-align:center;color:#8d715f;line-height:1.8;margin-top:13px}
 .wb-alert-story{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center;padding:70px 0;margin-top:65px;border-top:1px solid #895a4533;border-bottom:1px solid #895a4533;scroll-margin-top:90px}
 .wb-records{min-width:0;background:#ead9d5;padding:0 20px 14px}
@@ -28,7 +28,7 @@
 .wb-alert-story figure{margin:0}
 .wb-record-panel[hidden]{display:none}
 .wb-record-stage{height:410px;display:flex;align-items:center;justify-content:center}
-.wb-review-screen{display:block;width:100%;padding:0;cursor:zoom-in;box-shadow:0 8px 24px #543e2314}
+.wb-review-screen{display:block;width:100%;padding:0;cursor:default;box-shadow:0 8px 24px #543e2314}
 .wb-review-screen img{display:block;width:100%;height:auto}
 .wb-alert-story h3{margin:22px 0 25px}
 .wb-alert-story p+p{margin-top:26px}
@@ -45,11 +45,11 @@
 .wb-principle-detail{min-height:40px;padding-top:10px}
 .wb-principle-detail p{font-size:12px;line-height:1.9;margin:0;color:#7f6556}
 .wb-principle-detail p[hidden]{display:none}
-.wb-principles button:focus-visible,.wb-record-tabs button:focus-visible,.wb-reading-path a:focus-visible,.wb-full-screen:focus-visible,.wb-detail-crop:focus-visible,.wb-review-screen:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+.wb-principles button:focus-visible,.wb-record-tabs button:focus-visible,.wb-reading-path a:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 .travel-edition .planet-film{border:0;padding:45px;margin:55px 0;background:#e6ccd0;scroll-margin-top:90px}
 @media(max-width:900px){.wb-alert-story{gap:40px}.wb-detail-pair{gap:24px}.wb-conclusion{gap:30px}.wb-principles{gap:17px}.wb-principles button{font-size:13px}.travel-edition .planet-film{padding:25px}}
 @media(max-width:760px){
- .wb-full-screen{padding:5px}.wb-full-screen>span{right:10px;bottom:10px;padding:8px;font-size:9px}.wb-market-opening figcaption{font-size:9px;gap:10px}.wb-reading-path{gap:13px;margin-top:24px;font-size:11px;justify-content:space-between}
+ .wb-full-screen{padding:5px}.wb-market-opening figcaption{font-size:9px;gap:10px}.wb-reading-path{gap:13px;margin-top:24px;font-size:11px;justify-content:space-between}
  .wb-market-context{grid-template-columns:1fr;gap:12px;padding:36px 0}.wb-market-context h3{font-size:30px}.wb-market-context p{font-size:13px;margin:0}
  .wb-detail-pair{grid-template-columns:1fr;gap:36px}.wb-detail-pair article{padding-top:22px}.wb-detail-pair h3{font-size:27px}.wb-detail-pair article>p{font-size:12px;margin-bottom:20px}.wb-detail-pair figure{padding:18px 18px 12px}.wb-detail-crop{max-width:310px}
  .wb-alert-story{grid-template-columns:1fr;gap:27px;padding:35px 0;margin-top:40px}.wb-alert-copy{grid-row:1}.wb-alert-story h3{font-size:30px;margin:15px 0 18px}.wb-alert-story p{font-size:13px}.wb-alert-story .hand{font-size:25px;margin-top:22px}.wb-small-note{font-size:10px;margin-top:18px}.wb-records{padding:0 15px 14px}.wb-record-stage{height:390px}

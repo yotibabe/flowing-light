@@ -20,7 +20,7 @@
 .case-text-button{display:inline-block;font-size:13px;color:var(--red);padding:12px 0;border-bottom:1px solid #9f5b4a66;min-height:44px}
 .wb-evidence{margin:0;display:flex;flex-direction:column;align-items:center;background:#e6dfd3;padding:20px 18px 12px;min-width:0}
 .wb-evidence figcaption{font-size:10px;color:#8d7562;line-height:1.7;padding-top:12px}
-.wb-image-window{display:block;position:relative;overflow:hidden;padding:0;background:#fff;cursor:zoom-in;box-shadow:0 8px 24px #543e2314;max-width:100%}
+.wb-image-window{display:block;position:relative;overflow:hidden;padding:0;background:#fff;cursor:default;box-shadow:0 8px 24px #543e2314;max-width:100%}
 .wb-image-window img{display:block;position:absolute;max-width:none;pointer-events:none}
 .wb-crop-tracking{width:270px;aspect-ratio:374/557}
 .wb-crop-tracking img{width:393.048%;height:auto;left:-71.66%;top:-29.44%}

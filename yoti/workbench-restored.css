@@ -10,11 +10,10 @@
 .wb-detail-grid figure{min-width:0}
 .wb-detail-label{display:block;font-size:12px;letter-spacing:.08em;color:var(--red);margin:0 0 15px}
 .wb-restored .wb-record-stage{height:auto;aspect-ratio:1595/1529}
-.wb-tracking-panorama{position:relative;display:block;width:100%;height:100%;padding:0;overflow:hidden;background:#fff;cursor:zoom-in}
-.wb-tracking-panorama img{position:absolute;width:177.1787%;max-width:none;left:-27.8997%;top:-5.5592%;height:auto;pointer-events:none}
+.wb-tracking-panorama{position:relative;display:block;width:100%;height:100%;padding:0;overflow:hidden;background:#fff;cursor:default}
+.wb-tracking-panorama img{display:block;width:100%;max-width:100%;height:100%;object-fit:fill;pointer-events:none}
 .wb-restored .wb-review-screen{height:100%;background:#ead9d5;box-shadow:none}
 .wb-restored .wb-review-screen img{height:100%;width:100%;object-fit:contain}
-.wb-tracking-panorama:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 @media(max-width:900px){.wb-detail-grid{gap:24px}}
 @media(max-width:760px){
  .wb-restored .wb-preview-note{font-size:9px;margin:0 0 20px}
